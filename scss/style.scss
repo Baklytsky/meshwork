@@ -1,0 +1,260 @@
+@import "mixins";
+@import "variables";
+
+.wrapper {
+  max-width: 940px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 0;
+  }
+}
+
+//********************************************** SEARCH SECTION *********************************
+//***********************************************************************************************
+
+#hero-section {
+  width: 100%;
+  background: url("../img/search-section-bg.jpg") no-repeat center / cover;
+
+  //********************************************** Headline ************************************
+  .hero-headline {
+    font-size: $hero-headline;
+    line-height: 70px;
+    text-transform: uppercase;
+    padding: 157px 0 22px 0;
+    display: flex;
+    flex-direction: column;
+
+    span span {
+      color: $aquamarine;
+    }
+  }
+
+  //********************************************** Title`s ************************************
+  .hero-title {
+    font-size: $normal-plus;
+  }
+
+  .hero-title:nth-of-type(2) {
+    font-weight: bold;
+  }
+
+  .search-block {
+    display: flex;
+    margin: 42px 0 26px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.85);
+
+    //************************************* Status selector **************************************
+
+    .status-selector {
+      width: 171px;
+      height: 52px;
+      border: 6px solid $white;
+
+      .dropdown, .dropholder {
+        background-color: $gallery;
+      }
+
+      .dropdown {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $gallery;
+        position: relative;
+        cursor: pointer;
+
+        .holder {
+          font-weight: 700;
+          line-height: 52px;
+          color: $black;
+          padding-right: 19px;
+        }
+
+        .icon-down-open-big {
+          line-height: 0;
+          position: absolute;
+          top: 50%;
+          right: 21px;
+          transform: translateY(-50%);
+          transition: transform .3s linear;
+
+          &:before {
+            font-weight: 700;
+          }
+        }
+
+        &.active + .dropdownOption {
+          display: block;
+        }
+      }
+      .active {
+        .icon-down-open-big {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      .dropholder {
+        width: 100%;
+        height: 100%;
+        color: $black;
+        position: relative;
+      }
+
+      .dropdownOption {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+        margin: 10px 0;
+        cursor: pointer;
+        display: none;
+        background: $gallery;
+        z-index: 5;
+        overflow: hidden;
+
+        li {
+          text-align: center;
+          color: $black;
+          border-bottom: 2px solid $white;
+
+          p {
+            font-weight: bold;
+            line-height: 52px;
+          }
+
+          &:hover:not(.current) {
+            color: $aquamarine;
+          }
+        }
+
+        .current {
+          background-color: $aquamarine;
+          color: $black;
+        }
+      }
+    }
+
+    //************************************* Search input **************************************
+    .search-input {
+      flex-grow: 2;
+      overflow: hidden;
+      .search-form {
+        position: relative;
+        .search-text {
+          width: 100%;
+          height: 64px;
+          font-family: Nunito, sans-serif;
+          color: $shaft;
+          border: none;
+          padding-left: 5px;
+        }
+        .search-text:-webkit-autofill {
+          -webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
+          -webkit-text-fill-color: #999 !important; /* цвет текста */
+          color: #000 !important; /* цвет текста */
+        }
+        .search-submit {
+          width: 218px;
+          height: 64px;
+          @include btn;
+          position: absolute;
+          top: 0;
+          right: 0;
+          &:hover {
+            @include btn-hover;
+          }
+        }
+      }
+    }
+  }
+
+  //************************************* Tag`s *************************************************
+  .tag-list {
+    padding-bottom: 56px;
+    .tag-item {
+      display: inline-block;
+      margin: 17px 8px;
+      a {
+        font-size: $menu-link;
+        font-weight: 700;
+        color: $white;
+        background-color: rgba(27, 56, 54, 0.8);
+        border-radius: 80px;
+        padding: 9px 16px;
+        transition: all .3s linear;
+
+        &:before {
+          content: "#";
+        }
+        &:hover {
+          color: $black;
+          background-color: $aquamarine;
+        }
+      }
+    }
+  }
+}
+
+//********************************************** Customers **************************************
+//***********************************************************************************************
+
+#customers {
+  width: 100%;
+  background: $green-gradient;
+  .customers-wrapper {
+    max-width: 1084px;
+    margin: 0 auto;
+  }
+
+  //********************************************** Favorite customers list **********************
+  .fav-customers {
+    text-align: center;
+    .fav-customers-title {
+      font-size: $sign-up;
+      color: $alto;
+      text-transform: uppercase;
+      padding: 31px 25px;
+    }
+    .fav-customers-list {
+      display: flex;
+      justify-content: space-between;
+      line-height: 0;
+    }
+  }
+  //********************************************** Find customer block ***************************
+  .find-customer {
+    width: 100%;
+    background: url("../img/photo-colage.png") no-repeat center;
+    .text-block {
+      max-width: 588px;
+      text-align: center;
+      padding: 212px 0 179px;
+      margin: 0 auto;
+      .find-customer-headline {
+        font-size: $fav-customer-headline;
+        font-weight: 600;
+        line-height: 76px;
+        padding-bottom: 15px;
+      }
+      .find-customer-description {
+        font-size: $fav-customer-description;
+        line-height: 33px;
+        padding-bottom: 50px;
+      }
+      .find-customer-btn {
+        @include btn;
+        width: 218px;
+        height: 68px;
+        &:hover {
+          @include btn-hover;
+        }
+      }
+    }
+  }
+}
+

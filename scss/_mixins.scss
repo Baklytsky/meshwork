@@ -1,0 +1,16 @@
+@import "variables";
+@mixin btn {
+  font-family: Nunito, sans-serif;
+  font-size: $btn-size;
+  font-weight: bold;
+  color: $black;
+  background-color: $aquamarine;
+  border: 1px solid $aquamarine;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: all .3s linear;
+}
+@mixin btn-hover {
+  color: $white;
+}

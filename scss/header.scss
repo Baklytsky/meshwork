@@ -1,0 +1,237 @@
+@import "mixins";
+@import "variables";
+
+.show-menu {
+  overflow: visible;
+  transition: all .4s linear;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  transition: overflow .4s ease-in;
+  z-index: 2;
+
+  .wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    @media (min-width: 768px) {
+      padding: 40px 0 40px;
+    }
+  }
+
+  //********************************************** Logo ************************************
+  .logo {
+    margin-right: 65px;
+    z-index: 5;
+    a {
+      font-size: $normal-plus;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+
+  //********************************************** Main menu ********************************
+  .main-menu {
+    width: 100%;
+    height: 506px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: transform 0.4s ease-in;
+    z-index: 3;
+    @media (min-width: 768px) {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      position: relative;
+      right: 0;
+      padding: 0;
+    }
+
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 82px;
+      @media (min-width: 768px) {
+        flex-direction: row;
+        padding-top: 0;
+      }
+    }
+    .menu-item {
+      padding-bottom: 50px;
+      @media (min-width: 768px) {
+        padding: 0 15px;
+      }
+
+      .menu-link {
+        font-size: $menu-link;
+        font-weight: 700;
+        color: $white;
+        transition: all .3s linear;
+        &:hover {
+          color: $aquamarine;
+        }
+      }
+    }
+
+    //******************************* Secondary menu ***************************************
+    .secondary-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .init-block, .language {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+      }
+      .init-block {
+        padding-bottom: 25px;
+        @media (min-width: 768px) {
+          padding-right: 13px;
+          padding-bottom: 0;
+        }
+        .log-in {
+          font-size: $log-in;
+          color: $white;
+          position: relative;
+          transition: all .3s linear;
+          &:hover {
+            color: $aquamarine;
+          }
+        }
+        .register-btn {
+          @include btn;
+          font-size: $sign-up;
+          font-weight: normal;
+          text-transform: uppercase;
+          width: 92px;
+          height: 39px;
+          border-radius: 51px;
+          margin: 0 9px;
+          cursor: pointer;
+          transition: all .3s linear;
+          &:hover {
+            @include btn-hover;
+          }
+        }
+      }
+
+      .language {
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 13px;
+          background-color: $white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        li:first-child {
+          padding-right: 6px;
+          padding-left: 0;
+        }
+        li:last-child {
+          padding-left: 6px;
+          padding-right: 0;
+        }
+        a {
+          font-size: $lang-item;
+          color: $silver;
+          transition: all .3s linear;
+          &:hover {
+            color: $aquamarine;
+          }
+        }
+        .active-language {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  //********************************************** Burger btn ********************************
+
+  .burger-icon {
+    width: 18px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+  }
+
+  .burger-icon-line {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: $white;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      background-color: $white;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    }
+  }
+
+  .burger-icon-line::before {
+    top: 5px;
+  }
+
+  .burger-icon-line::after {
+    top: -5px;
+  }
+
+  .burger-icon.burger-icon-active .burger-icon-line {
+    background-color: transparent;
+  }
+
+  .burger-icon.burger-icon-active .burger-icon-line::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  .burger-icon.burger-icon-active .burger-icon-line::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  //************************************** Toggle class to menu ***********************
+  .mobile-menu-active {
+    transform: translateX(-100%);
+  }
+}
+
