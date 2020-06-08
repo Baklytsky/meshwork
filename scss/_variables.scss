@@ -9,6 +9,36 @@ $gallery: #EAEAEA;
 $green-gradient: linear-gradient(111.91deg, #121212 0%, #2A5352 157.69%), #F6B84C;
 $alto: #D9D9D9;
 $shaft :#393939;
+$solution-gradient: linear-gradient(0deg, #121212, #121212),
+                    linear-gradient(0deg, #F0FAF9, #F0FAF9),
+                    linear-gradient(0deg, #F0F0F0, #F0F0F0),
+                    linear-gradient(155.43deg, #30243E 22.29%, #B13B4A 80.93%),
+                    linear-gradient(0deg, #2B2B2B, #2B2B2B), #F6B84C;
+$cards-melrose: linear-gradient(0deg, #C1B0FF, #C1B0FF),
+                linear-gradient(0deg, #93E5FF, #93E5FF);
+$cards-casablanca: linear-gradient(0deg, #F6B84C, #F6B84C),
+                    linear-gradient(0deg, #F0FAF9, #F0FAF9);
+$cards-french: linear-gradient(0deg, #B6FFFE, #B6FFFE);
+$slider-gradient: linear-gradient(0deg, rgba(22, 22, 22, 0.87) 0%, rgba(22, 22, 22, 0) 100%);
+$project-card-gradient: linear-gradient(0deg, #25282E, #25282E),
+                        linear-gradient(0deg, #151C28, #151C28),
+                        linear-gradient(0deg, #BCBDC2, #BCBDC2),
+                        linear-gradient(0deg, #EDF4F5, #EDF4F5), #E6F1F3;
+$project-last-card-gradient: linear-gradient(180deg, rgba(22, 22, 22, 0) 76.05%, #161616 100%);
+$newsletter-gradient: linear-gradient(0deg, #121212, #121212), #000000;
+$benefits-gradient: linear-gradient(0deg, #F0FAF9, #F0FAF9),
+                    linear-gradient(0deg, #F4F3FF, #F4F3FF),
+                    linear-gradient(0deg, #CBDEE3, #CBDEE3),
+                    linear-gradient(0deg, #BCBDC2, #BCBDC2),
+                    linear-gradient(0deg, #F0FAF9, #F0FAF9),
+                    linear-gradient(0deg, #F0F0F0, #F0F0F0),
+                    linear-gradient(158.47deg, #30243E 21.24%, #B13B4A 80.67%),
+                    linear-gradient(0deg, #2B2B2B, #2B2B2B), #F6B84C;
+$code-gray: #161616;
+$silver:#BCBCBC;
+$tundora: #454545;
+$tuna: #30353E;
+
 
 //************************************* Font size ************************************
 
@@ -17,8 +47,15 @@ $lang-item: 14px;
 $log-in: 15px;
 $normal: 16px;
 $menu-link: 18px;
+$card-description: 19px;
 $btn-size: 21px;
 $normal-plus: 24px;
+$benefits-title: 27px;
+$normal-description: 32px;
+$big-description: 38px;
+$card-headline: 42px;
 $fav-customer-description: 44px;
+$h3: 52px;
 $hero-headline: 68px;
-$fav-customer-headline: 102px;
+$fav-customer-headline: 92px;
+

@@ -110,7 +110,7 @@
         left: 0;
         top: 100%;
         right: 0;
-        margin: 10px 0;
+        margin: 16px 0;
         cursor: pointer;
         display: none;
         background: $gallery;
@@ -142,7 +142,6 @@
     //************************************* Search input **************************************
     .search-input {
       flex-grow: 2;
-      overflow: hidden;
       .search-form {
         position: relative;
         .search-text {
@@ -153,11 +152,30 @@
           border: none;
           padding-left: 5px;
         }
-        .search-text:-webkit-autofill {
-          -webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
-          -webkit-text-fill-color: #999 !important; /* цвет текста */
-          color: #000 !important; /* цвет текста */
+
+        //************************************* Autocomplete block ****************************
+        .autocomplete-list {
+          width: calc(100% - 218px);
+          background-color: $white;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          margin: 10px 0;
+          display: none;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.85);
+          .autocomplete-item {
+            padding: 10px 12px;
+            cursor: pointer;
+            p {
+              color: $black;
+            }
+          }
         }
+
+        .autocomplete-list.autocomplete-list-active {
+          display: block;
+        }
+
         .search-submit {
           width: 218px;
           height: 64px;
@@ -200,7 +218,7 @@
   }
 }
 
-//********************************************** Customers **************************************
+//********************************************** Customers Section ******************************
 //***********************************************************************************************
 
 #customers {
@@ -257,4 +275,432 @@
     }
   }
 }
+
+//********************************************** Section Solutions ******************************
+//***********************************************************************************************
+
+#solutions {
+  width: 100%;
+  background: $solution-gradient;
+  padding: 99px 0 92px;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: "";
+    width: 275px;
+    height: 441px;
+    background: url("../img/right-bottom-bg-element.png") no-repeat center;
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    width: 176px;
+    height: 311px;
+    background: url("../img/left-bottom-bg-element.png") no-repeat center;
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    z-index: 1;
+  }
+
+  //********************************************** Solutions text ***************************
+  .solutions-text {
+    width: 90%;
+    text-align: center;
+    padding-bottom: 45px;
+    margin: 0 auto;
+    .solutions-headline {
+      @include headline;
+    }
+    .solution-description {
+      font-size: $normal-plus;
+      color: $silver;
+    }
+  }
+
+  //********************************************** Solutions cards ***************************
+  .solutions-cards {
+    text-align: center;
+    .solutions-cards-headline {
+      font-size: $big-description;
+      font-weight: 500;
+      line-height: 46px;
+      z-index: 4;
+    }
+    .solutions-cards-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 17px 0 53px;
+      z-index: 4;
+
+      //********************************************** Card item *******************************
+      .solutions-cards-item {
+        width: 33%;
+        min-height: 389px;
+        padding: 46px 35px 28px;
+        margin: 0 10px;
+        box-sizing: border-box;
+        z-index: 4;
+        .card-number {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          span {
+            font-size: $big-description;
+            font-weight: 700;
+            color: $black;
+          }
+        }
+        .card-text {
+          text-align: left;
+          padding-top: 50px;
+          .card-headline {
+            font-size: $card-headline;
+            font-weight: 700;
+            line-height: 44px;
+            color: $black;
+            span {
+              display: block;
+            }
+          }
+          .card-description {
+            font-size: $card-description;
+            line-height: 27px;
+            color: $black;
+          }
+        }
+      }
+
+      //********************************************** Card`s BG *******************************
+      .solutions-cards-item:first-child {
+        background: $cards-melrose;
+      }
+      .solutions-cards-item:nth-child(2) {
+        background: $cards-casablanca;
+      }
+      .solutions-cards-item:nth-child(3) {
+        background: $cards-french;
+      }
+    }
+  }
+
+  //********************************************** Solutions btn ********************************
+  .solutions-btn {
+    @include btn;
+    width: 218px;
+    height: 64px;
+    display: block;
+    margin: 0 auto;
+    z-index: 4;
+    &:hover {
+      @include btn-hover;
+    }
+  }
+  .bg-element {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+  }
+  .second-bg-element {
+    position: absolute;
+    bottom: 6%;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+//********************************************** Digital section ********************************
+//***********************************************************************************************
+#digital {
+  background-color: $code-gray;
+  padding: 97px 0 143px;
+  //********************************************** Digital text block ***************************
+    .digital-text {
+      max-width: 870px;
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: 65px;
+      .digital-headline {
+        @include headline;
+      }
+      .digital-description {
+        font-size: $normal-description;
+        color: $silver;
+      }
+    }
+  //********************************************** Digital slider ********************************
+  .sliders {
+    padding-bottom: 50px;
+    .top-slider, .bottom-slider {
+      .slider-item {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: $slider-gradient;
+        }
+        img {
+          width: 100%;
+        }
+        .slide-title {
+          font-size: $normal-plus;
+          font-weight: 700;
+          color: $white;
+          position: absolute;
+          bottom: 11px;
+          left: 25px;
+          transition: all .3s linear;
+          &:hover {
+            color: $aquamarine;
+          }
+        }
+      }
+    }
+  }
+  //********************************************** Discover link *********************************
+  .discover-block {
+    text-align: center;
+    .discover-link {
+      @include discover-link;
+    }
+  }
+  //********************************************** Projects ***************************************
+  .projects {
+    display: flex;
+    justify-content: center;
+    padding-top: 125px;
+    position: relative;
+    &:after {
+      content: url("../img/digital-bg-element.png");
+      position: absolute;
+      top: 60px;
+      left: -50px;
+    }
+  }
+  //********************************************** Project text block *****************************
+  .project-text-block {
+    width: 35%;
+    padding: 50px 25px 0 0;
+    p {
+      font-size: $big-description;
+    }
+  }
+  //********************************************** Project list block *****************************
+  .project-list-block {
+    width: 65%;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    .project-list {
+      padding-bottom: 68px;
+    }
+    .project-item {
+      height: 127px;
+      display: flex;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      overflow: hidden;
+      img {
+        width: 147px;
+        height: 127px;
+      }
+      .project-card {
+        width: 100%;
+        flex-grow: 2;
+        background: $project-card-gradient;
+        padding: 20px 24px 20px 16px;
+      }
+      //********************************************** Project card header *****************************
+      .project-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .project-name {
+          font-size: $card-description;
+          font-weight: 700;
+          color: $white;
+          transition: all .3s linear;
+          &:hover {
+            color: $aquamarine;
+          }
+        }
+        .project-price {
+          font-size: 16px;
+          font-weight: 700;
+          &:before {
+            content: "$";
+          }
+        }
+      }
+      //********************************************** Project card text *****************************
+      .project-card-description {
+        padding: 12px 0 8px;
+        p {
+          font-size: $lang-item;
+          color: $silver;
+        }
+      }
+      //********************************************** Project card tags *****************************
+      .project-card-tags {
+        display: flex;
+        align-items: center;
+        .card-tag-item {
+          display: inline-block;
+          line-height: 28px;
+          padding-right: 4px;
+          a {
+            font-size: $sign-up;
+            font-weight: 700;
+            color: $white;
+            background-color: $tuna;
+            border-radius: 80px;
+            padding: 5px 12px;
+            transition: all .3s linear;
+
+            &:before {
+              content: "#";
+            }
+            &:hover {
+              color: $black;
+              background-color: $aquamarine;
+            }
+          }
+        }
+      }
+    }
+    //****************************** Project card last child gradient *****************************
+    .project-item:last-child {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $project-last-card-gradient;
+      }
+    }
+  }
+}
+
+//********************************************** Newsletter section ********************************
+//**************************************************************************************************
+#newsletter {
+  padding: 99px 0 96px;
+  background: url("../img/newsletter-bg.jpg") no-repeat center / cover;
+  .newsletter-headline {
+    @include headline;
+    text-transform: none;
+    padding-bottom: 20px;
+  }
+  .newsletter-form {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .newsletter-input, .newsletter-submit {
+    height: 64px;
+  }
+  .newsletter-input {
+    flex-grow: 2;
+    padding-left: 24px;
+    font-size: $menu-link;
+    color: $black;
+    border: none;
+  }
+  .newsletter-input::placeholder {
+    font-size: $menu-link;
+    color: $black;
+  }
+  .newsletter-submit {
+    font-size: $btn-size;
+    font-weight: 700;
+    color: $black;
+    background-color: $aquamarine;
+    border: 1px solid $aquamarine;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    padding: 0 62px;
+    transition: all .3s linear;
+    &:hover {
+      @include btn-hover;
+    }
+  }
+}
+
+//********************************************** Benefits section ********************************
+//************************************************************************************************
+#benefits {
+  background: $benefits-gradient;
+  padding: 101px 0 77px;
+  .benefits-headline {
+    @include headline;
+    color: $black;
+    padding-bottom: 30px;
+  }
+  .benefits-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .benefits-list-item {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .benefits-list-title {
+    font-size: $benefits-title;
+    color: $black;
+    padding: 20px 0 10px;
+  }
+  .benefits-list-description {
+    font-size: $normal;
+    color: $black;
+  }
+}
+
+
+//********************************************** Footer ******************************************
+//************************************************************************************************
+#footer {
+  background: $benefits-gradient;
+  .footer-menu {
+    border-top: 2px solid $black;
+    padding: 30px 0;
+  }
+  .menu-list {
+    display: flex;
+    align-items: center;
+  }
+  .footer-menu-item {
+    padding-right: 124px;
+  }
+  .footer-menu-item:last-child {
+    padding-right: 0;
+  }
+  .footer-menu-link {
+    font-size: $log-in;
+    font-weight: 700;
+    color: $black;
+    transition: all .3s linear;
+    &:hover {
+      color: $aquamarine;
+    }
+  }
+}
+
 

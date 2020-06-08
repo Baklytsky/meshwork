@@ -27,7 +27,8 @@ function headerOverflow () {
 //------------------------------- Search block ---------------------------------------
 
 let navigationSelect = document.querySelector('.status-selector'),
-    searchInput = document.querySelector('.search-text');
+    searchInput = document.querySelector('.search-text'),
+    autocompliteBlock = document.querySelector('.autocomplete-list');
 
                 //------------- Status selector ---------------------------------------
 function initSelect(elem) {
@@ -60,4 +61,64 @@ function initSelect(elem) {
 
 initSelect(navigationSelect);
 
-                //------------- Search input ---------------------------------------
+                //------------- Search autocomplite -----------------------------------
+function showAutocompliteBlock() {
+    searchInput.addEventListener('click', () => {
+        autocompliteBlock.classList.toggle('autocomplete-list-active')
+    })
+}
+showAutocompliteBlock();
+
+//------------------------------- Digital sliders ---------------------------------------
+//----------------------------------- Top slider ----------------------------------------
+
+jQuery(function ($) {
+    $(document).ready(function () {
+
+        $('.top-slider').owlCarousel({
+            lazyLoad: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            loop: true,
+            smartSpeed: 1500,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                800: {
+                    items: 4
+                }
+            }
+        });
+//----------------------------------- Bottom slider ----------------------------------------
+        $('.bottom-slider').owlCarousel({
+            lazyLoad: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 6500,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            loop: true,
+            smartSpeed: 1500,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                800: {
+                    items: 4
+                }
+            }
+        });
+    });
+});

@@ -2,7 +2,7 @@
 @mixin btn {
   font-family: Nunito, sans-serif;
   font-size: $btn-size;
-  font-weight: bold;
+  font-weight: 700;
   color: $black;
   background-color: $aquamarine;
   border: 1px solid $aquamarine;
@@ -13,4 +13,79 @@
 }
 @mixin btn-hover {
   color: $white;
+}
+
+@mixin headline {
+  font-size: $h3;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin btn-two {
+  font-family: Nunito, sans-serif;
+  font-size: $btn-size;
+  font-weight: bold;
+  color: $black;
+  background-color: $black;
+  border: 1px solid $aquamarine;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $aquamarine;
+    transform: scaleY(1);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover, &:focus, &:active {
+    color: $aquamarine;
+    &:before {
+      transform: scaleY(0);
+    }
+  }
+}
+
+@mixin discover-link {
+  display: inline-block;
+  font-size: $btn-size;
+  line-height: 31px;
+  color: $aquamarine;
+  border: 1px solid $tundora;
+  border-radius: 4px;
+  padding: 10px 55px 10px 40px;
+  position: relative;
+  transition: all .3s linear;
+  &:before {
+    content: "\51";
+    font-family: untitled-font-1, sans-serif;
+    color: $white;
+    font-size: $normal;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translate(0, -50%);
+    transition: all .3s linear;
+  }
+  &:hover {
+    color: $white;
+    border: 1px solid $aquamarine;
+    &:before {
+      transform: translate(30%, -50%);
+      color: $aquamarine;
+    }
+  }
 }
