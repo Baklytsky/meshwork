@@ -25,7 +25,7 @@
             <div class="main-menu">
                 <nav>
                     <ul class="menu-list">
-                        <li class="menu-item"><a href="#" class="menu-link">Creators</a></li>
+                        <li class="menu-item"><a href="creators.html" class="menu-link">Creators</a></li>
                         <li class="menu-item"><a href="#" class="menu-link">Projects</a></li>
                         <li class="menu-item"><a href="#" class="menu-link">Benefits</a></li>
                         <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
@@ -57,6 +57,88 @@
         </div>
     </div>
 </header>
+
+<!------------------------------- POP-UP`s -------------------------------->
+<!------------------------------------------------------------------------->
+
+<!------------------------------- Sign in --------------------------------->
+<div class="pop-up sign-up">
+    <div class="sign-up-pop-up">
+        <span class="icon-close-round close-x"></span>
+        <h3 class="pop-up-headline">Sign up</h3>
+        <form action="#" method="post">
+            <ul class="form-list">
+                <li class="form-item">
+                    <label for="name1">Name:</label>
+                    <input id="name1" type="text">
+                </li>
+                <li class="form-item">
+                    <label for="mail1">E-mail:</label>
+                    <input id="mail1" type="email">
+                </li>
+            </ul>
+        </form>
+        <button class="pop-up-btn">Sign up</button>
+        <p class="note">You already have account?</p>
+        <p class="note">Than you should <a href="#" class="sign-link-in">Sign in</a></p>
+    </div>
+</div>
+
+<!------------------------------- Sign up --------------------------------->
+<div class="pop-up sign-in">
+    <div class="sign-in-pop-up">
+        <span class="icon-close-round close-x"></span>
+        <h3 class="pop-up-headline">Sign in</h3>
+        <form action="#" method="post">
+            <ul class="form-list">
+                <li class="form-item">
+                    <label for="name2">Name:</label>
+                    <input id="name2" type="text">
+                </li>
+                <li class="form-item">
+                    <label for="mail2">E-mail:</label>
+                    <input id="mail2" type="email">
+                </li>
+            </ul>
+        </form>
+        <button class="pop-up-btn">Sign in</button>
+        <p class="note">No account yet?</p>
+        <p class="note">Than you should <a href="#" class="sign-link-up">Sign up</a></p>
+    </div>
+</div>
+
+<!------------------------------- Cookie Alert ---------------------------->
+<!------------------------------------------------------------------------->
+<div class="cookie-alert">
+    <h3 class="cookie-headline">We use cookies</h3>
+    <p class="cookie-description">
+        Our website uses cookies to make your browsing
+        experience better. By using our website you
+        agree to our use of cookies.
+    </p>
+    <ul class="cookie-link-list">
+        <li class="cookie-list-item">
+            <a href="#" class="cookie-link">Learn more</a>
+        </li>
+        <li class="cookie-list-item">
+            <button class="cookie-btn">Accept</button>
+        </li>
+    </ul>
+</div>
+<!------------------------------- Cookie Pop up ---------------------------->
+<div class="pop-up cookie">
+    <div class="cookie-pop-up">
+        <span class="icon-close-round close-x"></span>
+        <img src="img/icons/cookie.svg" alt="Cookies icon" class="cookies-icon">
+        <h3 class="pop-up-headline">What is cookies?</h3>
+        <p class="pop-up-description">
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt
+        </p>
+        <button class="pop-up-btn got-it">Got it</button>
+    </div>
+</div>
 
 <!------------------------------- Search section -------------------------->
 <!------------------------------------------------------------------------->
@@ -514,10 +596,7 @@
         <ul class="benefits-list">
             <!------------------------------- Benefits item -------------------------->
             <li class="benefits-list-item">
-                <picture>
-                    <source srcset="img/benefits-icons3.webp" type="image/webp">
-                    <img src="img/benefits-icons3.png" alt="Benefits icon">
-                </picture>
+                <img src="img/icons/benefits-icon1.svg" alt="Benefits icon" class="benefits-icons">
                 <h4 class="benefits-list-title">
                     High quality
                 </h4>
@@ -528,10 +607,7 @@
             </li>
             <!------------------------------- Benefits item -------------------------->
             <li class="benefits-list-item">
-                <picture>
-                    <source srcset="img/benefits-icons1.webp" type="image/webp">
-                    <img src="img/benefits-icons1.png" alt="Benefits icon">
-                </picture>
+                <img src="img/icons/benefits-icon2.svg" alt="Benefits icon" class="benefits-icons">
                 <h4 class="benefits-list-title">
                     Support
                 </h4>
@@ -541,10 +617,7 @@
             </li>
             <!------------------------------- Benefits item -------------------------->
             <li class="benefits-list-item">
-                <picture>
-                    <source srcset="img/benefits-icons2.webp" type="image/webp">
-                    <img src="img/benefits-icons2.png" alt="Benefits icon">
-                </picture>
+                <img src="img/icons/benefits-icon3.svg" alt="Benefits icon" class="benefits-icons">
                 <h4 class="benefits-list-title">
                     Experience
                 </h4>
@@ -554,10 +627,7 @@
             </li>
             <!------------------------------- Benefits item -------------------------->
             <li class="benefits-list-item">
-                <picture>
-                    <source srcset="img/benefits-icons3.webp" type="image/webp">
-                    <img src="img/benefits-icons3.png" alt="Benefits icon">
-                </picture>
+                <img src="img/icons/benefits-icon4.svg" alt="Benefits icon" class="benefits-icons">
                 <h4 class="benefits-list-title">
                     High quality
                 </h4>
@@ -590,5 +660,6 @@
         crossorigin="anonymous"></script>
 <script src="js/owl.carousel.min.js" defer></script>
 <script src="js/custom.js" defer></script>
+<script src="js/demonstration.js" defer></script>
 </body>
 </html>

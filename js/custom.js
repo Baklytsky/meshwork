@@ -26,9 +26,7 @@ function headerOverflow () {
 
 //------------------------------- Search block ---------------------------------------
 
-let navigationSelect = document.querySelector('.status-selector'),
-    searchInput = document.querySelector('.search-text'),
-    autocompliteBlock = document.querySelector('.autocomplete-list');
+let navigationSelect = document.querySelector('.status-selector');
 
                 //------------- Status selector ---------------------------------------
 function initSelect(elem) {
@@ -60,14 +58,6 @@ function initSelect(elem) {
 }
 
 initSelect(navigationSelect);
-
-                //------------- Search autocomplite -----------------------------------
-function showAutocompliteBlock() {
-    searchInput.addEventListener('click', () => {
-        autocompliteBlock.classList.toggle('autocomplete-list-active')
-    })
-}
-showAutocompliteBlock();
 
 //------------------------------- Digital sliders ---------------------------------------
 //----------------------------------- Top slider ----------------------------------------

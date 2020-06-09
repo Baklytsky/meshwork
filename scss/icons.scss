@@ -158,9 +158,6 @@
 .icon-thumbnails:before {
   content: "\4e";
 }
-.icon-down-open-big:before {
-  content: "\4f";
-}
 .icon-left-open-big:before {
   content: "\50";
 }
@@ -356,9 +353,21 @@
 .icon-link-1:before {
   content: "\e00b";
 }
-.icon-telegram:before {
+.icon-paper-plane:before {
   content: "\e00c";
 }
 .icon-paper-plane-o:before {
   content: "\e00d";
+}
+.icon-angle-right:before {
+  content: "\e00e";
+}
+.icon-angle-left:before {
+  content: "\e00f";
+}
+.icon-down-open-big:before {
+  content: "\4f";
+}
+.icon-close-round:before {
+  content: "\e010";
 }
