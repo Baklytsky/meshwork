@@ -6,11 +6,459 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Creators</title>
-    <link rel="stylesheet" href="./css/business-dashboard.css">
+    <link rel="stylesheet" href="./css/creators.css">
 </head>
 <body>
-<section id="business-dashboard">
+<!------------------------------- DASHBOARD NAVIGATION -------------------->
+<!------------------------------------------------------------------------->
+<nav id="dashboard-sidebar" class="dashboard-nav">
 
+    <!------------------------------- LOGO -------------------------------->
+    <div class="logo">
+        <a href="index.html">Meshwork</a>
+    </div>
+
+    <!------------------------------- USER DATA --------------------------->
+    <ul class="user-data-list">
+        <li class="user-data-item">
+            <picture>
+                <source srcset="img/user-photo.webp" type="image/webp">
+                <img src="img/user-photo.jpg" alt="User photo" title="User photo" class="user-photo">
+            </picture>
+        </li>
+        <li class="user-data-item">
+            <h3 class="user-name">Alex</h3>
+        </li>
+        <li class="user-data-item">
+            <span class="user-meshes">80 meshes</span>
+        </li>
+    </ul>
+
+    <!------------------------------- SIDEBAR MENU ------------------------->
+    <ul class="sidebar-menu">
+        <li class="sidebar-menu-item active-sidebar-menu">
+            <a href="#" class="sidebar-menu-link">
+                Dashboard
+                <img src="img/icons/dashboard.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+            </a>
+        </li>
+        <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">
+                Inbox
+                <img src="img/icons/inbox.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                <span class="inbox-counter">4 new</span>
+            </a>
+        </li>
+        <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">
+                My briefs
+                <img src="img/icons/my-briefs.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+            </a>
+        </li>
+    </ul>
+
+    <!------------------------------- ACCOUNT BLOCK ------------------------->
+    <div class="account-block">
+        <ul class="sidebar-menu account-menu">
+            <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link account-link">
+                    My account
+                    <span class="account-mail">aleksdesigner@.com</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link log-out-link">
+                    log out
+                    <img src="img/icons/log-out-icon.svg" alt="Log out icon" class="log-out-icon">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!------------------------------- DASHBOARD SECTION ----------------------->
+<!------------------------------------------------------------------------->
+<section id="dashboard-section">
+
+    <!------------------------------- DASHBOARD HEADER ---------------->
+    <div class="dashboard-section-header">
+        <div class="dashboard-section-wrapper">
+
+            <!----------------------- DASHBOARD HEADER TOP ---------------->
+            <div class="dashboard-header-top">
+                <ul class="pages-list">
+                    <li class="pages-item">
+                        <h2>
+                            <a href="#" class="pages-item-link active-page-link">Creators</a>
+                        </h2>
+                    </li>
+                    <li class="pages-item">
+                        <h2>
+                            <a href="#" class="pages-item-link">Projects</a>
+                        </h2>
+                    </li>
+                </ul>
+                <div class="creator">
+                    <span class="creator-text">Create brief</span>
+                    <span class="creator-plus icon-android-add"></span>
+                </div>
+            </div>
+
+            <!----------------------- DASHBOARD HEADER BOTTOM -------------->
+            <div class="dashboard-header-bottom">
+                <ul class="selectors-list">
+                    <li class="selectors-items">
+                        <button class="search-btn">
+                            <img src="img/icons/search-icon.svg" alt="Search icon" class="search-icon">
+                        </button>
+                    </li>
+                    <li class="selectors-items">
+                        <div class="roles-selector">
+                            <div class="dropholder">
+                                <div class="dropdown">
+                                    <p class="holder">Roles</p>
+                                    <img src="img/icons/selector-icon.svg" alt="Selector icon" class="selector-icon">
+                                </div>
+                                <ul class="dropdownOption">
+                                    <li><p>Status 1</p></li>
+                                    <li><p>Status 2</p></li>
+                                    <li><p>Status 3</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="selectors-items">
+                        <div class="location-selector">
+                            <div class="dropholder">
+                                <div class="dropdown">
+                                    <p class="holder">Location</p>
+                                    <img src="img/icons/selector-icon.svg" alt="Selector icon" class="selector-icon">
+                                </div>
+                                <ul class="dropdownOption">
+                                    <li><p>Status 1</p></li>
+                                    <li><p>Status 2</p></li>
+                                    <li><p>Status 3</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-section-wrapper">
+        <!----------------------- DASHBOARD SECTION CONTENT ---------------->
+        <div class="dashboard-section-content">
+            <!----------------------- CREATORS LIST ------------------------>
+            <ul class="creators-list">
+
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!----------------------- CREATOR ITEM --------------------->
+                <li class="creator-card-item">
+                    <picture>
+                        <source srcset="img/creators-image.webp" type="image/webp">
+                        <img src="img/creators-image.webp" alt="Creator image" title="Creator image"
+                             class="creator-image">
+                    </picture>
+                    <div class="card-content">
+                        <!-------------- CREATOR INFORMATION --------------->
+                        <div class="creator-data">
+                            <h3 class="creator-name">
+                                Max Holden
+                            </h3>
+                            <address>
+                                <p class="creator-address">
+                                    Minneapolis, Minnesota
+                                </p>
+                            </address>
+                        </div>
+                        <!-------------- CREATOR TAG LIST ------------------->
+                        <ul class="tags-list">
+                            <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                            <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                        </ul>
+                        <!-------------- LEARN MORE & ASK PRICE --------------->
+                        <ul class="card-links-list">
+                            <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                            <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

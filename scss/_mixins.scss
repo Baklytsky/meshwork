@@ -1,4 +1,14 @@
 @import "variables";
+
+@mixin logo {
+  a {
+    font-size: $normal-plus;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
+
 @mixin btn {
   font-family: Nunito, sans-serif;
   font-size: $btn-size;
@@ -83,5 +93,49 @@
   transition: color .3s linear;
   &:hover {
     color: $aquamarine;
+  }
+}
+
+@mixin dashboard-card-headline {
+  font-size: $card-description;
+  font-weight: 700;
+  color: $black;
+}
+
+@mixin dashboard-card-description {
+  font-size: $lang-item;
+  color: $black;
+}
+
+@mixin tag-link {
+  font-size: $inbox-counter;
+  font-weight: 700;
+  color: $black;
+  background-color: $humming-bird;
+  padding: 5px 8px;
+  border-radius: 80px;
+  transition: background-color .3s linear;
+  &:before {
+    content: "#";
+  }
+  &:hover {
+    background-color: darken($humming-bird, 10%);
+  }
+}
+
+@mixin card-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 34px;
+  text-align: center;
+  font-size: $lang-item;
+  color: $black;
+  background-color: $athens;
+  border-radius: 4px;
+  transition: background-color .3s linear;
+  &:hover {
+    background-color: $athens-dark;
   }
 }

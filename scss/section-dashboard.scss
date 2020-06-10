@@ -1,0 +1,251 @@
+@import "mixins";
+@import "variables";
+
+//********************************************** Dashboard section ******************************
+//***********************************************************************************************
+#dashboard-section {
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  background: $dashboard-section-bg;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  z-index: 2;
+  //************************************* Dashboard section wrapper ******************************
+  .dashboard-section-wrapper {
+    max-width: 940px;
+    position: relative;
+    margin: 0 auto;
+  }
+  //**************************************** Dashboard section header ****************************
+  .dashboard-section-header {
+    padding-top: 64px;
+    background: $dashboard-section-bg;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  //*********************************** Dashboard section header top *****************************
+  .dashboard-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $mystic;
+
+    .pages-list {
+      display: flex;
+      align-items: center;
+
+      .pages-item-link {
+        position: relative;
+        font-size: $normal-description;
+        font-weight: 500;
+        color: $waterloo;
+        margin-right: 20px;
+      }
+
+      .active-page-link {
+        color: $black;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $tundora;
+          position: absolute;
+          bottom: -12px;
+          right: 0;
+        }
+      }
+    }
+    .creator {
+      position: relative;
+      padding: 8px 0;
+      border-radius: 4px;
+      overflow: hidden;
+      .creator-text {
+        font-size: $lang-item;
+        font-weight: 700;
+        color: $black;
+        background-color: $aquamarine;
+        padding: 10px 55px 10px 16px;
+
+      }
+      .creator-plus {
+        font-size: $normal;
+        background-color: $aquamarine-hover;
+        padding: 12px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+      }
+    }
+  }
+  //*********************************** Dashboard section header bottom *****************************
+  .dashboard-header-bottom {
+    padding: 24px 0 40px;
+    .selectors-list {
+      display: flex;
+      align-items: center;
+      .selectors-items {
+        padding-right: 16px;
+      }
+      .selectors-items:last-child {
+        padding-right: 0;
+      }
+      //*********************************** Search **************************************************
+      .search-btn {
+        background-color: $white;
+        border: 1px solid $alto;
+        box-sizing: border-box;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+        border-radius: 4px;
+        padding: 10px 10px 7px;
+        cursor: pointer;
+      }
+
+      //*********************************** Selectors ************************************************
+      .roles-selector, .location-selector {
+
+        .dropdown, .dropholder {
+          background-color: $white;
+        }
+
+        .dropdown {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $white;
+          position: relative;
+          cursor: pointer;
+
+          .holder {
+            font-size: $lang-item;
+            color: $black;
+            border: 1px solid $alto;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+            border-radius: 4px;
+            padding: 7px 34px 7px 16px;
+          }
+
+          .selector-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            transition: transform .3s linear;
+
+            &:before {
+              font-weight: 700;
+            }
+          }
+
+          &.active + .dropdownOption {
+            display: block;
+          }
+        }
+        .active {
+          .selector-icon {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+        .dropholder {
+          width: 100%;
+          height: 100%;
+          color: $black;
+          position: relative;
+        }
+        .dropdownOption {
+          position: absolute;
+          left: 0;
+          top: 100%;
+          right: 0;
+          margin: 16px 0;
+          cursor: pointer;
+          display: none;
+          background: $white;
+          z-index: 5;
+          overflow: hidden;
+
+          li {
+            text-align: center;
+            color: $black;
+            border-bottom: 2px solid $white;
+
+            p {
+              font-weight: bold;
+              line-height: 52px;
+            }
+
+            &:hover:not(.current) {
+              color: $aquamarine;
+            }
+          }
+
+          .current {
+            background-color: $aquamarine-hover;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  //*********************************** Section content **************************************
+  .dashboard-section-content {
+    //*********************************** Creators list **************************************
+    .creators-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .creator-card-item {
+        width: 32%;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .creator-data {
+        border-bottom: 1px solid $alto;
+        padding-bottom: 6px;
+      }
+      .creator-image {
+        width: 100%;
+        height: auto;
+      }
+      .card-content {
+        padding: 16px;
+      }
+      .creator-name {
+        @include dashboard-card-headline;
+      }
+      .creator-address {
+        @include dashboard-card-description;
+      }
+      .tags-list {
+        padding: 6px 0 16px;
+        .tag-item {
+          display: inline-block;
+          padding: 6px 4px;
+          .tag-link {
+            @include tag-link;
+          }
+        }
+      }
+      .card-links-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .card-link {
+          @include card-btn;
+        }
+      }
+    }
+  }
+}
+

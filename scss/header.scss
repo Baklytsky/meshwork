@@ -27,12 +27,7 @@ header {
   .logo {
     margin-right: 65px;
     z-index: 5;
-    a {
-      font-size: $normal-plus;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: $white;
-    }
+    @include logo;
   }
 
   //********************************************** Main menu ********************************
