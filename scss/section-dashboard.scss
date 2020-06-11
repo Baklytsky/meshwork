@@ -111,11 +111,11 @@
       //*********************************** Selectors ************************************************
       .roles-selector, .location-selector {
 
-        .dropdown, .dropholder {
+        .dropdown, .dropdown-roles, .dropholder-roles {
           background-color: $white;
         }
 
-        .dropdown {
+        .dropdown, .dropdown-roles {
           width: 100%;
           display: flex;
           justify-content: center;
@@ -144,52 +144,99 @@
               font-weight: 700;
             }
           }
-
-          &.active + .dropdownOption {
-            display: block;
-          }
         }
         .active {
           .selector-icon {
             transform: translateY(-50%) rotate(180deg);
           }
+          .dropdownOption-roles {
+            display: block;
+          }
         }
-        .dropholder {
+        .dropholder-roles {
           width: 100%;
           height: 100%;
           color: $black;
           position: relative;
         }
-        .dropdownOption {
+        .dropdownOption-roles {
+          display: none;
+          width: 300px;
           position: absolute;
           left: 0;
           top: 100%;
           right: 0;
-          margin: 16px 0;
-          cursor: pointer;
-          display: none;
           background: $white;
-          z-index: 5;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 4px;
+          margin: 16px 0;
+          padding: 16px;
+          cursor: pointer;
           overflow: hidden;
+          z-index: 5;
 
-          li {
-            text-align: center;
-            color: $black;
-            border-bottom: 2px solid $white;
-
-            p {
-              font-weight: bold;
-              line-height: 52px;
+          .roles-search-block {
+            position: relative;
+            margin-bottom: 6px;
+            overflow: hidden;
+            .roles-search {
+              width: 100%;
+              border: 1px solid $mystic;
+              box-sizing: border-box;
+              border-radius: 4px;
+              padding: 10px 16px;
+              &::placeholder {
+                color: $black;
+              }
             }
-
-            &:hover:not(.current) {
-              color: $aquamarine;
+            .roles-search-btn {
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+              background-color: transparent;
+              padding: 15px;
+              border: none;
+              cursor: pointer;
             }
           }
 
-          .current {
-            background-color: $aquamarine-hover;
-            color: $black;
+          .checkbox-item {
+            padding: 6px 0;
+          }
+          .roles-checkbox {
+            display: none;
+            cursor: pointer;
+          }
+          label {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            &:after {
+              content:'';
+              -webkit-appearance: none;
+              background-color: transparent;
+              border: 1px solid $mystic;
+              border-radius: 4px;
+              padding: 10px;
+              display: inline-block;
+              position: relative;
+              vertical-align: middle;
+              cursor: pointer;
+            }
+          }
+          .checkbox-item input:checked + label:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3px;
+            right: 7px;
+            width: 6px;
+            height: 8px;
+            border: solid $tundora;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
           }
         }
       }

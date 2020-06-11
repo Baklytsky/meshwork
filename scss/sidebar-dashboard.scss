@@ -16,47 +16,58 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   .dashboard-nav {
     min-height: 100vh;
     position: sticky;
     top: 0;
     left: 0;
   }
+
   .logo {
     text-align: center;
     @include logo;
     padding: 28px 0 20px;
   }
+
   .user-data-list {
     border-bottom: 1px dashed $abbey;
     padding-bottom: 24px;
     margin: 0 24px;
+
     .user-data-item {
       text-align: center;
+
       .user-photo {
         width: 70px;
         height: 70px;
         border-radius: 50%;
       }
+
       .user-name {
         font-weight: bold;
       }
+
       .user-meshes {
         color: $fresh-pass;
       }
     }
   }
+
   .sidebar-menu {
     flex-grow: 2;
     padding-top: 30px;
+
     .sidebar-menu-item {
       position: relative;
+
       .sidebar-menu-icon {
         position: absolute;
         top: 50%;
         left: 41px;
         transform: translateY(-50%);
       }
+
       .sidebar-menu-link {
         font-size: $menu-link;
         font-weight: 700;
@@ -64,34 +75,111 @@ body {
         display: block;
         padding: 17px 0 17px 73px;
       }
+
       .inbox-counter {
         font-size: $inbox-counter;
         color: $fresh-pass;
         padding-left: 10px;
       }
+
       &:hover {
         background-color: $bunker;
       }
+
       .account-link {
         padding: 9px 0 9px 57px;
       }
+
       .account-mail {
         font-size: $lang-item;
         font-weight: 500;
         color: $silver;
       }
+
       .log-out-link {
         padding: 17px 0 17px 57px;
       }
+
       .log-out-icon {
         position: absolute;
         top: 50%;
         right: 107px;
         transform: translateY(-50%);
       }
+
+      //******************************** Sub menu block ******************************
+      .sub-menu-block {
+        min-width: 174px;
+        background-color: $white;
+        position: absolute;
+        top: -350px;
+        left: 37px;
+        transform: translateX(-150%);
+        box-shadow: 0 3px 24px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        z-index: 3;
+        transition: transform .4s linear;
+
+        .user-sub-info {
+          display: flex;
+          align-items: center;
+          padding: 10px 8px;
+          border-bottom: 1px solid $mystic;
+        }
+
+        //******************************** User info block ******************************
+        .user-sub-data {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .user-sub-name {
+            font: 700 $log-in sans-serif;
+            color: $black;
+          }
+
+          .user-sub-nickname {
+            font: 500 $inbox-counter sans-serif;
+            color: $dove-gray;
+          }
+        }
+
+        .user-min-photo {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+        }
+
+        //******************************** Edit profile ******************************
+        .edit-profile {
+          font: 700 $log-in sans-serif;
+          color: $black;
+          padding: 12px 0 12px 24px;
+          display: block;
+          border-bottom: 1px solid $mystic;
+        }
+
+        //******************************** Sub menu list ******************************
+        .sub-menu-list {
+          .sub-menu-link {
+            font-size: $log-in;
+            color: $black;
+            padding: 8px 0 8px 24px;
+            display: block;
+          }
+          .faq {
+            text-transform: uppercase;
+          }
+        }
+      }
+      .active-sub-menu {
+        transform: translateX(0%);
+      }
     }
+
     .active-sidebar-menu {
       background-color: $bunker;
+
       &:before {
         content: "";
         display: block;
@@ -104,9 +192,11 @@ body {
       }
     }
   }
+
   .account-block {
     width: 110%;
     background-color: $dashboard-bg-dark;
+
     .account-menu {
       padding-top: 15px;
     }

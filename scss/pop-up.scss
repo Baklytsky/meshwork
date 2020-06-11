@@ -1,0 +1,156 @@
+@import "mixins";
+@import "variables";
+
+.pop-up {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .pop-up-window {
+    @include pop-up-window;
+  }
+
+  .close-x {
+    @include close-x;
+  }
+
+  .pop-up-headline {
+    @include pop-up-headline;
+    text-transform: uppercase;
+    padding-bottom: 17px;
+  }
+  .pop-up-title {
+    font-size: $card-description;
+    color: $black;
+  }
+
+  .form-list {
+    .form-item {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 24px;
+
+      label {
+        font-size: $normal;
+        font-weight: 600;
+        color: $black;
+        padding-bottom: 8px;
+      }
+
+      input {
+        font-weight: 600;
+        line-height: 40px;
+        background: $pop-up-input-gradient;
+        border: 1px solid $mystic;
+        border-radius: 4px;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .pop-up-btn {
+    @include btn;
+    font-size: $normal;
+    padding: 14px 41px;
+    margin-bottom: 24px;
+    &:hover {
+      @include btn-hover;
+    }
+  }
+
+  .note {
+    font-size: $lang-item;
+    color: $black;
+  }
+  .pop-up-description {
+    font-size: $card-description;
+    color: $black;
+    padding: 0 30px 24px;
+  }
+  .cookies-icon {
+    width: 56px;
+    height: 68px;
+  }
+  .sign-link-up, .sign-link-in  {
+    font-size: $lang-item;
+    font-weight: 700;
+    line-height: 20px;
+    color: $sign-link;
+    text-decoration: underline;
+  }
+  .icon-area {
+    width: 86px;
+    height: 86px;
+    margin: 8px auto;
+    border-radius: 50%;
+    background-color: $alabaster;
+    position: relative;
+    .pop-up-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .support-textarea {
+    max-width: 100%;
+    max-height: 250px;
+    background-color: $alabaster;
+    border: 1px solid $alto;
+    margin-bottom: 16px;
+  }
+  .contact-after-icon {
+    &:after {
+      content: "🤙";
+    }
+  }
+  .contact-info {
+    width: 254px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-bottom: 1px solid $alto;
+    margin: 0 auto;
+    padding: 0 0 17px 35px;
+    box-sizing: border-box;
+  }
+  .address-info {
+    width: 254px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 17px 0 17px 35px;
+    box-sizing: border-box;
+    span {
+      font: normal $card-description sans-serif;
+      line-height: 28px;
+      color: $black;
+    }
+    .street-bold {
+      display: block;
+      font-weight: bold;
+    }
+  }
+  .pop-up-mail {
+    font: normal 700 $card-description sans-serif;
+    line-height: 28px;
+    color: $aquamarine-hover;
+  }
+  .pop-up-phone {
+    font: normal $card-description sans-serif;
+    line-height: 28px;
+    color: $black;
+  }
+}
+.sign-in, .sign-up, .cookie,
+.faq-pop-up, .terms-pop-up,
+.privacy-pop-up, .support-pop-up,
+.message-pop-up, .contact-us-pop-up {
+  display: none;
+}
