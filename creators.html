@@ -241,11 +241,27 @@
             <!----------------------- DASHBOARD HEADER BOTTOM -------------->
             <div class="dashboard-header-bottom">
                 <ul class="selectors-list">
+                    <!----------------------- Search selector -------------->
                     <li class="selectors-items">
-                        <button class="search-btn">
-                            <img src="img/icons/search-icon.svg" alt="Search icon" class="search-icon">
-                        </button>
+                        <div class="search-selector">
+                            <div class="dropholder-search">
+                                <button class="dropdown-search-btn">
+                                    <img src="img/icons/search-icon.svg" alt="Search icon" class="search-icon">
+                                </button>
+                                <div class="dropdownOption-search">
+                                    <form action="#" method="GET">
+                                        <div class="search-block">
+                                            <input type="search" placeholder="Search" class="search-input">
+                                            <button type="submit" class="main-search-btn">
+                                                <img src="img/icons/search-icon.svg" alt="Search icon">
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </li>
+                    <!----------------------- Roles selector -------------->
                     <li class="selectors-items">
                         <div class="roles-selector">
                             <div class="dropholder-roles">
@@ -258,24 +274,24 @@
                                         <div class="roles-search-block">
                                             <input type="search" placeholder="Search" class="roles-search">
                                             <button type="submit" class="roles-search-btn">
-                                                <img src="img/icons/search-icon.svg" alt="Search icon" class="roles-search-icon">
+                                                <img src="img/icons/search-icon.svg" alt="Search icon">
                                             </button>
                                         </div>
                                         <ul>
                                             <li class="checkbox-item">
-                                                <input type="checkbox" id="videographer" name="roles" value="sleep" class="roles-checkbox">
+                                                <input type="checkbox" id="videographer" name="roles" value="videographer" class="checkbox">
                                                 <label for="videographer">videographer</label>
                                             </li>
                                             <li class="checkbox-item">
-                                                <input type="checkbox" id="director" name="roles" value="play with friends" class="roles-checkbox">
+                                                <input type="checkbox" id="director" name="roles" value="director" class="checkbox">
                                                 <label for="director">director</label>
                                             </li>
                                             <li class="checkbox-item">
-                                                <input type="checkbox" id="documentary" name="roles" value="fishing" class="roles-checkbox">
+                                                <input type="checkbox" id="documentary" name="roles" value="documentary" class="checkbox">
                                                 <label for="documentary">documentary</label>
                                             </li>
                                             <li class="checkbox-item">
-                                                <input type="checkbox" id="cameraman" name="roles" value="play games" class="roles-checkbox">
+                                                <input type="checkbox" id="cameraman" name="roles" value="cameraman" class="checkbox">
                                                 <label for="cameraman">cameraman</label>
                                             </li>
                                         </ul>
@@ -284,18 +300,62 @@
                             </div>
                         </div>
                     </li>
+                    <!----------------------- Location selector -------------->
                     <li class="selectors-items">
                         <div class="location-selector">
-                            <div class="dropholder">
-                                <div class="dropdown">
+                            <div class="dropholder-location">
+                                <div class="dropdown-location">
                                     <p class="holder">Location</p>
                                     <img src="img/icons/selector-icon.svg" alt="Selector icon" class="selector-icon">
                                 </div>
-<!--                                <ul class="dropdownOption">-->
-<!--                                    <li><p>Status 1</p></li>-->
-<!--                                    <li><p>Status 2</p></li>-->
-<!--                                    <li><p>Status 3</p></li>-->
-<!--                                </ul>-->
+                                <div class="dropdownOption-location">
+                                    <form action="#" method="GET">
+                                        <p class="selector-title">Country</p>
+                                        <div class="location-search-block">
+                                            <input type="search" placeholder="Search" class="location-search">
+                                            <button type="submit" class="location-search-btn">
+                                                <img src="img/icons/search-icon.svg" alt="Search icon">
+                                            </button>
+                                        </div>
+                                        <ul>
+                                            <li class="checkbox-item">
+                                                <input type="checkbox" id="ukraine" name="country" value="Ukraine" class="checkbox">
+                                                <label for="ukraine">Ukraine</label>
+                                            </li>
+                                            <li class="checkbox-item">
+                                                <input type="checkbox" id="usa" name="country" value="USA" class="checkbox">
+                                                <label for="usa">USA</label>
+                                            </li>
+                                            <li class="checkbox-item">
+                                                <input type="checkbox" id="canada" name="country" value="Canada" class="checkbox">
+                                                <label for="canada">Сanada</label>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                    <form action="#" method="GET">
+                                        <p class="selector-title">State/Province</p>
+                                        <div class="location-search-block">
+                                            <input type="search" placeholder="Search" class="location-search">
+                                            <button type="submit" class="location-search-btn">
+                                                <img src="img/icons/search-icon.svg" alt="Search icon">
+                                            </button>
+                                        </div>
+                                        <ul>
+                                            <li class="checkbox-item">
+                                                <input type="checkbox" id="kyiv" name="city" value="Kyiv" class="checkbox">
+                                                <label for="kyiv">Kyiv</label>
+                                            </li>
+                                            <li class="checkbox-item">
+                                                <input type="checkbox" id="new-york" name="city" value="New york" class="checkbox">
+                                                <label for="new-york">New york</label>
+                                            </li>
+                                            <li class="checkbox-item">
+                                                <input type="checkbox" id="vancouver" name="city" value="Vancouver" class="checkbox">
+                                                <label for="vancouver">Vancouver</label>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </li>

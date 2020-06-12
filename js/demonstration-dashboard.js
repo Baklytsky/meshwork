@@ -51,11 +51,30 @@ supportSubmit.addEventListener('click', ()=> {
     messagePopUp.style.display = 'block'
 })
 
-//----------------------------------- Selectors -----------------------------------
+//----------------------------------- Selectors -------------------------------
 
-let dropholder = document.querySelector('.dropholder-roles'),
-    dropdownRoles = document.querySelector('.dropdown-roles');
+let dropholderRoles = document.querySelector('.dropholder-roles'),
+    dropdownRoles = document.querySelector('.dropdown-roles'),
+    dropholderLocation = document.querySelector('.dropholder-location'),
+    dropdownLocation = document.querySelector('.dropdown-location'),
+    dropholderSearch = document.querySelector('.dropholder-search'),
+    dropdownSearch = document.querySelector('.dropdown-search-btn');
 
+//----------------------------------- Roles -----------------------------------
 dropdownRoles.addEventListener('click', ()=> {
-    dropholder.classList.toggle('active')
+    dropholderRoles.classList.toggle('active-roles')
+    dropholderLocation.classList.remove('active-location')
+    dropholderSearch.classList.remove('active-search')
+});
+//----------------------------------- Location ---------------------------------
+dropdownLocation.addEventListener('click', ()=> {
+    dropholderLocation.classList.toggle('active-location')
+    dropholderRoles.classList.remove('active-roles')
+    dropholderSearch.classList.remove('active-search')
+});
+//----------------------------------- Search -----------------------------------
+dropdownSearch.addEventListener('click', ()=> {
+    dropholderSearch.classList.toggle('active-search')
+    dropholderRoles.classList.remove('active-roles')
+    dropholderLocation.classList.remove('active-location')
 });
