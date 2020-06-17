@@ -61,20 +61,28 @@ let dropholderRoles = document.querySelector('.dropholder-roles'),
     dropdownSearch = document.querySelector('.dropdown-search-btn');
 
 //----------------------------------- Roles -----------------------------------
-dropdownRoles.addEventListener('click', ()=> {
-    dropholderRoles.classList.toggle('active-roles')
-    dropholderLocation.classList.remove('active-location')
-    dropholderSearch.classList.remove('active-search')
-});
+if (dropdownRoles) {
+    dropdownRoles.addEventListener('click', ()=> {
+        dropholderRoles.classList.toggle('active-roles')
+        dropholderLocation.classList.remove('active-location')
+        dropholderSearch.classList.remove('active-search')
+    });
+}
+
 //----------------------------------- Location ---------------------------------
-dropdownLocation.addEventListener('click', ()=> {
-    dropholderLocation.classList.toggle('active-location')
-    dropholderRoles.classList.remove('active-roles')
-    dropholderSearch.classList.remove('active-search')
-});
+if (dropdownLocation) {
+    dropdownLocation.addEventListener('click', ()=> {
+        dropholderLocation.classList.toggle('active-location')
+        dropholderRoles.classList.remove('active-roles')
+        dropholderSearch.classList.remove('active-search')
+    });
+}
+
 //----------------------------------- Search -----------------------------------
-dropdownSearch.addEventListener('click', ()=> {
-    dropholderSearch.classList.toggle('active-search')
-    dropholderRoles.classList.remove('active-roles')
-    dropholderLocation.classList.remove('active-location')
-});
+if (dropdownSearch) {
+    dropdownSearch.addEventListener('click', ()=> {
+        dropholderSearch.classList.toggle('active-search')
+        dropholderRoles.classList.remove('active-roles')
+        dropholderLocation.classList.remove('active-location')
+    });
+}

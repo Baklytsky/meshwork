@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="./css/creators.css">
+</head>
+<body>
+
+<!------------------------------- DASHBOARD BLOCK ------------------------->
+<!------------------------------------------------------------------------->
+<div class="dashboard-block">
+    <!------------------------------- DASHBOARD NAVIGATION -------------------->
+    <!------------------------------------------------------------------------->
+    <nav id="dashboard-sidebar" class="dashboard-nav">
+
+        <!------------------------------- LOGO -------------------------------->
+        <div class="logo">
+            <a href="index.html">Meshwork</a>
+        </div>
+
+        <!------------------------------- USER DATA --------------------------->
+        <ul class="user-data-list">
+            <li class="user-data-item">
+                <picture>
+                    <source srcset="img/user-photo.webp" type="image/webp">
+                    <img src="img/user-photo.jpg" alt="User photo" title="User photo" class="user-photo">
+                </picture>
+            </li>
+            <li class="user-data-item">
+                <h3 class="user-name">Alex</h3>
+            </li>
+            <li class="user-data-item">
+                <span class="user-meshes">80 meshes</span>
+            </li>
+        </ul>
+
+        <!------------------------------- SIDEBAR MENU ------------------------->
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                <a href="business-cabinet.html" class="sidebar-menu-link">
+                    Dashboard
+                    <img src="img/icons/dashboard.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link">
+                    Inbox
+                    <img src="img/icons/inbox.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                    <span class="inbox-counter">4 new</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link">
+                    My briefs
+                    <img src="img/icons/my-briefs.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+        </ul>
+
+        <!------------------------------- ACCOUNT BLOCK ------------------------->
+        <div class="account-block">
+            <ul class="sidebar-menu account-menu">
+                <!------------------------------- My account ------------------------->
+                <li class="sidebar-menu-item active-sidebar-menu">
+                    <a href="#" class="sidebar-menu-link account-link">
+                        My account
+                        <span class="account-mail">aleksdesigner@.com</span>
+                    </a>
+
+                    <!------------------------------- MY ACCOUNT SUB MENU ------------------------->
+                    <div class="sub-menu-block">
+
+                        <!------------------------------- User info ------------------------->
+                        <div class="user-sub-info">
+                            <picture>
+                                <source srcset="img/user-photo.webp" type="image/webp">
+                                <img src="img/user-photo.jpg" alt="User photo" title="User photo"
+                                     class="user-min-photo">
+                            </picture>
+                            <ul class="user-sub-data">
+                                <li><h4 class="user-sub-name">Alex</h4></li>
+                                <li><span class="user-sub-nickname">@aleksdesigner</span></li>
+                            </ul>
+                        </div>
+
+                        <!------------------------------- Edit Profile ------------------------->
+
+                        <a href="#" class="edit-profile">Edit profile</a>
+
+                        <!------------------------------- Sub menu list ------------------------->
+                        <ul class="sub-menu-list">
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link faq">Faq</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link terms">Terms of use</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link privacy">Privacy policy</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link support">Support</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link contact-us">Contact us</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!------------------------------- Log out ------------------------->
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link log-out-link">
+                        log out
+                        <img src="img/icons/log-out-icon.svg" alt="Log out icon" class="log-out-icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!------------------------------- POP`S-UP SUB MENU ----------------------->
+    <!------------------------------------------------------------------------->
+    <!------------------------------- faq ----------------------->
+    <div class="pop-up faq-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/faq-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Faq</h3>
+            <p class="pop-up-description">
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- terms ----------------------->
+    <div class="pop-up terms-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/terms-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Terms of use</h3>
+            <p class="pop-up-description">
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- privacy ----------------------->
+    <div class="pop-up privacy-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/privacy-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Privacy policy</h3>
+            <p class="pop-up-description">
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- support ----------------------->
+    <div class="pop-up support-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/support-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Support</h3>
+            <h4 class="pop-up-title">Seems something goes wrong?</h4>
+            <p class="pop-up-description">
+                Write your question and our manager will soon helps you:
+            </p>
+            <form action="#">
+                <textarea name="support" id="support" cols="40" rows="5" class="support-textarea"></textarea>
+                <button type="submit" class="pop-up-btn support-submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <!------------------------------- Message submit ----------------------->
+    <div class="pop-up message-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/message-icon.svg" alt="Message icon" class="pop-up-icon">
+            </div>
+            <h4 class="pop-up-title">Your message has been successfully sent!</h4>
+            <p class="pop-up-description">
+                We will contact you shortly
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- Contact Us ----------------------->
+    <div class="pop-up contact-us-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/contact-icon.svg" alt="Contact icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline contact-after-icon">Contact us</h3>
+            <address>
+                <ul class="contact-info">
+                    <li><a href="mailto:sayhi@meshwork.pro" class="pop-up-mail">sayhi@meshwork.pro</a></li>
+                    <li><a href="tel:+380505555777" class="pop-up-phone">+380505555777</a></li>
+                </ul>
+                <div class="address-info">
+                    <span>Ukraine, Kyiv, 12000</span>
+                    <span class="street-bold">Reheneratorna 4</span>
+                </div>
+            </address>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- DASHBOARD SECTION ----------------------->
+    <!------------------------------------------------------------------------->
+    <section id="dashboard-section">
+
+        <!------------------------------- DASHBOARD HEADER ---------------->
+        <div class="dashboard-section-header">
+            <div class="dashboard-section-wrapper">
+
+                <!----------------------- DASHBOARD HEADER TOP ---------------->
+                <div class="dashboard-header-top">
+                    <h2 class="dashboard-header-title">Edit profile</h2>
+                    <div class="creator">
+                        <span class="creator-text">Create brief</span>
+                        <span class="creator-plus icon-android-add"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-section-wrapper">
+            <!----------------------- DASHBOARD BUSINESS PROFILE CONTENT ---------------->
+            <div class="business-profile-content">
+                <form action="#" method="POST">
+
+                    <ul class="profile-parts">
+
+                        <!----------------------- Profile picture ------------------------>
+                        <li class="profile-parts-item">
+                            <h3 class="profile-part-headline">Profile picture</h3>
+                            <div class="profile-block">
+                                <div class="upload-block">
+                                    <picture>
+                                        <source srcset="img/no-photo.webp" type="image/webp">
+                                        <img src="img/no-photo.jpg" alt="User photo" title="User photo"
+                                             class="upload-photo">
+                                    </picture>
+                                    <div class="upload-options">
+                                        <label for="upload-image" class="upload-btn">Upload photo</label>
+                                        <input id="upload-image" type="file" name="user photo" class="image-upload">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!----------------------- Name ------------------------>
+                        <li class="profile-parts-item">
+                            <h3 class="profile-part-headline">Name</h3>
+                            <div class="profile-block">
+                                <ul class="profile-input-list">
+                                    <li class="profile-input-item">
+                                        <label for="first-name" class="profile-label">First name</label>
+                                        <input id="first-name" type="text" name="first name" class="profile-input">
+                                    </li>
+                                    <li class="profile-input-item">
+                                        <label for="last-name" class="profile-label">Last name</label>
+                                        <input id="last-name" type="text" name="last name" class="profile-input">
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!----------------------- Location ------------------------>
+                        <li class="profile-parts-item">
+                            <h3 class="profile-part-headline">Location</h3>
+                            <div class="profile-block">
+                                <ul class="profile-selector-list">
+                                    <li class="profile-selector-item">
+                                        <label for="country" class="profile-label">Country</label>
+                                        <input list="country" name="Country" class="profile-input selector">
+                                        <datalist id="country">
+                                            <option value="Ukraine"></option>
+                                            <option value="Canada"></option>
+                                            <option value="USA"></option>
+                                        </datalist>
+                                    </li>
+                                    <li class="profile-selector-item">
+                                        <label for="state" class="profile-label">State/Province</label>
+                                        <input list="state" name="state" class="profile-input selector">
+                                        <datalist id="state">
+                                            <option value="Kyiv"></option>
+                                            <option value="New York"></option>
+                                            <option value="Vancouver"></option>
+                                        </datalist>
+                                    </li>
+                                    <li class="profile-selector-item">
+                                        <label for="city" class="profile-label">City</label>
+                                        <input list="city" name="city" class="profile-input selector">
+                                        <datalist id="city">
+                                            <option value="Kyiv"></option>
+                                            <option value="New York"></option>
+                                            <option value="Vancouver"></option>
+                                        </datalist>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!----------------------- Phone number ------------------------>
+                        <li class="profile-parts-item">
+                            <h3 class="profile-part-headline">Phone number</h3>
+                            <div class="profile-block">
+                                <div class="phone-verify-block">
+                                    <input type="tel" id="phone" class="profile-input">
+                                    <button class="verify-btn">Verify by SMS</button>
+                                    <p id="result"></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="profile-btn-block">
+                        <button class="reset-btn">Reset changes</button>
+                        <button type="submit" class="save-btn">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="js/intlTelInput.min.js" defer></script>
+<script src="js/utils.js" defer></script>
+<script src="js/demonstration-edit-profile.js" defer></script>
+</body>
+</html>

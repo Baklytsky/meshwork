@@ -1,12 +1,13 @@
 @import "mixins";
 @import "variables";
 
-body {
+.dashboard-block {
   background-color: $dashboard-bg;
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 //********************************************** Dashboard sidebar ******************************

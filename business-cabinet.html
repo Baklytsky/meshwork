@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creators</title>
+    <link rel="stylesheet" href="./css/creators.css">
+</head>
+<body>
+
+<!------------------------------- DASHBOARD BLOCK ------------------------->
+<!------------------------------------------------------------------------->
+<div class="dashboard-block">
+    <!------------------------------- DASHBOARD NAVIGATION -------------------->
+    <!------------------------------------------------------------------------->
+    <nav id="dashboard-sidebar" class="dashboard-nav">
+
+        <!------------------------------- LOGO -------------------------------->
+        <div class="logo">
+            <a href="index.html">Meshwork</a>
+        </div>
+
+        <!------------------------------- USER DATA --------------------------->
+        <ul class="user-data-list">
+            <li class="user-data-item">
+                <picture>
+                    <source srcset="img/user-photo.webp" type="image/webp">
+                    <img src="img/user-photo.jpg" alt="User photo" title="User photo" class="user-photo">
+                </picture>
+            </li>
+            <li class="user-data-item">
+                <h3 class="user-name">Alex</h3>
+            </li>
+            <li class="user-data-item">
+                <span class="user-meshes">80 meshes</span>
+            </li>
+        </ul>
+
+        <!------------------------------- SIDEBAR MENU ------------------------->
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-item active-sidebar-menu">
+                <a href="business-cabinet.html" class="sidebar-menu-link">
+                    Dashboard
+                    <img src="img/icons/dashboard.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link">
+                    Inbox
+                    <img src="img/icons/inbox.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                    <span class="inbox-counter">4 new</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link">
+                    My briefs
+                    <img src="img/icons/my-briefs.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+        </ul>
+
+        <!------------------------------- ACCOUNT BLOCK ------------------------->
+        <div class="account-block">
+            <ul class="sidebar-menu account-menu">
+                <!------------------------------- My account ------------------------->
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link account-link">
+                        My account
+                        <span class="account-mail">aleksdesigner@.com</span>
+                    </a>
+
+                    <!------------------------------- MY ACCOUNT SUB MENU ------------------------->
+                    <div class="sub-menu-block">
+
+                        <!------------------------------- User info ------------------------->
+                        <div class="user-sub-info">
+                            <picture>
+                                <source srcset="img/user-photo.webp" type="image/webp">
+                                <img src="img/user-photo.jpg" alt="User photo" title="User photo"
+                                     class="user-min-photo">
+                            </picture>
+                            <ul class="user-sub-data">
+                                <li><h4 class="user-sub-name">Alex</h4></li>
+                                <li><span class="user-sub-nickname">@aleksdesigner</span></li>
+                            </ul>
+                        </div>
+
+                        <!------------------------------- Edit Profile ------------------------->
+
+                        <a href="business-profile.html" class="edit-profile">Edit profile</a>
+
+                        <!------------------------------- Sub menu list ------------------------->
+                        <ul class="sub-menu-list">
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link faq">Faq</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link terms">Terms of use</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link privacy">Privacy policy</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link support">Support</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link contact-us">Contact us</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!------------------------------- Log out ------------------------->
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link log-out-link">
+                        log out
+                        <img src="img/icons/log-out-icon.svg" alt="Log out icon" class="log-out-icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!------------------------------- POP`S-UP SUB MENU ----------------------->
+    <!------------------------------------------------------------------------->
+    <!------------------------------- faq ----------------------->
+    <div class="pop-up faq-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/faq-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Faq</h3>
+            <p class="pop-up-description">
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- terms ----------------------->
+    <div class="pop-up terms-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/terms-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Terms of use</h3>
+            <p class="pop-up-description">
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- privacy ----------------------->
+    <div class="pop-up privacy-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/privacy-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Privacy policy</h3>
+            <p class="pop-up-description">
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- support ----------------------->
+    <div class="pop-up support-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/support-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Support</h3>
+            <h4 class="pop-up-title">Seems something goes wrong?</h4>
+            <p class="pop-up-description">
+                Write your question and our manager will soon helps you:
+            </p>
+            <form action="#">
+                <textarea name="support" id="support" cols="40" rows="5" class="support-textarea"></textarea>
+                <button type="submit" class="pop-up-btn support-submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <!------------------------------- Message submit ----------------------->
+    <div class="pop-up message-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/message-icon.svg" alt="Message icon" class="pop-up-icon">
+            </div>
+            <h4 class="pop-up-title">Your message has been successfully sent!</h4>
+            <p class="pop-up-description">
+                We will contact you shortly
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- Contact Us ----------------------->
+    <div class="pop-up contact-us-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/contact-icon.svg" alt="Contact icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline contact-after-icon">Contact us</h3>
+            <address>
+                <ul class="contact-info">
+                    <li><a href="mailto:sayhi@meshwork.pro" class="pop-up-mail">sayhi@meshwork.pro</a></li>
+                    <li><a href="tel:+380505555777" class="pop-up-phone">+380505555777</a></li>
+                </ul>
+                <div class="address-info">
+                    <span>Ukraine, Kyiv, 12000</span>
+                    <span class="street-bold">Reheneratorna 4</span>
+                </div>
+            </address>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- DASHBOARD SECTION ----------------------->
+    <!------------------------------------------------------------------------->
+    <section id="dashboard-section">
+
+        <!------------------------------- DASHBOARD HEADER ---------------->
+        <div class="dashboard-section-header">
+            <div class="dashboard-section-wrapper">
+
+                <!----------------------- DASHBOARD HEADER TOP ---------------->
+                <div class="dashboard-header-top">
+                    <ul class="pages-list">
+                        <li class="pages-item">
+                            <h2>
+                                <a href="#" class="pages-item-link active-page-link">Creators</a>
+                            </h2>
+                        </li>
+                        <li class="pages-item">
+                            <h2>
+                                <a href="#" class="pages-item-link">Projects</a>
+                            </h2>
+                        </li>
+                    </ul>
+                    <div class="creator">
+                        <span class="creator-text">Create brief</span>
+                        <span class="creator-plus icon-android-add"></span>
+                    </div>
+                </div>
+
+                <!----------------------- DASHBOARD HEADER BOTTOM -------------->
+                <div class="dashboard-header-bottom">
+                    <ul class="selectors-list">
+                        <!----------------------- Search selector -------------->
+                        <li class="selectors-items">
+                            <div class="search-selector">
+                                <div class="dropholder-search">
+                                    <button class="dropdown-search-btn">
+                                        <img src="img/icons/search-icon.svg" alt="Search icon" class="search-icon">
+                                    </button>
+                                    <div class="dropdownOption-search">
+                                        <form action="#" method="GET">
+                                            <div class="search-block">
+                                                <input type="search" placeholder="Search" class="search-input">
+                                                <button type="submit" class="main-search-btn">
+                                                    <img src="img/icons/search-icon.svg" alt="Search icon">
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!----------------------- Roles selector -------------->
+                        <li class="selectors-items">
+                            <div class="roles-selector">
+                                <div class="dropholder-roles">
+                                    <div class="dropdown-roles">
+                                        <p class="holder">Roles</p>
+                                        <img src="img/icons/selector-icon.svg" alt="Selector icon"
+                                             class="selector-icon">
+                                    </div>
+                                    <div class="dropdownOption-roles">
+                                        <form action="#" method="GET">
+                                            <div class="roles-search-block">
+                                                <input type="search" placeholder="Search" class="roles-search">
+                                                <button type="submit" class="roles-search-btn">
+                                                    <img src="img/icons/search-icon.svg" alt="Search icon">
+                                                </button>
+                                            </div>
+                                            <ul>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="videographer" name="roles"
+                                                           value="videographer" class="checkbox">
+                                                    <label for="videographer">videographer</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="director" name="roles" value="director"
+                                                           class="checkbox">
+                                                    <label for="director">director</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="documentary" name="roles"
+                                                           value="documentary" class="checkbox">
+                                                    <label for="documentary">documentary</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="cameraman" name="roles" value="cameraman"
+                                                           class="checkbox">
+                                                    <label for="cameraman">cameraman</label>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!----------------------- Location selector -------------->
+                        <li class="selectors-items">
+                            <div class="location-selector">
+                                <div class="dropholder-location">
+                                    <div class="dropdown-location">
+                                        <p class="holder">Location</p>
+                                        <img src="img/icons/selector-icon.svg" alt="Selector icon"
+                                             class="selector-icon">
+                                    </div>
+                                    <div class="dropdownOption-location">
+                                        <form action="#" method="GET">
+                                            <p class="selector-title">Country</p>
+                                            <div class="location-search-block">
+                                                <input type="search" placeholder="Search" class="location-search">
+                                                <button type="submit" class="location-search-btn">
+                                                    <img src="img/icons/search-icon.svg" alt="Search icon">
+                                                </button>
+                                            </div>
+                                            <ul>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="ukraine" name="country" value="Ukraine"
+                                                           class="checkbox">
+                                                    <label for="ukraine">Ukraine</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="usa" name="country" value="USA"
+                                                           class="checkbox">
+                                                    <label for="usa">USA</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="canada" name="country" value="Canada"
+                                                           class="checkbox">
+                                                    <label for="canada">Сanada</label>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                        <form action="#" method="GET">
+                                            <p class="selector-title">State/Province</p>
+                                            <div class="location-search-block">
+                                                <input type="search" placeholder="Search" class="location-search">
+                                                <button type="submit" class="location-search-btn">
+                                                    <img src="img/icons/search-icon.svg" alt="Search icon">
+                                                </button>
+                                            </div>
+                                            <ul>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="kyiv" name="city" value="Kyiv"
+                                                           class="checkbox">
+                                                    <label for="kyiv">Kyiv</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="new-york" name="city" value="New york"
+                                                           class="checkbox">
+                                                    <label for="new-york">New york</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="vancouver" name="city" value="Vancouver"
+                                                           class="checkbox">
+                                                    <label for="vancouver">Vancouver</label>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-section-wrapper">
+            <!----------------------- DASHBOARD SECTION CONTENT ---------------->
+            <div class="business-cabinet-content">
+                <!----------------------- CREATORS LIST ------------------------>
+                <ul class="creators-list">
+
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!----------------------- CREATOR ITEM --------------------->
+                    <li class="creator-card-item">
+                        <picture>
+                            <source srcset="img/creators-image.webp" type="image/webp">
+                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                 class="creator-image">
+                        </picture>
+                        <div class="card-content">
+                            <!-------------- CREATOR INFORMATION --------------->
+                            <div class="creator-data">
+                                <h3 class="creator-name">
+                                    Max Holden
+                                </h3>
+                                <address>
+                                    <p class="creator-address">
+                                        Minneapolis, Minnesota
+                                    </p>
+                                </address>
+                            </div>
+                            <!-------------- CREATOR TAG LIST ------------------->
+                            <ul class="tags-list">
+                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
+                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
+                            </ul>
+                            <!-------------- LEARN MORE & ASK PRICE --------------->
+                            <ul class="card-links-list">
+                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
+                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="js/demonstration-dashboard.js" defer></script>
+</body>
+</html>
