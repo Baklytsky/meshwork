@@ -125,16 +125,14 @@
 }
 
 @mixin card-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 128px;
-  height: 34px;
+  display: inline-block;
+  width: 100%;
   text-align: center;
   font-size: $lang-item;
   color: $black;
   background-color: $athens;
   border-radius: 4px;
+  padding: 9px 0;
   transition: background-color .3s linear;
   &:hover {
     background-color: $athens-dark;
