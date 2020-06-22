@@ -35,9 +35,11 @@
 
                     <!------------------------------- Log in & Register btn`s --------------------------------->
                     <ul class="init-block">
-                        <li><a href="#" class="log-in">Log in</a></li>
                         <li>
-                            <button class="register-btn">Sign Up</button>
+                            <button class="log-in">Log in</button>
+                        </li>
+                        <li>
+                            <button class="sign-up">Sign Up</button>
                         </li>
                     </ul>
 
@@ -61,11 +63,14 @@
 <!------------------------------- POP-UP`s -------------------------------->
 <!------------------------------------------------------------------------->
 
-<!------------------------------- Sign in --------------------------------->
-<div class="pop-up sign-up">
+<!------------------------------- Sign up --------------------------------->
+<div class="pop-up sign-up-pop-up">
     <div class="pop-up-window">
         <span class="icon-close-round close-x"></span>
         <h3 class="pop-up-headline">Sign up</h3>
+        <p class="pop-up-title">
+            Get your <span class="free-upp">free</span> account
+        </p>
         <form action="#" method="post">
             <ul class="form-list">
                 <li class="form-item">
@@ -76,19 +81,46 @@
                     <label for="mail1">E-mail:</label>
                     <input id="mail1" type="email">
                 </li>
+                <li class="form-item">
+                    <label for="password">Password:</label>
+                    <input id="password" type="password">
+                </li>
+                <li class="form-item">
+                    <label for="confirm">Confirm password:</label>
+                    <input id="confirm" type="password">
+                </li>
             </ul>
+            <div class="role-radio">
+                <h4 class="role-radio-title">Select your role:</h4>
+                <div class="radio-btn">
+                    <label class="radio-label">
+                        <input type="radio" name="role" value="customer" class="role-radio-input" checked>
+                        <span class="design"></span>
+                        <span class="text">Customer</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="role" value="creator" class="role-radio-input">
+                        <span class="design"></span>
+                        <span class="text">Creator</span>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="pop-up-btn">Sign in</button>
+            <div class="subscribe-checkbox">
+                <input type="checkbox" id="subscribe" name="subscribe" value="subscribe" class="subscribe-input">
+                <label for="subscribe" class="subscribe-label">Subscribe on news</label>
+            </div>
         </form>
-        <button class="pop-up-btn">Sign up</button>
         <p class="note">You already have account?</p>
         <p class="note">Than you should <a href="#" class="sign-link-in">Sign in</a></p>
     </div>
 </div>
 
-<!------------------------------- Sign up --------------------------------->
-<div class="pop-up sign-in">
+<!------------------------------- Log in --------------------------------->
+<div class="pop-up log-in-pop-up">
     <div class="pop-up-window">
         <span class="icon-close-round close-x"></span>
-        <h3 class="pop-up-headline">Sign in</h3>
+        <h3 class="pop-up-headline">log in</h3>
         <form action="#" method="post">
             <ul class="form-list">
                 <li class="form-item">
@@ -100,16 +132,20 @@
                     <input id="mail2" type="email">
                 </li>
             </ul>
+            <a href="#" class="forgot-pass-link">Forgot password?</a>
+            <button type="submit" class="pop-up-btn">Sign in</button>
         </form>
-        <button class="pop-up-btn">Sign in</button>
-        <p class="note">No account yet?</p>
-        <p class="note">Than you should <a href="#" class="sign-link-up">Sign up</a></p>
+        <div class="sign-up-link-wrapper">
+            <p class="note">No account yet?</p>
+            <p class="note">Than you should <a href="#" class="sign-link-up">Sign up</a></p>
+        </div>
     </div>
 </div>
 
 <!------------------------------- Cookie Alert ---------------------------->
 <!------------------------------------------------------------------------->
 <div class="cookie-alert">
+    <img src="img/icons/cookie.svg" alt="Cookie icon">
     <h3 class="cookie-headline">We use cookies</h3>
     <p class="cookie-description">
         Our website uses cookies to make your browsing
@@ -118,7 +154,7 @@
     </p>
     <ul class="cookie-link-list">
         <li class="cookie-list-item">
-            <a href="#" class="cookie-link">Learn more</a>
+            <button class="cookie">Learn more</button>
         </li>
         <li class="cookie-list-item">
             <button class="cookie-btn">Accept</button>
@@ -126,7 +162,7 @@
     </ul>
 </div>
 <!------------------------------- Cookie Pop up ---------------------------->
-<div class="pop-up cookie">
+<div class="pop-up cookie-pop-up">
     <div class="pop-up-window">
         <span class="icon-close-round close-x"></span>
         <img src="img/icons/cookie.svg" alt="Cookies icon" class="cookies-icon">
@@ -295,11 +331,7 @@
                 <!------------------------------- Card item 1--------------------------------------->
                 <li class="solutions-cards-item">
                     <div class="card-number">
-                        <span>1</span>
-                        <picture>
-                            <source srcset="img/card-icon-1.webp" type="image/webp">
-                            <img src="img/card-icon-1.png" alt="Steps icon" title="Steps icon">
-                        </picture>
+                        <img src="img/icons/notebook.svg" alt="icon" title="icon">
                     </div>
                     <div class="card-text">
                         <h4 class="card-headline">
@@ -314,11 +346,7 @@
                 <!------------------------------- Card item 2--------------------------------------->
                 <li class="solutions-cards-item">
                     <div class="card-number">
-                        <span>2</span>
-                        <picture>
-                            <source srcset="img/card-icon-2.webp" type="image/webp">
-                            <img src="img/card-icon-2.png" alt="Steps icon" title="Steps icon">
-                        </picture>
+                        <img src="img/icons/eye.svg" alt="icon" title="icon">
                     </div>
                     <div class="card-text">
                         <h4 class="card-headline">
@@ -333,11 +361,7 @@
                 <!------------------------------- Card item 3--------------------------------------->
                 <li class="solutions-cards-item">
                     <div class="card-number">
-                        <span>3</span>
-                        <picture>
-                            <source srcset="img/card-icon-3.webp" type="image/webp">
-                            <img src="img/card-icon-3.png" alt="Steps icon" title="Steps icon">
-                        </picture>
+                        <img src="img/icons/hends.svg" alt="icon" title="icon">
                     </div>
                     <div class="card-text">
                         <h4 class="card-headline">
@@ -392,28 +416,50 @@
                     <source srcset="img/slide-img1.webp" type="image/webp">
                     <img src="img/slide-img1.jpg" alt="Slider item">
                 </picture>
-                <a href="#" class="slide-title">Eva Stark</a>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Eva Stark</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">cameraman</a></li>
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="slider-item">
                 <picture>
                     <source srcset="img/slide-img2.webp" type="image/webp">
                     <img src="img/slide-img2.jpg" alt="Slider item">
                 </picture>
-                <a href="#" class="slide-title">Julia Bush</a>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Julia Bush</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                        <li class="slide-tag-item"><a href="#">cameraman</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="slider-item">
                 <picture>
                     <source srcset="img/slide-img3.webp" type="image/webp">
                     <img src="img/slide-img3.jpg" alt="Slider item">
                 </picture>
-                <a href="#" class="slide-title">Carlos Lott</a>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Carlos Lott</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">videographer</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="slider-item">
                 <picture>
                     <source srcset="img/slide-img4.webp" type="image/webp">
                     <img src="img/slide-img4.jpg" alt="Slider item">
                 </picture>
-                <a href="#" class="slide-title">Lucy Good</a>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Lucy Good</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
 
@@ -424,28 +470,50 @@
                     <source srcset="img/slide-img1.webp" type="image/webp">
                     <img src="img/slide-img1.jpg" alt="Slider item">
                 </picture>
-                <a href="#" class="slide-title">Eva Stark</a>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Eva Stark</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">cameraman</a></li>
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="slider-item">
                 <picture>
                     <source srcset="img/slide-img2.webp" type="image/webp">
                     <img src="img/slide-img2.jpg" alt="Slider item">
                 </picture>
-                <a href="#" class="slide-title">Julia Bush</a>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Julia Bush</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                        <li class="slide-tag-item"><a href="#">cameraman</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="slider-item">
                 <picture>
                     <source srcset="img/slide-img3.webp" type="image/webp">
                     <img src="img/slide-img3.jpg" alt="Slider item">
                 </picture>
-                <a href="#" class="slide-title">Carlos Lott</a>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Carlos Lott</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">videographer</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="slider-item">
                 <picture>
                     <source srcset="img/slide-img4.webp" type="image/webp">
                     <img src="img/slide-img4.jpg" alt="Slider item">
                 </picture>
-                <a href="#" class="slide-title">Lucy Good</a>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Lucy Good</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </div>
@@ -460,6 +528,7 @@
         <div class="projects">
             <!------------------------ Project text block -------------------------->
             <div class="project-text-block">
+                <img src="img/icons/fire-icon.svg" alt="Fire icon">
                 <p>
                     The system process of communication between
                     the creator and the customer allows to create

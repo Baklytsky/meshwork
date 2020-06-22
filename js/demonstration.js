@@ -1,6 +1,10 @@
 'use strict'
 
-
+//------------- Header on Scroll --------------------------------------
+window.addEventListener('scroll', ()=> {
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky-header', window.scrollY > 750);
+})
 //------------- Search autocomplete -----------------------------------
 
 let searchInput = document.querySelector('.search-text'),
@@ -18,23 +22,42 @@ showAutocompleteBlock();
 let signIn = document.querySelector('.log-in'),
     signInFormBtn = document.querySelector('.sign-link-in'),
     signUpFormBtn = document.querySelector('.sign-link-up'),
-    signUp = document.querySelector('.register-btn'),
-    signInPopUp = document.querySelector('.sign-in'),
-    signUpPopUp = document.querySelector('.sign-up'),
-    cookie = document.querySelector('.cookie'),
+    signUp = document.querySelector('.sign-up'),
+    signInPopUp = document.querySelector('.log-in-pop-up'),
+    signUpPopUp = document.querySelector('.sign-up-pop-up'),
+    cookie = document.querySelector('.cookie-pop-up'),
     cookieAlert = document.querySelector('.cookie-alert'),
-    learnMoreCookie = document.querySelector('.cookie-link'),
+    learnMoreCookie = document.querySelector('.cookie'),
     acceptCookie = document.querySelector('.cookie-btn'),
     gotIt = document.querySelector('.got-it'),
-    closeX = document.querySelectorAll('.close-x');
+    closeX = document.querySelectorAll('.close-x'),
+    openPopUpBlock = [signIn, signUp, learnMoreCookie];
+
+//------------- OPEN Pop-up -----------------------------------
+openPopUpBlock.forEach(i => i.addEventListener('click', () => {
+    let linkName =  i.className,
+        pop = document.querySelector('.'+ linkName + '-pop-up');
+    pop.style.display = 'block'
+    closePopUp(pop);
+    outBlockClick(pop);
+}));
 
 //------------- CLOSE Pop-up -----------------------------------
 
-closeX.forEach(i => i.addEventListener('click', closePopUp));
-function closePopUp() {
-    signInPopUp.style.display = 'none';
-    signUpPopUp.style.display = 'none';
-    cookie.style.display = 'none';
+function closePopUp(pop) {
+    closeX.forEach(i => i.addEventListener('click', () => {
+        pop.style.display = "none";
+    }));
+}
+
+function outBlockClick(pop) {
+    if (pop.style.display === "block") {
+        document.body.addEventListener('mousedown', function (e) {
+            if (e.target === pop) {
+                pop.style.display = "none";
+            }
+        })
+    }
 }
 
 //------------- Pop-up Sign-in -----------------------------------
@@ -62,13 +85,9 @@ function showCookieAlert() {
 }
 showCookieAlert();
 
-learnMoreCookie.addEventListener('click', showCookiePopUp);
 acceptCookie.addEventListener('click', closeCookieAlert);
 gotIt.addEventListener('click', closeCookiePopUp);
 
-function showCookiePopUp() {
-    cookie.style.display = 'block';
-}
 
 function closeCookieAlert() {
     cookieAlert.style.display = 'none';

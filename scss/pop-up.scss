@@ -3,14 +3,12 @@
 
 .pop-up {
   position: fixed;
-  z-index: 10;
-  width: 100%;
-  height: 100vh;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
 
   .pop-up-window {
     @include pop-up-window;
@@ -23,14 +21,20 @@
   .pop-up-headline {
     @include pop-up-headline;
     text-transform: uppercase;
-    padding-bottom: 17px;
   }
+
   .pop-up-title {
     font-size: $card-description;
     color: $black;
+
+    .free-upp {
+      text-transform: uppercase;
+    }
   }
 
   .form-list {
+    padding-top: 40px;
+
     .form-item {
       text-align: left;
       display: flex;
@@ -59,32 +63,164 @@
     @include btn;
     font-size: $normal;
     padding: 14px 41px;
-    margin-bottom: 24px;
+
     &:hover {
       @include btn-hover;
     }
+  }
+
+  .sign-up-link-wrapper {
+    padding-top: 40px;
+  }
+
+  .forgot-pass-link {
+    display: block;
+    font-size: $lang-item;
+    font-weight: 700;
+    text-decoration: underline;
+    color: $aquamarine;
+    padding-bottom: 16px;
   }
 
   .note {
     font-size: $lang-item;
     color: $black;
   }
+
+  //----------------------------------Sign up role radio---------------------------------
+  .role-radio {
+    text-align: left;
+    border-bottom: 1px solid $mystic;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .radio-btn {
+    display: flex;
+    align-items: center;
+  }
+
+  .radio-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: $log-in;
+    color: $black;
+    padding-right: 24px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .role-radio-input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .design {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $mystic;
+    border-radius: 100%;
+    margin-right: 4px;
+    position: relative;
+  }
+
+  .design::before {
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center center;
+  }
+
+  .design:before {
+    background: $aquamarine;
+    opacity: 0;
+    transition: .3s;
+  }
+
+  input:checked + .design::before {
+    opacity: 1;
+    transform: scale(.7);
+  }
+
+  .role-radio-title {
+    font-size: $normal;
+    font-weight: 600;
+    color: $black;
+    padding-bottom: 8px;
+  }
+
+  .subscribe-checkbox {
+    padding: 16px 0 34px;
+
+    .subscribe-input {
+      display: none;
+      cursor: pointer;
+    }
+
+    .subscribe-label {
+      font-size: $sign-up;
+      color: $black;
+      position: relative;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 1px solid $mystic;
+        border-radius: 4px;
+        vertical-align: middle;
+        padding: 8px;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+    }
+
+    input:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      width: 6px;
+      height: 8px;
+      border: solid $tundora;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
   .pop-up-description {
     font-size: $card-description;
     color: $black;
     padding: 0 30px 24px;
   }
+
   .cookies-icon {
     width: 56px;
     height: 68px;
   }
-  .sign-link-up, .sign-link-in  {
+
+  .sign-link-up, .sign-link-in {
     font-size: $lang-item;
     font-weight: 700;
     line-height: 20px;
     color: $sign-link;
     text-decoration: underline;
   }
+
   .icon-area {
     width: 86px;
     height: 86px;
@@ -92,6 +228,7 @@
     border-radius: 50%;
     background-color: $alabaster;
     position: relative;
+
     .pop-up-icon {
       position: absolute;
       top: 50%;
@@ -99,6 +236,7 @@
       transform: translate(-50%, -50%);
     }
   }
+
   .support-textarea {
     max-width: 100%;
     max-height: 250px;
@@ -106,11 +244,13 @@
     border: 1px solid $alto;
     margin-bottom: 16px;
   }
+
   .contact-after-icon {
     &:after {
       content: "🤙";
     }
   }
+
   .contact-info {
     width: 254px;
     display: flex;
@@ -121,36 +261,54 @@
     padding: 0 0 17px 35px;
     box-sizing: border-box;
   }
+
   .address-info {
     width: 254px;
     text-align: left;
     margin: 0 auto;
     padding: 17px 0 17px 35px;
     box-sizing: border-box;
+
     span {
       font: normal $card-description sans-serif;
       line-height: 28px;
       color: $black;
     }
+
     .street-bold {
       display: block;
       font-weight: bold;
     }
   }
+
   .pop-up-mail {
     font: normal 700 $card-description sans-serif;
     line-height: 28px;
     color: $aquamarine-hover;
   }
+
   .pop-up-phone {
     font: normal $card-description sans-serif;
     line-height: 28px;
     color: $black;
   }
 }
-.sign-in, .sign-up, .cookie,
+
+.log-in-pop-up, .sign-up-pop-up, .cookie-pop-up,
 .faq-pop-up, .terms-pop-up,
 .privacy-pop-up, .support-pop-up,
 .message-pop-up, .contact-us-pop-up {
   display: none;
+}
+
+.sign-up-pop-up, .log-in-pop-up, .cookie-pop-up {
+  animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }

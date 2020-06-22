@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Profile</title>
+    <title>Creators</title>
     <link rel="stylesheet" href="./css/creators.css">
 </head>
 <body>
@@ -46,7 +46,7 @@
                     <img src="img/icons/dashboard.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
-            <li class="sidebar-menu-item">
+            <li class="sidebar-menu-item active-sidebar-menu">
                 <a href="business-inbox.html" class="sidebar-menu-link">
                     Inbox
                     <img src="img/icons/inbox.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
@@ -65,7 +65,7 @@
         <div class="account-block">
             <ul class="sidebar-menu account-menu">
                 <!------------------------------- My account ------------------------->
-                <li class="sidebar-menu-item active-sidebar-menu">
+                <li class="sidebar-menu-item">
                     <a href="#" class="sidebar-menu-link account-link">
                         My account
                         <span class="account-mail">aleksdesigner@.com</span>
@@ -89,7 +89,7 @@
 
                         <!------------------------------- Edit Profile ------------------------->
 
-                        <a href="#" class="edit-profile">Edit profile</a>
+                        <a href="business-profile.html" class="edit-profile">Edit profile</a>
 
                         <!------------------------------- Sub menu list ------------------------->
                         <ul class="sub-menu-list">
@@ -225,7 +225,13 @@
 
                 <!----------------------- DASHBOARD HEADER TOP ---------------->
                 <div class="dashboard-header-top">
-                    <h2 class="dashboard-header-title">Edit profile</h2>
+                    <div class="pages-list">
+                        <div class="pages-item">
+                            <h2>
+                                <a href="#" class="pages-item-link inbox-page-headline">Inbox</a>
+                            </h2>
+                        </div>
+                    </div>
                     <div class="creator">
                         <span class="creator-text">Create brief</span>
                         <span class="creator-plus icon-android-add"></span>
@@ -234,100 +240,22 @@
             </div>
         </div>
         <div class="dashboard-section-wrapper">
-            <!----------------------- DASHBOARD BUSINESS PROFILE CONTENT ---------------->
-            <div class="business-profile-content">
-                <form action="#" method="POST">
-
-                    <ul class="profile-parts">
-
-                        <!----------------------- Profile picture ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Profile picture</h3>
-                            <div class="profile-block">
-                                <div class="upload-block">
-                                    <picture>
-                                        <source srcset="img/no-photo.webp" type="image/webp">
-                                        <img src="img/no-photo.jpg" alt="User photo" title="User photo"
-                                             class="upload-photo">
-                                    </picture>
-                                    <div class="upload-options">
-                                        <label for="upload-image" class="upload-btn">Upload photo</label>
-                                        <input id="upload-image" type="file" name="user photo" class="image-upload">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!----------------------- Name ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Name</h3>
-                            <div class="profile-block">
-                                <ul class="profile-input-list">
-                                    <li class="profile-input-item">
-                                        <label for="first-name" class="profile-label">First name</label>
-                                        <input id="first-name" type="text" name="first name" class="profile-input">
-                                    </li>
-                                    <li class="profile-input-item">
-                                        <label for="last-name" class="profile-label">Last name</label>
-                                        <input id="last-name" type="text" name="last name" class="profile-input">
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <!----------------------- Location ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Location</h3>
-                            <div class="profile-block">
-                                <ul class="profile-selector-list">
-                                    <li class="profile-selector-item">
-                                        <label for="country" class="profile-label">Country</label>
-                                        <input list="country" name="Country" class="profile-input selector">
-                                        <datalist id="country">
-                                            <option value="Ukraine"></option>
-                                            <option value="Canada"></option>
-                                            <option value="USA"></option>
-                                        </datalist>
-                                    </li>
-                                    <li class="profile-selector-item">
-                                        <label for="state" class="profile-label">State/Province</label>
-                                        <input list="state" name="state" class="profile-input selector">
-                                        <datalist id="state">
-                                            <option value="Kyiv"></option>
-                                            <option value="New York"></option>
-                                            <option value="Vancouver"></option>
-                                        </datalist>
-                                    </li>
-                                    <li class="profile-selector-item">
-                                        <label for="city" class="profile-label">City</label>
-                                        <input list="city" name="city" class="profile-input selector">
-                                        <datalist id="city">
-                                            <option value="Kyiv"></option>
-                                            <option value="New York"></option>
-                                            <option value="Vancouver"></option>
-                                        </datalist>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <!----------------------- Phone number ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Phone number</h3>
-                            <div class="profile-block">
-                                <div class="phone-verify-block">
-                                    <input type="tel" id="phone" class="profile-input">
-                                    <button class="verify-btn">Verify by SMS</button>
-                                    <p id="result"></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="profile-btn-block">
-                        <button class="reset-btn">Reset changes</button>
-                        <button type="submit" class="save-btn">Save changes</button>
+            <!----------------------- DASHBOARD SECTION CONTENT ---------------->
+            <div class="business-inbox-content">
+                <!----------------------- INBOX CONTENT ------------------------>
+                <div class="massage-author">
+                    <div class="author">
+                        <picture>
+                            <source srcset="img/user-photo.webp" type="image/webp">
+                            <img src="img/user-photo.jpg" alt="User photo" title="User photo"
+                                 class="massage-author-photo">
+                        </picture>
+                        <h3 class="massage-author-name">
+                            Max Holden
+                        </h3>
                     </div>
-                </form>
+                    <time datetime="2020-06-15 17:10" class="massage-time">17:10</time>
+                </div>
             </div>
         </div>
     </section>
@@ -335,8 +263,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-<script src="js/intlTelInput.min.js" defer></script>
-<script src="js/utils.js" defer></script>
-<script src="js/demonstration-edit-profile.js" defer></script>
+<script src="js/demonstration-dashboard.js" defer></script>
 </body>
 </html>

@@ -10,8 +10,8 @@ header {
   width: 100%;
   position: absolute;
   overflow: hidden;
-  transition: overflow .4s ease-in;
-  z-index: 2;
+  transition: all .4s ease-in;
+  z-index: 10;
 
   .wrapper-header {
     display: flex;
@@ -105,14 +105,18 @@ header {
         }
         .log-in {
           font-size: $log-in;
+          text-transform: uppercase;
           color: $white;
+          background-color: transparent;
+          border: none;
           position: relative;
+          cursor: pointer;
           transition: all .3s linear;
           &:hover {
             color: $aquamarine;
           }
         }
-        .register-btn {
+        .sign-up {
           @include btn;
           font-size: $sign-up;
           font-weight: normal;
@@ -227,6 +231,21 @@ header {
   //************************************** Toggle class to menu ***********************
   .mobile-menu-active {
     transform: translateX(-100%);
+  }
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  background-color: $black;
+  animation: slide-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  @keyframes slide-bottom {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 }
 
