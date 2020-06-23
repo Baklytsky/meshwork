@@ -88,10 +88,12 @@
       }
 
       .account-link {
-        padding: 9px 0 9px 57px;
+        padding: 9px 0 0 57px;
       }
 
       .account-mail {
+        display: inline-block;
+        padding: 0 0 9px 57px;
         font-size: $lang-item;
         font-weight: 500;
         color: $silver;
@@ -115,7 +117,7 @@
         position: absolute;
         top: -350px;
         left: 37px;
-        transform: translateX(-150%);
+        transform: scale(0);
         box-shadow: 0 3px 24px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
         z-index: 3;
@@ -174,7 +176,15 @@
         }
       }
       .active-sub-menu {
-        transform: translateX(0%);
+        animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        @keyframes slide-top {
+          0% {
+            transform: translateY(50px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
       }
     }
 

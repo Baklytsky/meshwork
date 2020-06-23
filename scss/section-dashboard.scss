@@ -113,27 +113,42 @@
 
     .selectors-items {
       padding-right: 16px;
+      position: relative;
     }
+    .selectors-items:first-child {
 
+    }
     .selectors-items:last-child {
       padding-right: 0;
     }
 
     //*********************************** Search **************************************************
-    .dropdown-search-btn {
-      background-color: $white;
+    .search-input {
+      width: 35px;
+      height: 35px;
       border: 1px solid $alto;
       box-sizing: border-box;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
       border-radius: 4px;
-      padding: 10px 10px 7px;
-      cursor: pointer;
+      font-size: 16px;
+      background-color: $white;
+      background-image: url('../img/icons/search-icon.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      padding: 10px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .search-input:focus {
+      width: 100%;
+      background-position: 90% 50%;
     }
 
     //*********************************** Selectors ************************************************
 
-    .roles-selector, .location-selector, .search-selector {
-      .dropdown-location, .dropdown-roles, .dropdown-search-btn {
+    .roles-selector, .location-selector {
+      .dropdown-location, .dropdown-roles {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -187,13 +202,8 @@
       }
 
       //********************** Active search toggle class ******************************
-      .active-search {
-        .dropdownOption-search {
-          display: block;
-        }
-      }
 
-      .dropholder-roles, .dropholder-location, .dropholder-search {
+      .dropholder-roles, .dropholder-location {
         width: 100%;
         height: 100%;
         color: $black;
@@ -222,13 +232,13 @@
         }
 
         //********************** Roles & Search & location styles *****************************
-        .roles-search-block, .location-search-block, .search-block {
+        .roles-search-block, .location-search-block {
           position: relative;
           margin-bottom: 6px;
           overflow: hidden;
           -webkit-appearance: none;
 
-          .roles-search, .search-input, .location-search {
+          .roles-search, .location-search {
             width: 100%;
             border: 1px solid $mystic;
             box-sizing: border-box;
@@ -261,7 +271,7 @@
             display: none;
           }
 
-          .roles-search-btn, .main-search-btn, .location-search-btn {
+          .roles-search-btn, .location-search-btn {
             position: absolute;
             top: 50%;
             right: 0;
