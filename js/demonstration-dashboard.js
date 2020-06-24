@@ -79,17 +79,17 @@ supportSubmit.addEventListener('click', ()=> {
 
 let dropholderRoles = document.querySelector('.dropholder-roles'),
     dropdownRoles = document.querySelector('.dropdown-roles'),
+    dropdownRolesOption = document.querySelector('.dropdownOption-roles'),
     dropholderLocation = document.querySelector('.dropholder-location'),
-    dropdownLocation = document.querySelector('.dropdown-location'),
-    dropholderSearch = document.querySelector('.dropholder-search'),
-    dropdownSearch = document.querySelector('.dropdown-search-btn');
+    dropdownLocationOption = document.querySelector('.dropdownOption-location'),
+    dropdownLocation = document.querySelector('.dropdown-location');
 
 //----------------------------------- Roles -----------------------------------
 if (dropdownRoles) {
     dropdownRoles.addEventListener('click', ()=> {
         dropholderRoles.classList.toggle('active-roles')
         dropholderLocation.classList.remove('active-location')
-        dropholderSearch.classList.remove('active-search')
+        // outSelectorClick()
     });
 }
 
@@ -98,15 +98,17 @@ if (dropdownLocation) {
     dropdownLocation.addEventListener('click', ()=> {
         dropholderLocation.classList.toggle('active-location')
         dropholderRoles.classList.remove('active-roles')
-        dropholderSearch.classList.remove('active-search')
+        // outSelectorClick()
     });
 }
 
-//----------------------------------- Search -----------------------------------
-if (dropdownSearch) {
-    dropdownSearch.addEventListener('click', ()=> {
-        dropholderSearch.classList.toggle('active-search')
-        dropholderRoles.classList.remove('active-roles')
-        dropholderLocation.classList.remove('active-location')
-    });
-}
+// function outSelectorClick() {
+//     if (dropholderRoles.classList.contains('active-roles')) {
+//         document.body.addEventListener('mousedown', function (e) {
+//             if (e.target === dropdownRolesOption) {
+//                 console.log (e.target)
+//                 dropholderRoles.classList.remove('active-roles')
+//             }
+//         })
+//     }
+// }

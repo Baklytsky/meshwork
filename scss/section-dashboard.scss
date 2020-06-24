@@ -687,19 +687,41 @@
 
 .business-inbox-content {
   width: 100%;
+  max-height: 70vh;
   background: $white;
   box-shadow: 0 2px 12px rgba(219, 219, 219, 0.8);
   border-radius: 4px;
   margin-top: 32px;
+  position: relative;
+  display: flex;
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+  ::-webkit-scrollbar { /* chrome based */
+    width: 0;  /* ширина scrollbar'a */
+  }
 }
+
+//*********************************** LEFT INBOX BLOCK **************************
+
+.left-inbox-block {
+  width: 35%;
+  background-color: $athens-gray;
+  padding-top: 20px;
+  overflow-y: scroll;
+}
+
 .massage-author {
-  width: 300px;
   background-color: $athens-gray;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 13px 15px 13px 28px;
   border-bottom: 1px solid $white;
+  cursor: pointer;
+}
+.active-chat {
+  background-color: $mystic;
+  border-left: 3px solid $black;
 }
 .author {
   display: flex;
@@ -717,4 +739,110 @@
 }
 .massage-time {
   color: $black;
+}
+
+//*********************************** RIGHT INBOX BLOCK **************************
+
+.right-inbox-block {
+  width: 65%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+}
+
+.right-inbox-massage {
+  overflow-y: scroll;
+}
+
+//*********************************** Incoming and outgoing message ***************
+.incoming-message-block {
+  width: 90%;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.outgoing-message-block {
+  width: 90%;
+  text-align: right;
+  margin-left: auto;
+  margin-bottom: 32px;
+}
+
+.chat-author {
+  font-weight: 700;
+  font-size: $normal;
+  line-height: 22px;
+  color: $black;
+}
+
+.message-text {
+  font-size: $lang-item;
+  line-height: 19px;
+  color: $black;
+}
+
+.incoming-message, .outgoing-message {
+  background: $massage-gradient;
+  border: 1px solid $iron;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 24px 16px;
+  margin-top: 12px;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    border: 10px solid transparent;
+    border-bottom: 10px solid $gallery;
+    position: absolute;
+  }
+}
+
+.incoming-message {
+  &:before {
+    top: -20px;
+    left: 30px;
+  }
+}
+.outgoing-message {
+  text-align: left;
+  &:before {
+    top: -20px;
+    right: 30px;
+  }
+}
+
+.send-massage-block {
+  border: 1px solid $silver;
+  border-radius: 6px;
+  padding: 6px;
+}
+.send-textarea-form {
+  display: flex;
+  align-items: center;
+}
+
+.massage-textarea {
+  height: 16px;
+  padding: 8px 0 8px 10px;
+  flex-grow: 1;
+  border: none;
+  &::placeholder {
+    font-size: $lang-item;
+    color: $black;
+  }
+}
+
+.massage-send-btn {
+  width: 68px;
+  text-align: center;
+  font-weight: 700;
+  font-size: $inbox-counter;
+  color: $black;
+  background-color: $aquamarine;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 0;
+  cursor: pointer;
 }
