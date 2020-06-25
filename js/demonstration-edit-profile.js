@@ -1,5 +1,7 @@
 'use strict'
 
+//--------------------------- Phone selector -----------------------
+
 let input = document.querySelector("#phone");
 
 let iti = intlTelInput(input, {
@@ -17,13 +19,14 @@ function openSubMenu() {
     subMenuBlock.classList.toggle('active-sub-menu');
     outBlockClick();
 }
+
 //------------- CLOSE Sub menu on click "My account" -----------------------------------
 
 function outBlockClick() {
     if (subMenuBlock.classList.contains('active-sub-menu')) {
         document.body.addEventListener('mousedown', function (e) {
             if (e.target === subMenuBlock && e.target !== myAccountLink) {
-                console.log (e.target)
+                console.log(e.target)
                 subMenuBlock.classList.remove('active-sub-menu');
             }
         })
@@ -46,8 +49,8 @@ let faq = document.querySelector('.faq'),
 
 
 subMenuLinks.forEach(i => i.addEventListener('click', () => {
-    let linkName =  i.className.split(' ')[1],
-        pop = document.querySelector('.'+ linkName + '-pop-up');
+    let linkName = i.className.split(' ')[1],
+        pop = document.querySelector('.' + linkName + '-pop-up');
     pop.style.display = 'block'
     xClick(pop);
     gotItClick(pop);
@@ -67,6 +70,7 @@ function gotItClick(pop) {
         pop.style.display = "none";
     }));
 }
+
 function outPopUpClick(pop) {
     if (pop.style.display === "block") {
         document.body.addEventListener('mousedown', function (e) {
@@ -77,7 +81,25 @@ function outPopUpClick(pop) {
     }
 }
 
-supportSubmit.addEventListener('click', ()=> {
+supportSubmit.addEventListener('click', () => {
     supportPopUp.style.display = 'none'
     messagePopUp.style.display = 'block'
 })
+
+//----------------------- Show password -----------------------------------
+
+let showPassword =
+    [document.querySelector('.current-password'),
+        document.querySelector('.new-password'),
+        document.querySelector('.confirm-password'),];
+
+//----------------------- Show current password ----------------------------
+showPassword.forEach(i => i.addEventListener('click', () => {
+    let passName = i.className,
+        passId = document.querySelector('#' + passName);
+    if (passId.type === "password") {
+        passId.type = "text";
+    } else {
+        passId.type = "password";
+    }
+}));

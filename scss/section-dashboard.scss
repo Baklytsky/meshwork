@@ -424,13 +424,17 @@
 //*********************************** profile block *********************
 .profile-block {
   width: 100%;
-  height: 220px;
   background-color: $white;
   box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
   border-radius: 4px;
   padding: 24px;
   margin: 8px 0 32px;
   box-sizing: border-box;
+}
+
+.profile-block-custom {
+  height: auto;
+  padding: 24px 24px 32px;
 }
 
 .profile-parts-item:last-child {
@@ -446,8 +450,8 @@
 }
 
 .upload-photo {
-  width: 172px;
-  height: 172px;
+  width: 158px;
+  height: 158px;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -456,24 +460,35 @@
   flex-grow: 1;
   text-align: center;
 
-  .upload-btn {
-    display: inline-block;
-    font-size: $lang-item;
-    font-weight: 700;
-    color: $black;
-    background-color: $white;
-    border: 1px solid $mercury;
-    box-sizing: border-box;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-    padding: 10px 30px;
-    margin: 0 auto;
-    cursor: pointer;
-  }
-
   input[type="file"] {
     display: none;
   }
+}
+
+.upload-btn, .change-pass-btn {
+  display: inline-block;
+  font-size: $lang-item;
+  font-weight: 700;
+  color: $black;
+  background-color: $white;
+  border: 1px solid $mercury;
+  box-sizing: border-box;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 10px 30px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color .3s linear;
+  &:hover {
+    background-color: $mercury;
+  }
+}
+
+.change-pass-btn {
+  width: 165px;
+  display: block;
+  padding: 11px 0;
+  margin: 32px 0 0 auto;
 }
 
 .profile-input-list {
@@ -481,6 +496,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.profile-input-item {
+  padding-bottom: 24px;
+}
+.profile-input-item:last-child {
+  padding-bottom: 0;
 }
 .profile-selector-list {
   display: flex;
@@ -526,8 +547,60 @@
     background-color: $white;
   }
 }
-.selector::-webkit-calendar-picker-indicator {
-  opacity: 1;
+.profile-input-wrapper {
+  position: relative;
+}
+.input-btn-wrapper {
+  padding: 9px 80px 9px 16px;
+}
+.btn-inside-input {
+  width: 72px;
+  font-weight: 600;
+  font-size: $sign-up;
+  color: $black;
+  background: $white;
+  border: 1px solid $mercury;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 6px 0 5px;
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: background-color .3s linear;
+  &:hover {
+    background-color: $mercury;
+  }
+}
+
+#show-current-password, #show-new-password, #show-confirm-password {
+  display: none;
+}
+.current-password, .new-password, .confirm-password {
+  font-size: $inbox-counter;
+  color: $show-pass;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.selector {
+  font-size: $lang-item;
+  position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("../img/icons/selector-icon.svg") no-repeat center right 10px;
+  &::-ms-expand { /* для IE */
+    display: none;
+  }
+  option {
+    font-size: $lang-item;
+    color: $black;
+  }
 }
 
 .phone-verify-block {
@@ -555,6 +628,13 @@
   &:hover {
     background-color: $mercury;
   }
+}
+
+.location-phone-block {
+  height: 454px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .profile-btn-block {

@@ -273,54 +273,132 @@
                             </div>
                         </li>
 
-                        <!----------------------- Location ------------------------>
+                        <!----------------------- Account name ------------------------>
                         <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Location</h3>
-                            <div class="profile-block">
-                                <ul class="profile-selector-list">
-                                    <li class="profile-selector-item">
-                                        <label for="country" class="profile-label">Country</label>
-                                        <input list="country" name="Country" class="profile-input selector">
-                                        <datalist id="country">
-                                            <option value="Ukraine"></option>
-                                            <option value="Canada"></option>
-                                            <option value="USA"></option>
-                                        </datalist>
-                                    </li>
-                                    <li class="profile-selector-item">
-                                        <label for="state" class="profile-label">State/Province</label>
-                                        <input list="state" name="state" class="profile-input selector">
-                                        <datalist id="state">
-                                            <option value="Kyiv"></option>
-                                            <option value="New York"></option>
-                                            <option value="Vancouver"></option>
-                                        </datalist>
-                                    </li>
-                                    <li class="profile-selector-item">
-                                        <label for="city" class="profile-label">City</label>
-                                        <input list="city" name="city" class="profile-input selector">
-                                        <datalist id="city">
-                                            <option value="Kyiv"></option>
-                                            <option value="New York"></option>
-                                            <option value="Vancouver"></option>
-                                        </datalist>
+                            <h3 class="profile-part-headline">Account name</h3>
+                            <div class="profile-block profile-block-custom">
+                                <ul class="profile-input-list">
+                                    <li class="profile-input-item">
+                                        <label for="account-name" class="profile-label">Your account name</label>
+                                        <div class="profile-input-wrapper">
+                                            <input id="account-name" type="text" name="account name"
+                                                   class="profile-input input-btn-wrapper">
+                                            <button class="btn-inside-input">Edit</button>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
-                        <!----------------------- Phone number ------------------------>
+                        <!------------------------------ Email ------------------------>
                         <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Phone number</h3>
-                            <div class="profile-block">
-                                <div class="phone-verify-block">
-                                    <input type="tel" id="phone" class="profile-input">
-                                    <button class="verify-btn">Verify by SMS</button>
-                                    <p id="result"></p>
-                                </div>
+                            <h3 class="profile-part-headline">Email</h3>
+                            <div class="profile-block profile-block-custom">
+                                <ul class="profile-input-list">
+                                    <li class="profile-input-item">
+                                        <label for="account-email" class="profile-label">Your email</label>
+                                        <div class="profile-input-wrapper">
+                                            <input id="account-email" type="email" name="account email"
+                                                   class="profile-input input-btn-wrapper">
+                                            <button class="btn-inside-input">Edit</button>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
+
+                        <!----------------------- Password ------------------------>
+                        <li class="profile-parts-item">
+                            <h3 class="profile-part-headline">Change password</h3>
+                            <div class="profile-block profile-block-custom">
+                                <ul class="profile-input-list">
+                                    <li class="profile-input-item">
+                                        <label for="current-password" class="profile-label">Current password</label>
+                                        <div class="profile-input-wrapper">
+                                            <input id="current-password" type="password" name="current password"
+                                                   class="profile-input input-btn-wrapper">
+                                            <label for="show-current-password" class="current-password">Show</label>
+                                            <input type="checkbox" id="show-current-password">
+                                        </div>
+                                    </li>
+                                    <li class="profile-input-item">
+                                        <label for="new-password" class="profile-label">New password</label>
+                                        <div class="profile-input-wrapper">
+                                            <input id="new-password" type="password" name="new password"
+                                                   class="profile-input input-btn-wrapper">
+                                            <label for="show-new-password" class="new-password">Show</label>
+                                            <input type="checkbox" id="show-new-password">
+                                        </div>
+                                    </li>
+                                    <li class="profile-input-item">
+                                        <label for="confirm-password" class="profile-label">Confirm new password</label>
+                                        <div class="profile-input-wrapper">
+                                            <input id="confirm-password" type="password" name="new password"
+                                                   class="profile-input input-btn-wrapper">
+                                            <label for="show-confirm-password" class="confirm-password">Show</label>
+                                            <input type="checkbox" id="show-confirm-password">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="change-pass-btn">Change password</button>
+                            </div>
+                        </li>
+                        <!----------------------- Location and Phone ------------------------>
+                        <li class="profile-parts-item">
+                            <ul class="location-phone-block">
+                                <!----------------------- Location ------------------------>
+                                <li>
+                                    <h3 class="profile-part-headline">Location</h3>
+                                    <div class="profile-block">
+                                        <ul class="profile-selector-list">
+                                            <li class="profile-selector-item">
+                                                <label for="country" class="profile-label">Country</label>
+                                                <select name="country" id="country" class="profile-input selector">
+                                                    <option selected></option>
+                                                    <option value="Ukraine">Ukraine</option>
+                                                    <option value="Canada">Canada</option>
+                                                    <option value="USA">USA</option>
+                                                </select>
+                                            </li>
+                                            <li class="profile-selector-item">
+                                                <label for="state" class="profile-label">State/Province</label>
+                                                <select name="state" id="state" class="profile-input selector">
+                                                    <option selected></option>
+                                                    <option value="Kyiv">Kyiv</option>
+                                                    <option value="New York">New York</option>
+                                                    <option value="Vancouver">Vancouver</option>
+                                                </select>
+                                            </li>
+                                            <li class="profile-selector-item">
+                                                <label for="city" class="profile-label">City</label>
+                                                <select name="city" id="city" class="profile-input selector">
+                                                    <option selected></option>
+                                                    <option value="Kyiv">Kyiv</option>
+                                                    <option value="New York">New York</option>
+                                                    <option value="Vancouver">Vancouver</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!----------------------- Phone number ------------------------>
+                                <li>
+                                    <h3 class="profile-part-headline">Phone number</h3>
+                                    <div class="profile-block profile-block-custom">
+                                        <div class="phone-verify-block">
+                                            <input type="tel" id="phone" class="profile-input">
+                                            <button class="verify-btn">Verify by SMS</button>
+                                            <p id="result"></p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </li>
+
                     </ul>
+
                     <div class="profile-btn-block">
                         <button class="reset-btn">Reset changes</button>
                         <button type="submit" class="save-btn">Save changes</button>
