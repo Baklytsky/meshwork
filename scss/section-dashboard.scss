@@ -110,13 +110,14 @@
   .selectors-list {
     display: flex;
     align-items: center;
+    position: relative;
 
     .selectors-items {
       padding-right: 16px;
       position: relative;
     }
     .selectors-items:first-child {
-
+      padding-right: 51px;
     }
     .selectors-items:last-child {
       padding-right: 0;
@@ -124,25 +125,38 @@
 
     //*********************************** Search **************************************************
     .search-input {
+      display: block;
       width: 35px;
       height: 35px;
-      border: 1px solid $alto;
+      border: 1px solid $selector-border;
       box-sizing: border-box;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
       border-radius: 4px;
-      font-size: 16px;
       background-color: $white;
       background-image: url('../img/icons/search-icon.svg');
       background-position: 50% 50%;
       background-repeat: no-repeat;
-      padding: 10px;
       -webkit-transition: width 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+      overflow: hidden;
+      &::placeholder {
+        color: transparent;
+      }
     }
 
     .search-input:focus {
-      width: 100%;
+      width: 400px;
       background-position: 90% 50%;
+      padding-left: 16px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.11);
+      &::placeholder {
+        color: $placeholder;
+      }
     }
 
     //*********************************** Selectors ************************************************
@@ -160,10 +174,11 @@
         .holder {
           font-size: $lang-item;
           color: $black;
-          border: 1px solid $alto;
+          border: 1px solid $selector-border;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+          box-sizing: border-box;
           border-radius: 4px;
-          padding: 7px 34px 7px 16px;
+          padding: 6px 34px 7px 16px;
         }
 
         .selector-icon {
@@ -499,6 +514,7 @@
 }
 .profile-input-item {
   padding-bottom: 24px;
+  position: relative;
 }
 .profile-input-item:last-child {
   padding-bottom: 0;
@@ -587,6 +603,26 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
+
+//*********************************** Wrong password class *********************
+
+.wrong-pass-description {
+  font-size: $inbox-counter;
+  color: $wrong-pass;
+  position: absolute;
+  bottom: -20px;
+}
+.wrong-password {
+  .profile-input {
+    border: 1px solid $wrong-pass;
+  }
+  .wrong-pass-description {
+    display: block;
+  }
+}
+
+//*********************************** Phone selector *********************************
+
 .selector {
   font-size: $lang-item;
   position: relative;
@@ -636,6 +672,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+//*********************************** Save and Reset btn *********************************
 
 .profile-btn-block {
   border-top: 1px solid $mystic;
