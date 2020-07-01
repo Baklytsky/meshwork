@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Profile</title>
+    <title>Create Brief</title>
     <link rel="stylesheet" href="./css/creators.css">
 </head>
 <body>
@@ -65,7 +65,7 @@
         <div class="account-block">
             <ul class="sidebar-menu account-menu">
                 <!------------------------------- My account ------------------------->
-                <li class="sidebar-menu-item active-sidebar-menu">
+                <li class="sidebar-menu-item">
                     <a href="#" class="sidebar-menu-link account-link">My account</a>
                     <a href="mailto:aleksdesigner@.com" class="account-mail">aleksdesigner@.com</a>
 
@@ -87,7 +87,7 @@
 
                         <!------------------------------- Edit Profile ------------------------->
 
-                        <a href="#" class="edit-profile">Edit profile</a>
+                        <a href="business-profile.html" class="edit-profile">Edit profile</a>
 
                         <!------------------------------- Sub menu list ------------------------->
                         <ul class="sub-menu-list">
@@ -223,7 +223,10 @@
 
                 <!----------------------- DASHBOARD HEADER TOP ---------------->
                 <div class="dashboard-header-top">
-                    <h2 class="dashboard-header-title">Edit profile</h2>
+                    <div class="project-name-block">
+                        <a href="business-my-briefs.html" class="business-projects-link">Projects</a>
+                        <h2 class="dashboard-header-title">Nike UK</h2>
+                    </div>
                     <div class="creator">
                         <span class="creator-text">Create brief</span>
                         <a href="business-create-brief-key.html" class="creator-plus icon-android-add"></a>
@@ -232,175 +235,113 @@
             </div>
         </div>
         <div class="dashboard-section-wrapper">
-            <!----------------------- DASHBOARD BUSINESS PROFILE CONTENT ---------------->
-            <div class="business-profile-content">
+            <!----------------------- DASHBOARD BUSINESS CREATE BRIEF CONTENT ---------------->
+            <!----------------------- Create steps --------------------------->
+
+            <ul class="create-steps">
+                <li class="step-item active-step-item">
+                    <h3 class="create-step-title">Key details</h3>
+                </li>
+                <li class="step-item">
+                    <h3 class="create-step-title">Brief summary</h3>
+                </li>
+            </ul>
+
+            <!----------------------- Key details --------------------------->
+            <div class="business-create-brief-content">
+
                 <form action="#" method="POST">
+                    <ul class="key-details-list">
 
-                    <ul class="profile-parts">
+                        <!----------------------- Preview image --------------------------->
 
-                        <!----------------------- Profile picture ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Profile picture</h3>
-                            <div class="profile-block">
-                                <div class="upload-block">
-                                    <picture>
-                                        <source srcset="img/no-photo.webp" type="image/webp">
-                                        <img src="img/no-photo.jpg" alt="User photo" title="User photo"
-                                             class="upload-photo">
-                                    </picture>
-                                    <div class="upload-options">
-                                        <label for="upload-image" class="upload-btn">Upload photo</label>
-                                        <input id="upload-image" type="file" name="user photo" class="image-upload">
-                                    </div>
+                        <li class="key-details-item">
+                            <h3 class="key-details-headline">Preview image</h3>
+                            <div class="upload-image-block">
+                                <picture>
+                                    <source srcset="img/prev-img.webp" type="image/webp">
+                                    <img src="img/prev-img.jpg" alt="Brief photo" title="Brief photo"
+                                         class="brief-preview-photo">
+                                </picture>
+                                <div class="upload-image-options">
+                                    <label for="upload-image" class="upload-btn">Upload photo</label>
+                                    <input id="upload-image" type="file" name="user photo" class="image-upload">
+                                    <p class="image-upload-description">Image size must be at list 600×338px</p>
                                 </div>
                             </div>
                         </li>
 
-                        <!----------------------- Name ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Name</h3>
-                            <div class="profile-block">
-                                <ul class="profile-input-list">
-                                    <li class="profile-input-item">
-                                        <label for="first-name" class="profile-label">First name</label>
-                                        <input id="first-name" type="text" name="first name" class="profile-input">
-                                    </li>
-                                    <li class="profile-input-item">
-                                        <label for="last-name" class="profile-label">Last name</label>
-                                        <input id="last-name" type="text" name="last name" class="profile-input">
-                                    </li>
-                                </ul>
+                        <!----------------------- Company / Agency --------------------------->
+
+                        <li class="key-details-item">
+                            <div class="check-header">
+                                <h3 class="key-details-headline">Company / Agency</h3>
+                                <span class="check-icon-style"></span>
+                            </div>
+                            <div class="key-input-wrapper">
+                                <label for="company-name" class="key-input-label">Company name</label>
+                                <input type="text" id="company-name" class="key-input">
                             </div>
                         </li>
 
-                        <!----------------------- Account name ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Account name</h3>
-                            <div class="profile-block profile-block-custom">
-                                <ul class="profile-input-list">
-                                    <li class="profile-input-item">
-                                        <label for="account-name" class="profile-label">Your account name</label>
-                                        <div class="profile-input-wrapper">
-                                            <input id="account-name" type="text" name="account name"
-                                                   class="profile-input input-btn-wrapper">
-                                            <button class="btn-inside-input">Edit</button>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                        <!------------------------------- Location  --------------------------->
 
-                        <!------------------------------ Email ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Email</h3>
-                            <div class="profile-block profile-block-custom">
-                                <ul class="profile-input-list">
-                                    <li class="profile-input-item">
-                                        <label for="account-email" class="profile-label">Your email</label>
-                                        <div class="profile-input-wrapper">
-                                            <input id="account-email" type="email" name="account email"
-                                                   class="profile-input input-btn-wrapper">
-                                            <button class="btn-inside-input">Edit</button>
-                                        </div>
-                                    </li>
-                                </ul>
+                        <li class="key-details-item">
+                            <div class="check-header">
+                                <h3 class="key-details-headline">Location </h3>
+                                <span class="check-icon-style active-check-icon-style"></span>
                             </div>
-                        </li>
+                            <!------------------------------- Location radio --------------------------->
+                            <div class="location-radio-block">
+                                <label class="location-label">
+                                    <input type="radio" name="location part" class="location-radio" checked>
+                                    <span class="design"></span>
+                                    <span class="radio-text">Specific location</span>
+                                </label>
 
-                        <!----------------------- Password ------------------------>
-                        <li class="profile-parts-item">
-                            <h3 class="profile-part-headline">Change password</h3>
-                            <div class="profile-block profile-block-custom">
-                                <ul class="profile-input-list">
-                                    <li class="profile-input-item">
-                                        <label for="current-password" class="profile-label">Current password</label>
-                                        <div class="profile-input-wrapper">
-                                            <input id="current-password" type="password" name="current password"
-                                                   class="profile-input input-btn-wrapper">
-                                            <label for="show-current-password" class="current-password">Show</label>
-                                            <input type="checkbox" id="show-current-password">
-                                        </div>
-                                    </li>
-                                    <li class="profile-input-item">
-                                        <label for="new-password" class="profile-label">New password</label>
-                                        <div class="profile-input-wrapper">
-                                            <input id="new-password" type="password" name="new password"
-                                                   class="profile-input input-btn-wrapper">
-                                            <label for="show-new-password" class="new-password">Show</label>
-                                            <input type="checkbox" id="show-new-password">
-                                        </div>
-                                    </li>
-                                    <li class="profile-input-item wrong-password">
-                                        <label for="confirm-password" class="profile-label">Confirm new password</label>
-                                        <div class="profile-input-wrapper">
-                                            <input id="confirm-password" type="password" name="new password"
-                                                   class="profile-input input-btn-wrapper">
-                                            <label for="show-confirm-password" class="confirm-password">Show</label>
-                                            <input type="checkbox" id="show-confirm-password">
-                                        </div>
-                                        <p class="wrong-pass-description">New password and confirm new password do not match</p>
-                                    </li>
-                                </ul>
-                                <button class="change-pass-btn">Change password</button>
+                                <label class="location-label">
+                                    <input type="radio" name="location part" class="location-radio">
+                                    <span class="design"></span>
+                                    <span class="radio-text">Worldwide</span>
+                                </label>
                             </div>
-                        </li>
-                        <!----------------------- Location and Phone ------------------------>
-                        <li class="profile-parts-item">
-                            <ul class="location-phone-block">
-                                <!----------------------- Location ------------------------>
-                                <li>
-                                    <h3 class="profile-part-headline">Location</h3>
-                                    <div class="profile-block">
-                                        <ul class="profile-selector-list">
-                                            <li class="profile-selector-item">
-                                                <label for="country" class="profile-label">Country</label>
-                                                <select name="country" id="country" class="profile-input selector">
-                                                    <option selected></option>
-                                                    <option value="Ukraine">Ukraine</option>
-                                                    <option value="Canada">Canada</option>
-                                                    <option value="USA">USA</option>
-                                                </select>
-                                            </li>
-                                            <li class="profile-selector-item">
-                                                <label for="state" class="profile-label">State/Province</label>
-                                                <select name="state" id="state" class="profile-input selector">
-                                                    <option selected></option>
-                                                    <option value="Kyiv">Kyiv</option>
-                                                    <option value="New York">New York</option>
-                                                    <option value="Vancouver">Vancouver</option>
-                                                </select>
-                                            </li>
-                                            <li class="profile-selector-item">
-                                                <label for="city" class="profile-label">City</label>
-                                                <select name="city" id="city" class="profile-input selector">
-                                                    <option selected></option>
-                                                    <option value="Kyiv">Kyiv</option>
-                                                    <option value="New York">New York</option>
-                                                    <option value="Vancouver">Vancouver</option>
-                                                </select>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <!------------------------------- Location select --------------------------->
+                            <div class="key-input-wrapper">
+                            <ul class="profile-selector-list">
+                                <li class="profile-selector-item">
+                                    <label for="country" class="profile-label">Country</label>
+                                    <select name="country" id="country" class="profile-input selector">
+                                        <option selected></option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="USA">USA</option>
+                                    </select>
                                 </li>
-
-                                <!----------------------- Phone number ------------------------>
-                                <li>
-                                    <h3 class="profile-part-headline">Phone number</h3>
-                                    <div class="profile-block profile-block-custom">
-                                        <div class="phone-verify-block">
-                                            <input type="tel" id="phone" class="profile-input">
-                                            <button class="verify-btn">Verify by SMS</button>
-                                            <p id="result"></p>
-                                        </div>
-                                    </div>
+                                <li class="profile-selector-item">
+                                    <label for="state" class="profile-label">State/Province</label>
+                                    <select name="state" id="state" class="profile-input selector">
+                                        <option selected></option>
+                                        <option value="Kyiv">Kyiv</option>
+                                        <option value="New York">New York</option>
+                                        <option value="Vancouver">Vancouver</option>
+                                    </select>
+                                </li>
+                                <li class="profile-selector-item">
+                                    <label for="city" class="profile-label">City</label>
+                                    <select name="city" id="city" class="profile-input selector">
+                                        <option selected></option>
+                                        <option value="Kyiv">Kyiv</option>
+                                        <option value="New York">New York</option>
+                                        <option value="Vancouver">Vancouver</option>
+                                    </select>
                                 </li>
                             </ul>
+                            </div>
                         </li>
                     </ul>
 
                     <div class="profile-btn-block">
-                        <button type="reset" class="reset-btn">Reset changes</button>
-                        <button type="submit" class="save-btn">Save changes</button>
+                        <button type="submit" class="save-btn">Submit</button>
                     </div>
                 </form>
             </div>
@@ -409,8 +350,6 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="js/intlTelInput.min.js" defer></script>
-<script src="js/utils.js" defer></script>
-<script src="js/demonstration-edit-profile.js" defer></script>
+<script src="js/demonstration-brief-key.js" defer></script>
 </body>
 </html>
