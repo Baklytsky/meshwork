@@ -78,3 +78,12 @@ supportSubmit.addEventListener('click', () => {
     messagePopUp.style.display = 'block'
 })
 
+
+//----------------------------------- Date picker ----------------------------------------
+jQuery(function ($) {
+    $(document).ready(function () {
+        $('#submission-date').datepicker({
+            minDate: 0,
+        });
+    });
+});

@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create Brief</title>
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
     <link rel="stylesheet" href="./css/creators.css">
 </head>
 <body>
@@ -307,37 +308,71 @@
                             </div>
                             <!------------------------------- Location select --------------------------->
                             <div class="key-input-wrapper">
-                            <ul class="profile-selector-list">
-                                <li class="profile-selector-item">
-                                    <label for="country" class="profile-label">Country</label>
-                                    <select name="country" id="country" class="profile-input selector">
-                                        <option selected></option>
-                                        <option value="Ukraine">Ukraine</option>
-                                        <option value="Canada">Canada</option>
-                                        <option value="USA">USA</option>
-                                    </select>
-                                </li>
-                                <li class="profile-selector-item">
-                                    <label for="state" class="profile-label">State/Province</label>
-                                    <select name="state" id="state" class="profile-input selector">
-                                        <option selected></option>
-                                        <option value="Kyiv">Kyiv</option>
-                                        <option value="New York">New York</option>
-                                        <option value="Vancouver">Vancouver</option>
-                                    </select>
-                                </li>
-                                <li class="profile-selector-item">
-                                    <label for="city" class="profile-label">City</label>
-                                    <select name="city" id="city" class="profile-input selector">
-                                        <option selected></option>
-                                        <option value="Kyiv">Kyiv</option>
-                                        <option value="New York">New York</option>
-                                        <option value="Vancouver">Vancouver</option>
-                                    </select>
-                                </li>
-                            </ul>
+                                <ul class="profile-selector-list">
+                                    <li class="profile-selector-item">
+                                        <label for="country" class="profile-label">Country</label>
+                                        <select name="country" id="country" class="profile-input selector">
+                                            <option value="Ukraine" selected>Ukraine</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="USA">USA</option>
+                                        </select>
+                                    </li>
+                                    <li class="profile-selector-item">
+                                        <label for="state" class="profile-label">State/Province</label>
+                                        <select name="state" id="state" class="profile-input selector">
+                                            <option value="Kyiv" selected>Kyiv</option>
+                                            <option value="New York">New York</option>
+                                            <option value="Vancouver">Vancouver</option>
+                                        </select>
+                                    </li>
+                                    <li class="profile-selector-item">
+                                        <label for="city" class="profile-label">City</label>
+                                        <select name="city" id="city" class="profile-input selector">
+                                            <option value="Kyiv" selected>Kyiv</option>
+                                            <option value="New York">New York</option>
+                                            <option value="Vancouver">Vancouver</option>
+                                        </select>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
+
+                        <!------------------------------- Budget --------------------------->
+
+                        <li class="key-details-item">
+                            <div class="check-header">
+                                <h3 class="key-details-headline">Budget</h3>
+                                <span class="check-icon-style active-check-icon-style"></span>
+                            </div>
+                            <div class="key-input-wrapper budget-wrapper">
+                                <div class="currency-wrapper">
+                                    <label for="currency" class="profile-label">Currency</label>
+                                    <select name="currency" id="currency" class="profile-input selector">
+                                        <option value="Ukraine" selected>UAH</option>
+                                        <option value="Canada">USD</option>
+                                        <option value="USA">EUR</option>
+                                    </select>
+                                </div>
+                                <div class="budget-amount-wrapper">
+                                    <label for="budget-amount" class="key-input-label">Budget amount</label>
+                                    <input type="number" id="budget-amount" class="key-input">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!------------------------------- Submission --------------------------->
+
+                        <li class="key-details-item">
+                            <div class="check-header">
+                                <h3 class="key-details-headline">Submission date</h3>
+                                <span class="check-icon-style"></span>
+                            </div>
+                            <div class="key-input-wrapper">
+                                <label for="submission-date" class="profile-label calendar-label">Choose date</label>
+                                <input type="text" id="submission-date" name="submission-date" class="profile-input selector">
+                            </div>
+                        </li>
+
                     </ul>
 
                     <div class="profile-btn-block">
@@ -350,6 +385,7 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/jquery-ui.min.js" defer></script>
 <script src="js/demonstration-brief-key.js" defer></script>
 </body>
 </html>
