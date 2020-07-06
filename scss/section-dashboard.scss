@@ -1291,3 +1291,134 @@
     }
   }
 }
+
+.submit-brief-btn {
+  width: 200px;
+  font-size: $normal;
+  font-weight: 700;
+  color: $black;
+  background-color: $aquamarine;
+  border: 1px solid $mercury;
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 13px 0;
+  cursor: pointer;
+  transition: all .3s linear;
+  &:hover {
+    background-color: $aquamarine-hover;
+  }
+}
+
+//*********************************** CREATE BRIEF Brief Summary *************
+
+.brief-summary-description {
+  width: 100%;
+  max-width: 720px;
+  font-size: $log-in;
+  color: $summary-description;
+  padding-top: 8px;
+}
+
+.brief-textarea {
+  width: 100%;
+  max-width: 720px;
+  height: 230px;
+  resize: none;
+  background-color: $pop-up-input-gradient;
+  border: 1px solid $mystic;
+  border-radius: 4px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+//*********************************** CREATE BRIEF Add attachment *************
+
+.input-file {
+  background-color:rgba(238, 238, 238, 0.5);
+  padding:5px;
+  border-radius:5px;
+  margin-right:25px;
+  margin-top:10px;
+}
+.AttachmentLegend {
+  background-color: transparent;
+  width: auto;
+  height: 30px;
+  padding: 0;
+  line-height: 25px;
+  color: #fff;
+}
+.AttachmentFS {
+  float: none;
+  clear: both;
+  width: 600px;
+  margin: 25px auto 15px;
+  border-radius:5px;
+  border:2px solid #fff;
+}
+.AttachmentFS .Msg {
+  float: left;
+  background-color: #fff;
+  color: rgb(0, 143, 255);
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 15px;
+  line-height: 20px;
+  font-size: 11px;
+  display: none;
+}
+.AttachmentFS .Msg:before  {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 5px solid transparent;
+  border-right-color: #fff;
+  margin-top: 5px;
+  margin-left: -21px;
+}
+.AttachmentFS .x {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  line-height: 13px;
+  margin-left: -35px;
+  position: absolute;
+  margin-top:0;
+  background-color: #fff;
+  color: rgb(0, 143, 255);
+  font-size: 13px;
+  font-weight: lighter;
+  border-color:#ccc;
+}
+.AttachmentFS .x:hover {
+  background-color: rgb(0, 143, 255);
+  color: #fff;
+  cursor:pointer;
+}
+.addNewAttachment {
+  font-weight: 700;
+  font-size: $normal;
+  color: $black;
+  background-color:#fff;
+  border: 1px solid $mercury;
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 13px 24px;
+  cursor:pointer;
+  transition: all .3s linear;
+  &:hover {
+    background-color: $mercury;
+  }
+}
+
+.attachmentContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  clear: both;
+}

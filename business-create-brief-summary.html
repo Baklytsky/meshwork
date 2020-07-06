@@ -240,139 +240,69 @@
             <!----------------------- Create steps --------------------------->
 
             <ul class="create-steps">
-                <li class="step-item active-step-item">
+                <li class="step-item">
                     <h3 class="create-step-title">Key details</h3>
                 </li>
-                <li class="step-item">
+                <li class="step-item active-step-item">
                     <h3 class="create-step-title">Brief summary</h3>
                 </li>
             </ul>
 
-            <!----------------------- Key details --------------------------->
+            <!----------------------- Brief summary --------------------------->
             <div class="business-create-brief-content">
 
-                <form action="business-create-brief-summary.html" method="">
+                <form action="#" method="POST">
                     <ul class="key-details-list">
 
-                        <!----------------------- Preview image --------------------------->
-
-                        <li class="key-details-item">
-                            <h3 class="key-details-headline">Preview image</h3>
-                            <div class="upload-image-block">
-                                <picture>
-                                    <source srcset="img/prev-img.webp" type="image/webp">
-                                    <img src="img/prev-img.jpg" alt="Brief photo" title="Brief photo"
-                                         class="brief-preview-photo">
-                                </picture>
-                                <div class="upload-image-options">
-                                    <label for="upload-image" class="upload-btn">Upload photo</label>
-                                    <input id="upload-image" type="file" name="user photo" class="image-upload">
-                                    <p class="image-upload-description">Image size must be at list 600×338px</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!----------------------- Company / Agency --------------------------->
+                        <!----------------------- Brief summary --------------------------->
 
                         <li class="key-details-item">
                             <div class="check-header">
-                                <h3 class="key-details-headline">Company / Agency</h3>
+                                <div>
+                                    <h3 class="key-details-headline">Brief summary</h3>
+                                    <p class="brief-summary-description">
+                                        Start off with 1 or 2 sentences that broadly describe the entire brief.
+                                    </p>
+                                </div>
                                 <span class="check-icon-style"></span>
                             </div>
-                            <div class="key-input-wrapper">
-                                <label for="company-name" class="key-input-label">Company name</label>
-                                <input type="text" id="company-name" class="key-input">
-                            </div>
+                            <label for="brief-summery">
+                                <textarea name="Brief summary" id="brief-summery" class="brief-textarea"></textarea>
+                            </label>
                         </li>
 
-                        <!------------------------------- Location  --------------------------->
+                        <!----------------------- Brief details --------------------------->
 
                         <li class="key-details-item">
                             <div class="check-header">
-                                <h3 class="key-details-headline">Location </h3>
+                                <div>
+                                    <h3 class="key-details-headline">Brief details</h3>
+                                    <p class="brief-summary-description">
+                                        Be sure to include information like: the purpose of the video,
+                                        intended platform (digital, broadcast), what should be included in
+                                        the video, pacing, etc
+                                    </p>
+                                </div>
                                 <span class="check-icon-style active-check-icon-style"></span>
                             </div>
-                            <!------------------------------- Location radio --------------------------->
-                            <div class="location-radio-block">
-                                <label class="location-label">
-                                    <input type="radio" name="location part" class="location-radio" checked>
-                                    <span class="design"></span>
-                                    <span class="radio-text">Specific location</span>
-                                </label>
-
-                                <label class="location-label">
-                                    <input type="radio" name="location part" class="location-radio">
-                                    <span class="design"></span>
-                                    <span class="radio-text">Worldwide</span>
-                                </label>
-                            </div>
-                            <!------------------------------- Location select --------------------------->
-                            <div class="key-input-wrapper">
-                                <ul class="profile-selector-list">
-                                    <li class="profile-selector-item">
-                                        <label for="country" class="profile-label">Country</label>
-                                        <select name="country" id="country" class="profile-input selector">
-                                            <option value="Ukraine" selected>Ukraine</option>
-                                            <option value="Canada">Canada</option>
-                                            <option value="USA">USA</option>
-                                        </select>
-                                    </li>
-                                    <li class="profile-selector-item">
-                                        <label for="state" class="profile-label">State/Province</label>
-                                        <select name="state" id="state" class="profile-input selector">
-                                            <option value="Kyiv" selected>Kyiv</option>
-                                            <option value="New York">New York</option>
-                                            <option value="Vancouver">Vancouver</option>
-                                        </select>
-                                    </li>
-                                    <li class="profile-selector-item">
-                                        <label for="city" class="profile-label">City</label>
-                                        <select name="city" id="city" class="profile-input selector">
-                                            <option value="Kyiv" selected>Kyiv</option>
-                                            <option value="New York">New York</option>
-                                            <option value="Vancouver">Vancouver</option>
-                                        </select>
-                                    </li>
-                                </ul>
-                            </div>
+                            <label for="brief-details">
+                                <textarea name="Brief details" id="brief-details" class="brief-textarea"></textarea>
+                            </label>
                         </li>
 
-                        <!------------------------------- Budget --------------------------->
+                        <!----------------------- Attachemts --------------------------->
 
                         <li class="key-details-item">
-                            <div class="check-header">
-                                <h3 class="key-details-headline">Budget</h3>
-                                <span class="check-icon-style active-check-icon-style"></span>
-                            </div>
-                            <div class="key-input-wrapper budget-wrapper">
-                                <div class="currency-wrapper">
-                                    <label for="currency" class="profile-label">Currency</label>
-                                    <select name="currency" id="currency" class="profile-input selector">
-                                        <option value="Ukraine" selected>UAH</option>
-                                        <option value="Canada">USD</option>
-                                        <option value="USA">EUR</option>
-                                    </select>
-                                </div>
-                                <div class="budget-amount-wrapper">
-                                    <label for="budget-amount" class="key-input-label">Budget amount</label>
-                                    <input type="number" id="budget-amount" class="key-input">
-                                </div>
-                            </div>
+                            <h3 class="key-details-headline">Attachemts</h3>
+
+                            <input type="text" style="visibility: hidden; display: none; position: absolute" id="attachmentNum" value="123456" />
+                            <input type="button" class="GeneralButton addNewAttachment" value="Add New Attachment" onclick="addAttachment(this)" />
+                            <div class="Msg">You cant add new attachment</div>
+                            <div style="clear:both;margin-bottom:10px;"></div>
+                            <div class="attachmentContainer"></div>
+                            <div class="sureAdd" style="text-align: center; margin-top: 15px; clear: both; display: none;"></div>
+
                         </li>
-
-                        <!------------------------------- Submission --------------------------->
-
-                        <li class="key-details-item">
-                            <div class="check-header">
-                                <h3 class="key-details-headline">Submission date</h3>
-                                <span class="check-icon-style"></span>
-                            </div>
-                            <div class="key-input-wrapper">
-                                <label for="submission-date" class="profile-label calendar-label">Choose date</label>
-                                <input type="text" id="submission-date" name="submission-date" class="profile-input selector">
-                            </div>
-                        </li>
-
                     </ul>
 
                     <div class="profile-btn-block">

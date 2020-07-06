@@ -87,3 +87,22 @@ jQuery(function ($) {
         });
     });
 });
+//----------------------------------- Date picker ----------------------------------------
+
+//--------------------------------------------------------------remove attachment
+    function clearAttachment(field) {
+        let name = $(field).closest("div").find("input[type = 'file']").attr("name").substr(5);
+        $(field).closest("div").remove();
+        let strNew = $("#attachmentNum").val().toString();
+        strNew = strNew + name;
+        $("#attachmentNum").val(strNew);
+    }
+
+//--------------------------------------------------------------add attachment
+    function addAttachment(field) {
+        let str = $("#attachmentNum").val().toString();
+        let id = str.charAt(0).toString();
+        $(".attachmentContainer").append("<div class='file-block'>" + "<input type='file' class='input-file' name='file" + id + "'/><input type='button' value='X' class='GeneralButton x' onclick='clearAttachment(this)' /> </div>");
+        let temp = str.substr(1);
+        $("#attachmentNum").val(temp);
+    }
