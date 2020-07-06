@@ -122,12 +122,11 @@ function addAttachment(field) {
             let file = $(inputId)[0].files[0].name,
                 format = file.split(".")
             $(this).prev('label').text(file);
-            $(this).prev('label').append("<img src='../img/append-" + format[1] + ".png' alt='Image icon' class='append-image'/>");
+            $(this).prev('label').append("<img src='img/append-" + format[1] + ".png' alt='Image icon' class='append-image'/>");
             $(".formats").append(format[1] + ', ' )
         });
         let temp = str.substr(1);
         attachmentNum.val(temp);
-
     }
     else {
         //view message
