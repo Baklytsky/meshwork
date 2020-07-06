@@ -1334,13 +1334,57 @@
 
 //*********************************** CREATE BRIEF Add attachment *************
 
-.input-file {
-  background-color:rgba(238, 238, 238, 0.5);
-  padding:5px;
-  border-radius:5px;
-  margin-right:25px;
-  margin-top:10px;
+#attachmentNum {
+  visibility: hidden;
+  display: none;
+  position: absolute;
 }
+.file-block {
+  padding: 30px 0 20px;
+  margin-right: 45px;
+  position: relative;
+}
+.input-file-label {
+  font-weight: 600;
+  font-size: $normal;
+  color: $black;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  .append-image {
+    padding-right: 15px;
+  }
+}
+.input-file {
+  display: none;
+}
+.input-close {
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  &:before {
+    content: "\38";
+    font-family: untitled-font-1, sans-serif;
+    color: $black;
+    font-size: $normal;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border: 1px solid $mystic;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s linear;
+  }
+  &:hover {
+    &:before {
+      background-color: $aquamarine;
+    }
+  }
+}
+
 .AttachmentLegend {
   background-color: transparent;
   width: auto;
@@ -1350,34 +1394,22 @@
   color: #fff;
 }
 .AttachmentFS {
-  float: none;
-  clear: both;
   width: 600px;
   margin: 25px auto 15px;
-  border-radius:5px;
-  border:2px solid #fff;
-}
-.AttachmentFS .Msg {
-  float: left;
-  background-color: #fff;
-  color: rgb(0, 143, 255);
-  padding: 5px 10px 5px 10px;
-  border: 1px solid #ccc;
   border-radius: 5px;
-  margin-left: 15px;
-  line-height: 20px;
-  font-size: 11px;
-  display: none;
+  border: 2px solid #fff;
 }
-.AttachmentFS .Msg:before  {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  border: 5px solid transparent;
-  border-right-color: #fff;
-  margin-top: 5px;
-  margin-left: -21px;
+.Msg {
+  width: 720px;
+  font-size: $normal;
+  color: $black;
+  background-color: $pop-up-input-gradient;
+  border: 1px solid $mystic;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  display: none;
 }
 .AttachmentFS .x {
   border-radius: 50%;
@@ -1415,10 +1447,56 @@
     background-color: $mercury;
   }
 }
-
+.add-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
 .attachmentContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  clear: both;
+}
+.sureAdd {
+  text-align: center;
+  margin-top: 15px;
+  display: none;
+}
+.attachment-description {
+  font-weight: 600;
+  font-size: $description-text;
+  color: $description;
+  padding-left: 16px;
+}
+
+//*********************************** CREATE BRIEF Publish brief *************
+.publish-brief-block {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+}
+.publish-brief-btn {
+  font-size: $normal;
+  font-weight: 700;
+  color: $black;
+  border: 1px solid $mercury;
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 13px 37px;
+  cursor: pointer;
+  margin-right: 8px;
+  background-color: $aquamarine;
+  transition: background-color .3s linear;
+  &:hover {
+    background-color: $aquamarine-hover;
+  }
+}
+.publish-description {
+  width: 100%;
+  max-width: 427px;
+  font-weight: 600;
+  font-size: $description-text;
+  color: $description;
+  padding-left: 40px;
 }

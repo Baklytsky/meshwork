@@ -290,23 +290,28 @@
                             </label>
                         </li>
 
-                        <!----------------------- Attachemts --------------------------->
+                        <!----------------------- Attachments --------------------------->
 
                         <li class="key-details-item">
-                            <h3 class="key-details-headline">Attachemts</h3>
-
-                            <input type="text" style="visibility: hidden; display: none; position: absolute" id="attachmentNum" value="123456" />
-                            <input type="button" class="GeneralButton addNewAttachment" value="Add New Attachment" onclick="addAttachment(this)" />
-                            <div class="Msg">You cant add new attachment</div>
-                            <div style="clear:both;margin-bottom:10px;"></div>
+                            <h3 class="key-details-headline">Attachments</h3>
+                            <input type="text" id="attachmentNum" value="123456"/>
+                            <div class="add-wrapper">
+                                <input type="button" class="GeneralButton addNewAttachment" value="Add New Attachment"/>
+                                <span class="attachment-description">File formats: <span class="formats"></span> (2MB maximum)</span>
+                            </div>
+                            <div class="Msg">You can add only 6 attachment</div>
                             <div class="attachmentContainer"></div>
-                            <div class="sureAdd" style="text-align: center; margin-top: 15px; clear: both; display: none;"></div>
-
+                            <div class="sureAdd"></div>
                         </li>
                     </ul>
 
-                    <div class="profile-btn-block">
-                        <button type="submit" class="submit-brief-btn">Submit</button>
+                    <div class="publish-brief-block">
+                        <button type="submit" class="publish-brief-btn">Publish brief</button>
+                        <p class="publish-description">
+                            I understand that this Brief contains Confidential Information or Assets,
+                            and I am bound by Genero's Terms which requires me to keep secret, secure and not disclose,
+                            share or publish any and all Confidential Information or Assets.
+                        </p>
                     </div>
                 </form>
             </div>
