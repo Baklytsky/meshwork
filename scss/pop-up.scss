@@ -297,11 +297,11 @@
 .log-in-pop-up, .sign-up-pop-up, .cookie-pop-up,
 .faq-pop-up, .terms-pop-up,
 .privacy-pop-up, .support-pop-up,
-.message-pop-up, .contact-us-pop-up {
+.message-pop-up, .contact-us-pop-up, .almost-pop-up {
   display: none;
 }
 
-.sign-up-pop-up, .log-in-pop-up, .cookie-pop-up {
+.sign-up-pop-up, .log-in-pop-up, .cookie-pop-up, .almost-pop-up {
   animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   @keyframes fade-in {
     0% {

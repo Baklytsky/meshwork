@@ -32,15 +32,17 @@ let faq = document.querySelector('.faq'),
     privacy = document.querySelector('.privacy'),
     support = document.querySelector('.support'),
     contactUs = document.querySelector('.contact-us'),
+    almostPopUp = document.querySelector('.almost'),
     gotIt = document.querySelectorAll('.got-it'),
     closeX = document.querySelectorAll('.close-x'),
     supportSubmit = document.querySelector('.support-submit'),
     messagePopUp = document.querySelectorAll('.message-pop-up'),
     supportPopUp = document.querySelectorAll('.support-pop-up'),
-    subMenuLinks = [faq, terms, privacy, support, contactUs];
+    // almostPopUp = document.querySelectorAll('.almost-pop-up'),
+    popUPLinks = [faq, terms, privacy, support, contactUs, almostPopUp];
 
 
-subMenuLinks.forEach(i => i.addEventListener('click', () => {
+popUPLinks.forEach(i => i.addEventListener('click', () => {
     let linkName = i.className.split(' ')[1],
         pop = document.querySelector('.' + linkName + '-pop-up');
     pop.style.display = 'block'
