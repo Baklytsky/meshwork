@@ -351,19 +351,22 @@
 }
 
 //*********************************** Section business cabinet content *********************
-.business-cabinet-content {
+.business-cabinet-content {}
   //*********************************** Creators list **************************************
   .creators-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
 
     .creator-card-item {
-      width: calc(33% - 20px);
+      width: calc(33.3% - 15px);
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
       overflow: hidden;
-      margin: 0 10px 20px;
+      margin: 0 0 24px;
+      display: flex;
+      flex-direction: column;
     }
 
     .creator-data {
@@ -377,6 +380,9 @@
     }
 
     .card-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
       padding: 16px;
     }
 
@@ -404,16 +410,18 @@
     .card-links-list {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-.card-link-item {
-  width: calc(50% - 6px);
-}
+      align-items: flex-end;
+      flex-grow: 1;
+
+      .card-link-item {
+        width: calc(50% - 6px);
+      }
       .card-link {
         @include card-btn;
       }
     }
-  }
-}
+
+
 
 //*********************************** Section business profile content *********************
 .business-profile-content {
@@ -1514,8 +1522,8 @@
 
 //*********************************** CREATOR PAGE avatar block ******************
 .creator-avatar-block {
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
+  min-width: 300px;
   text-align: center;
   background-color: $pop-up-input-gradient;
   padding: 32px 0 57px;
@@ -1560,4 +1568,129 @@
 //*********************************** CREATOR PAGE info block ******************
 .creator-info-block {
   flex-grow: 1;
+  padding: 49px 74px 32px 32px;
+}
+.creator-title-block {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+}
+.creator-title {
+  font-weight: 700;
+  font-size: $menu-link;
+  color: $black;
+  padding-right: 5px;
+}
+.creator-description {
+  font-size: $normal;
+  color: $black;
+}
+.about-creator-text {
+  padding: 24px 0;
+}
+.creator-tags {
+  display: inline-block;
+  font-weight: 700;
+  font-size: $lang-item;
+  color: $black;
+  padding: 8px 12px;
+  background-color: $humming-bird;
+  border-radius: 160px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  transition: all .3s linear;
+  &:hover {
+    background-color: darken($humming-bird, 10%);
+  }
+}
+.creator-small-description {
+  font-size: 11px;
+  line-height: 13px;
+  color: $small-description;
+  padding-top: 8px;
+}
+
+//*********************************** CREATOR PAGE projects content ******************
+.creator-projects-content {}
+.creator-projects-title {
+  font-weight: 700;
+  font-size: $benefits-title;
+  color: $black;
+  border-bottom: 1px solid $mystic;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.creator-project-name {
+  font-weight: 700;
+  font-size: $card-description;
+  color: $black;
+}
+.creator-project-description {
+  font-size: $lang-item;
+  color: $black;
+  padding-bottom: 16px;
+}
+
+//************************************************************************************
+//*********************************** Section business PROJECT ITEM ******************
+//************************************************************************************
+.creator-post-type-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 45px 0 72px;
+}
+.creator-post-type {
+  background-color: $white;
+  box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
+  border-radius: 4px;
+  .post-type-img {
+    width: 100%;
+    height: auto;
+  }
+}
+.project-info-block {
+  padding: 24px 32px 24px;
+}
+.projects-item-title {
+  font-weight: 700;
+  font-size: $benefits-title;
+  color: $black;
+}
+.about-project-text {
+  padding: 8px 0 24px;
+  border-bottom: 1px solid $mystic;
+}
+.project-roles-title {
+  font-size: $lang-item;
+  color: $black;
+  padding: 16px 0 8px;
+}
+
+.creator-avatar-item-style {
+  box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
+  border-radius: 4px;
+  padding: 16px 0 0;
+  margin-left: 23px;
+  .open-chat-btn {
+    margin-bottom: 24px;
+  }
+}
+.creator-name-item {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 0;
+  .first-name {
+    padding-right: 8px;
+  }
+}
+.creator-info-item {
+  padding: 24px 26px;
+  background-color: $white;
 }
