@@ -103,6 +103,8 @@ supportSubmit.addEventListener('click', ()=> {
 
 let dropholderRoles = document.querySelector('.dropholder-roles'),
     dropdownRoles = document.querySelector('.dropdown-roles'),
+    dropdownProjects = document.querySelector('.dropdown-project'),
+    dropholderProjects = document.querySelector('.dropholder-project'),
     dropdownRolesOption = document.querySelector('.dropdownOption-roles'),
     dropholderLocation = document.querySelector('.dropholder-location'),
     dropdownLocationOption = document.querySelector('.dropdownOption-location'),
@@ -113,6 +115,7 @@ if (dropdownRoles) {
     dropdownRoles.addEventListener('click', ()=> {
         dropholderRoles.classList.toggle('active-roles')
         dropholderLocation.classList.remove('active-location')
+        dropholderProjects.classList.remove('active-project')
         // outSelectorClick()
     });
 }
@@ -122,6 +125,16 @@ if (dropdownLocation) {
     dropdownLocation.addEventListener('click', ()=> {
         dropholderLocation.classList.toggle('active-location')
         dropholderRoles.classList.remove('active-roles')
+        dropholderProjects.classList.remove('active-project')
+        // outSelectorClick()
+    });
+}
+//----------------------------------- Location ---------------------------------
+if (dropdownProjects) {
+    dropdownProjects.addEventListener('click', ()=> {
+        dropholderProjects.classList.toggle('active-project')
+        dropholderRoles.classList.remove('active-roles')
+        dropholderLocation.classList.remove('active-location')
         // outSelectorClick()
     });
 }
