@@ -1,4 +1,4 @@
-'use strict'
+
 
 //--------------------------- Sub menu on click "My account" -----------------
 

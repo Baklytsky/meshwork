@@ -16,8 +16,9 @@
 
 //************************************* Dashboard section wrapper ******************************
 .dashboard-section-wrapper {
-  max-width: 940px;
+  max-width: 100%;
   position: relative;
+  padding: 0 3%;
   margin: 0 auto;
 }
 
@@ -356,7 +357,7 @@
   .creators-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    //justify-content: space-between;
     width: 100%;
     margin: 0 auto;
   }
@@ -369,6 +370,12 @@
       margin: 0 10px 20px;
       display: flex;
       flex-direction: column;
+      @media (min-width: 1280px) {
+        width: calc(25% - 20px);
+      }
+      @media (min-width: 1440px) {
+        width: calc(20% - 20px);
+      }
     }
 
     .creator-data {

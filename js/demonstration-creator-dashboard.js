@@ -98,3 +98,41 @@ supportSubmit.addEventListener('click', ()=> {
     supportPopUp.style.display = 'none'
     messagePopUp.style.display = 'block'
 })
+
+//----------------------------------- Selectors -------------------------------
+
+let dropholderRoles = document.querySelector('.dropholder-roles'),
+    dropdownRoles = document.querySelector('.dropdown-roles'),
+    dropdownRolesOption = document.querySelector('.dropdownOption-roles'),
+    dropholderLocation = document.querySelector('.dropholder-location'),
+    dropdownLocationOption = document.querySelector('.dropdownOption-location'),
+    dropdownLocation = document.querySelector('.dropdown-location');
+
+//----------------------------------- Roles -----------------------------------
+if (dropdownRoles) {
+    dropdownRoles.addEventListener('click', ()=> {
+        dropholderRoles.classList.toggle('active-roles')
+        dropholderLocation.classList.remove('active-location')
+        // outSelectorClick()
+    });
+}
+
+//----------------------------------- Location ---------------------------------
+if (dropdownLocation) {
+    dropdownLocation.addEventListener('click', ()=> {
+        dropholderLocation.classList.toggle('active-location')
+        dropholderRoles.classList.remove('active-roles')
+        // outSelectorClick()
+    });
+}
+
+// function outSelectorClick() {
+//     if (dropholderRoles.classList.contains('active-roles')) {
+//         document.body.addEventListener('mousedown', function (e) {
+//             if (e.target === dropdownRolesOption) {
+//                 console.log (e.target)
+//                 dropholderRoles.classList.remove('active-roles')
+//             }
+//         })
+//     }
+// }
