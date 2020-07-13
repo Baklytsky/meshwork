@@ -42,8 +42,8 @@
         <ul class="sidebar-menu">
             <li class="sidebar-menu-item active-sidebar-menu">
                 <a href="business-cabinet.html" class="sidebar-menu-link">
-                    Find creators
-                    <img src="img/icons/find-creator-active.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                    Dashboard
+                    <img src="img/icons/dashboard.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
             <li class="sidebar-menu-item">
@@ -55,8 +55,20 @@
             </li>
             <li class="sidebar-menu-item">
                 <a href="business-my-briefs.html" class="sidebar-menu-link">
-                    My briefs
-                    <img src="img/icons/my-briefs.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                    Balance
+                    <img src="img/icons/balance.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="business-my-briefs.html" class="sidebar-menu-link">
+                    My projects
+                    <img src="img/icons/my-profile.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="business-my-briefs.html" class="sidebar-menu-link">
+                    My portfolio
+                    <img src="img/icons/portfolio.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
         </ul>
@@ -173,9 +185,7 @@
                 Write your question and our manager will soon helps you:
             </p>
             <form action="#">
-                <label for="support">
-                    <textarea name="support" id="support" cols="40" rows="5" class="support-textarea"></textarea>
-                </label>
+                <textarea name="support" id="support" cols="40" rows="5" class="support-textarea"></textarea>
                 <button type="submit" class="pop-up-btn support-submit">Send</button>
             </form>
         </div>
@@ -228,12 +238,12 @@
                     <ul class="pages-list">
                         <li class="pages-item">
                             <h2>
-                                <a href="business-cabinet.html" class="pages-item-link active-page-link">Creators</a>
+                                <a href="#" class="pages-item-link">Creators</a>
                             </h2>
                         </li>
                         <li class="pages-item">
                             <h2>
-                                <a href="creator-dashboard.html" class="pages-item-link">Projects</a>
+                                <a href="#" class="pages-item-link active-page-link">Projects</a>
                             </h2>
                         </li>
                     </ul>
@@ -245,15 +255,60 @@
 
                 <!----------------------- DASHBOARD HEADER BOTTOM -------------->
                 <div class="dashboard-header-bottom">
-                    <ul class="selectors-list">
+                    <div class="selectors-list">
+
                         <!----------------------- Search selector -------------->
-                        <li class="selectors-items">
+                        <div class="selectors-items">
                             <form action="#" method="GET">
                                 <input type="text" name="search" class="search-input" autocomplete="off" placeholder="Search creators">
                             </form>
-                        </li>
+                        </div>
+                        <!----------------------- Project selector -------------->
+                        <div class="selectors-items">
+                            <div class="roles-selector">
+                                <div class="dropholder-roles">
+                                    <div class="dropdown-roles">
+                                        <p class="holder">Project type</p>
+                                        <img src="img/icons/selector-icon.svg" alt="Selector icon"
+                                             class="selector-icon">
+                                    </div>
+                                    <div class="dropdownOption-roles">
+                                        <form action="#" method="GET">
+                                            <div class="roles-search-block">
+                                                <input type="search" placeholder="Search" class="roles-search">
+                                                <button type="submit" class="roles-search-btn">
+                                                    <img src="img/icons/search-icon.svg" alt="Search icon">
+                                                </button>
+                                            </div>
+                                            <ul>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="videographer1" name="project"
+                                                           value="videographer" class="checkbox">
+                                                    <label for="videographer1">videographer</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="director1" name="project" value="director"
+                                                           class="checkbox">
+                                                    <label for="director1">director</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="documentary1" name="project"
+                                                           value="documentary" class="checkbox">
+                                                    <label for="documentary1">documentary</label>
+                                                </li>
+                                                <li class="checkbox-item">
+                                                    <input type="checkbox" id="cameraman1" name="project" value="cameraman"
+                                                           class="checkbox">
+                                                    <label for="cameraman1">cameraman</label>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!----------------------- Roles selector -------------->
-                        <li class="selectors-items">
+                        <div class="selectors-items">
                             <div class="roles-selector">
                                 <div class="dropholder-roles">
                                     <div class="dropdown-roles">
@@ -295,9 +350,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </div>
                         <!----------------------- Location selector -------------->
-                        <li class="selectors-items">
+                        <div class="selectors-items">
                             <div class="location-selector">
                                 <div class="dropholder-location">
                                     <div class="dropdown-location">
@@ -361,8 +416,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <!----------------------- Filter btn ------------------->
+                        <ul class="filters-button-group button-group creator-button-group">
+                            <li class="active-btn-filter">
+                                <button class="btn-filter" data-filter="*">All</button>
+                                <span class="briefs-counter">53</span>
+                            </li>
+                            <li>
+                                <button class="btn-filter" data-filter=".active">Active</button>
+                                <span class="briefs-counter">32</span>
+                            </li>
+                            <li>
+                                <button class="btn-filter" data-filter=".completed">Completed</button>
+                                <span class="briefs-counter">21</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,307 +443,271 @@
                 <ul class="creators-list">
 
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item completed">
                         <picture>
-                            <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <source srcset="img/briefs.webp" type="image/webp">
+                            <img src="img/briefs.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
 
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item active">
                         <picture>
                             <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <img src="img/creators-image.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item active">
                         <picture>
-                            <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <source srcset="img/briefs.webp" type="image/webp">
+                            <img src="img/briefs.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
 
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item active">
                         <picture>
                             <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <img src="img/creators-image.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
 
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item completed">
                         <picture>
-                            <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <source srcset="img/briefs.webp" type="image/webp">
+                            <img src="img/briefs.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
 
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item active">
                         <picture>
-                            <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <source srcset="img/briefs.webp" type="image/webp">
+                            <img src="img/briefs.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
 
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item completed">
                         <picture>
                             <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <img src="img/creators-image.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
 
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item completed">
                         <picture>
-                            <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <source srcset="img/briefs.webp" type="image/webp">
+                            <img src="img/briefs.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
 
                     <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
+                    <li class="creator-card-item completed">
                         <picture>
-                            <source srcset="img/creators-image.webp" type="image/webp">
-                            <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                            <source srcset="img/briefs.webp" type="image/webp">
+                            <img src="img/briefs.jpg" alt="Brief image" title="Brief image"
                                  class="creator-image">
                         </picture>
                         <div class="card-content">
                             <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
+                            <div class="brief-data">
+                                <h3 class="creator-name">
+                                    Nestle
+                                </h3>
                                 <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
+                                    <p class="brief-description">
+                                        Make original video content for a product launch
                                     </p>
                                 </address>
                             </div>
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
+                            <!-------------- BRIEF INFO --------------->
+                            <div class="brief-info">
+                                <h4 class="brief-status">Active</h4>
+                                <p class="brief-price">USD <span>$40,000</span></p>
+                            </div>
+
+                            <!-------------- VIEW BRIEF --------------->
+                            <a href="#" class="brief-link">View brief</a>
                         </div>
                     </li>
                 </ul>
@@ -683,6 +717,7 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="js/demonstration-dashboard.js" defer></script>
+<script src="js/isotope.pkgd.min.js" defer></script>
+<script src="js/demonstration-my-briefs.js" defer></script>
 </body>
 </html>

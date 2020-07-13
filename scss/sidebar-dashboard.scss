@@ -13,7 +13,7 @@
 //********************************************** Dashboard sidebar ******************************
 //***********************************************************************************************
 #dashboard-sidebar {
-  width: 250px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -70,7 +70,7 @@
       }
 
       .sidebar-menu-link {
-        font-size: $menu-link;
+        font-size: $normal;
         font-weight: 700;
         color: $white;
         display: block;
@@ -88,19 +88,19 @@
       }
 
       .account-link {
-        padding: 9px 0 0 57px;
+        padding: 9px 0 0 36px;
       }
 
       .account-mail {
         display: inline-block;
-        padding: 0 0 9px 57px;
+        padding: 0 0 9px 36px;
         font-size: $lang-item;
         font-weight: 500;
         color: $silver;
       }
 
       .log-out-link {
-        padding: 17px 0 17px 57px;
+        padding: 17px 0 17px 36px;
       }
 
       .log-out-icon {
@@ -116,7 +116,7 @@
         background-color: $white;
         position: absolute;
         top: -350px;
-        left: 37px;
+        left: 13px;
         transform: scale(0);
         box-shadow: 0 3px 24px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
