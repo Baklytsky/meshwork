@@ -21,6 +21,11 @@
   padding: 0 3%;
   margin: 0 auto;
 }
+.small-section-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+}
 
 //**************************************** Dashboard section header ****************************
 .dashboard-section-header {
@@ -358,7 +363,7 @@
     display: flex;
     flex-wrap: wrap;
     //justify-content: space-between;
-    width: 100%;
+    max-width: 940px;
     margin: 0 auto;
   }
 
@@ -431,7 +436,9 @@
 
 //*********************************** Section business profile content *********************
 .business-profile-content {
+  width: 940px;
   padding: 32px 0 40px;
+  margin: 0 auto;
 }
 
 .profile-parts {
@@ -804,12 +811,12 @@
 //*********************************** Section business INBOX *********************
 
 .business-inbox-content {
-  width: 100%;
+  width: 940px;
   max-height: 70vh;
   background: $white;
   box-shadow: 0 2px 12px rgba(219, 219, 219, 0.8);
   border-radius: 4px;
-  margin-top: 32px;
+  margin: 32px auto 0;
   position: relative;
   display: flex;
   -ms-overflow-style: none;  /* IE 10+ */
