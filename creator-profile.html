@@ -41,22 +41,34 @@
         <!------------------------------- SIDEBAR MENU ------------------------->
         <ul class="sidebar-menu">
             <li class="sidebar-menu-item">
-                <a href="business-cabinet.html" class="sidebar-menu-link">
-                    Find creators
-                    <img src="img/icons/find-creator.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                <a href="creator-dashboard.html" class="sidebar-menu-link">
+                    Dashboard
+                    <img src="img/icons/dashboard.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
             <li class="sidebar-menu-item">
-                <a href="business-inbox.html" class="sidebar-menu-link">
+                <a href="#" class="sidebar-menu-link">
                     Inbox
                     <img src="img/icons/inbox.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                     <span class="inbox-counter">4 new</span>
                 </a>
             </li>
             <li class="sidebar-menu-item">
-                <a href="business-my-briefs.html" class="sidebar-menu-link">
-                    My briefs
-                    <img src="img/icons/my-briefs.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                <a href="#" class="sidebar-menu-link">
+                    Balance
+                    <img src="img/icons/balance.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link">
+                    My projects
+                    <img src="img/icons/my-profile.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link">
+                    My portfolio
+                    <img src="img/icons/portfolio.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
         </ul>
@@ -65,7 +77,7 @@
         <div class="account-block">
             <ul class="sidebar-menu account-menu">
                 <!------------------------------- My account ------------------------->
-                <li class="sidebar-menu-item active-sidebar-menu">
+                <li class="sidebar-menu-item">
                     <a href="#" class="sidebar-menu-link account-link">
                         My account
                         <span class="account-mail">aleksdesigner@.com</span>
@@ -89,7 +101,7 @@
 
                         <!------------------------------- Edit Profile ------------------------->
 
-                        <a href="#" class="edit-profile">Edit profile</a>
+                        <a href="business-profile.html" class="edit-profile">Edit profile</a>
 
                         <!------------------------------- Sub menu list ------------------------->
                         <ul class="sub-menu-list">
@@ -215,6 +227,19 @@
             <button class="pop-up-btn got-it">Got it</button>
         </div>
     </div>
+    <!------------------------------- Delete skill? ----------------------->
+    <div class="pop-up delete-skill-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <p class="pop-up-description skill-question">
+                Delete <span class="skill-name"></span> skill?
+            </p>
+            <div class="skill-btn-wrapper">
+                <button class="pop-up-btn cancel-skill">Cancel</button>
+                <button class="pop-up-btn delete-skill">Delete</button>
+            </div>
+        </div>
+    </div>
     <!------------------------------- DASHBOARD SECTION ----------------------->
     <!------------------------------------------------------------------------->
     <section id="dashboard-section">
@@ -308,7 +333,51 @@
                                 </ul>
                             </div>
                         </li>
-
+                        <!----------------------- Skills ------------------------>
+                        <li class="profile-parts-item">
+                            <h3 class="profile-part-headline">Skills</h3>
+                            <div class="profile-block skills-block">
+                                <div id="skills-wrapper" class="skills-wrapper">
+                                    <label class="profile-label">Add skills</label>
+                                    <input type="text" class="tagify" />
+                                </div>
+                            </div>
+                        </li>
+                        <!----------------------- Location ------------------------>
+                        <li class="profile-parts-item">
+                            <h3 class="profile-part-headline">Location</h3>
+                            <div class="profile-block">
+                                <ul class="profile-selector-list">
+                                    <li class="profile-selector-item">
+                                        <label for="country" class="profile-label">Country</label>
+                                        <select name="country" id="country" class="profile-input selector">
+                                            <option selected></option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="USA">USA</option>
+                                        </select>
+                                    </li>
+                                    <li class="profile-selector-item">
+                                        <label for="state" class="profile-label">State/Province</label>
+                                        <select name="state" id="state" class="profile-input selector">
+                                            <option selected></option>
+                                            <option value="Kyiv">Kyiv</option>
+                                            <option value="New York">New York</option>
+                                            <option value="Vancouver">Vancouver</option>
+                                        </select>
+                                    </li>
+                                    <li class="profile-selector-item">
+                                        <label for="city" class="profile-label">City</label>
+                                        <select name="city" id="city" class="profile-input selector">
+                                            <option selected></option>
+                                            <option value="Kyiv">Kyiv</option>
+                                            <option value="New York">New York</option>
+                                            <option value="Vancouver">Vancouver</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <!----------------------- Password ------------------------>
                         <li class="profile-parts-item">
                             <h3 class="profile-part-headline">Change password</h3>
@@ -348,55 +417,14 @@
                         </li>
                         <!----------------------- Location and Phone ------------------------>
                         <li class="profile-parts-item">
-                            <ul class="location-phone-block">
-                                <!----------------------- Location ------------------------>
-                                <li>
-                                    <h3 class="profile-part-headline">Location</h3>
-                                    <div class="profile-block">
-                                        <ul class="profile-selector-list">
-                                            <li class="profile-selector-item">
-                                                <label for="country" class="profile-label">Country</label>
-                                                <select name="country" id="country" class="profile-input selector">
-                                                    <option selected></option>
-                                                    <option value="Ukraine">Ukraine</option>
-                                                    <option value="Canada">Canada</option>
-                                                    <option value="USA">USA</option>
-                                                </select>
-                                            </li>
-                                            <li class="profile-selector-item">
-                                                <label for="state" class="profile-label">State/Province</label>
-                                                <select name="state" id="state" class="profile-input selector">
-                                                    <option selected></option>
-                                                    <option value="Kyiv">Kyiv</option>
-                                                    <option value="New York">New York</option>
-                                                    <option value="Vancouver">Vancouver</option>
-                                                </select>
-                                            </li>
-                                            <li class="profile-selector-item">
-                                                <label for="city" class="profile-label">City</label>
-                                                <select name="city" id="city" class="profile-input selector">
-                                                    <option selected></option>
-                                                    <option value="Kyiv">Kyiv</option>
-                                                    <option value="New York">New York</option>
-                                                    <option value="Vancouver">Vancouver</option>
-                                                </select>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <!----------------------- Phone number ------------------------>
-                                <li>
-                                    <h3 class="profile-part-headline">Phone number</h3>
-                                    <div class="profile-block profile-block-custom">
-                                        <div class="phone-verify-block">
-                                            <input type="tel" id="phone" class="profile-input">
-                                            <button class="verify-btn">Verify by SMS</button>
-                                            <p id="result"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <h3 class="profile-part-headline">Phone number</h3>
+                            <div class="profile-block profile-block-custom">
+                                <div class="phone-verify-block">
+                                    <input type="tel" id="phone" class="profile-input">
+                                    <button class="verify-btn">Verify by SMS</button>
+                                    <p id="result"></p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
 

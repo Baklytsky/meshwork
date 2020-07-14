@@ -207,6 +207,9 @@
     color: $black;
     padding: 0 30px 24px;
   }
+  .skill-question {
+    padding: 26px 0;
+  }
 
   .cookies-icon {
     width: 56px;
@@ -292,16 +295,32 @@
     line-height: 28px;
     color: $black;
   }
+  .cancel-skill {
+    background-color: $white;
+    border: 1px solid $mercury;
+    margin: 0 4px;
+    &:hover {
+      background-color: $mercury;
+    }
+  }
+  .delete-skill {
+    margin: 0 4px;
+  }
+  .skill-name {
+    font-weight: 700;
+    font-size: 20px;
+  }
 }
+
 
 .log-in-pop-up, .sign-up-pop-up, .cookie-pop-up,
 .faq-pop-up, .terms-pop-up,
 .privacy-pop-up, .support-pop-up,
-.message-pop-up, .contact-us-pop-up, .almost-pop-up {
+.message-pop-up, .contact-us-pop-up, .almost-pop-up, .delete-skill-pop-up {
   display: none;
 }
 
-.sign-up-pop-up, .log-in-pop-up, .cookie-pop-up, .almost-pop-up {
+.sign-up-pop-up, .log-in-pop-up, .cookie-pop-up, .almost-pop-up, .delete-skill-pop-up {
   animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   @keyframes fade-in {
     0% {

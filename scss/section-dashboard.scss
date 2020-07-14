@@ -661,7 +661,42 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
+//*********************************** Skills selector *********************************
+.skills-block {
+  min-height: 212px;
+  position: relative;
+  padding-bottom: 100px;
+}
+.skills-wrapper {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: $white;
+  z-index: 2;
+}
+.ui-tagify-wrap {
+  overflow-y: auto;
+}
+.ui-tagify-tag {
+  background: $skills-bg;
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 14px;
+  color: $black;
+  padding: 8px 12px;
+  margin: 4px 4px 4px 0;
+  border-radius: 80px;
+}
+.ui-tagify-remove {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: $black;
+  margin-left: 8px;
+  cursor: pointer;
+}
 //*********************************** Save and Reset btn *********************************
 
 .profile-btn-block {

@@ -70,8 +70,7 @@
       }
 
       .sidebar-menu-link {
-        font-size: $normal;
-        font-weight: 700;
+        font-size: $lang-item;
         color: $white;
         display: block;
         padding: 17px 0 17px 73px;
@@ -93,7 +92,7 @@
 
       .account-mail {
         display: inline-block;
-        padding: 0 0 9px 36px;
+        padding-bottom: 9px;
         font-size: $lang-item;
         font-weight: 500;
         color: $silver;
@@ -200,6 +199,10 @@
         position: absolute;
         top: 0;
         left: 0;
+      }
+      .sidebar-menu-link {
+        font-size: $normal;
+        font-weight: 700;
       }
     }
   }
