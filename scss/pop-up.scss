@@ -20,7 +20,7 @@
 
   .pop-up-headline {
     @include pop-up-headline;
-    text-transform: uppercase;
+    //text-transform: uppercase;
   }
 
   .pop-up-title {
@@ -207,6 +207,16 @@
     color: $black;
     padding: 0 30px 24px;
   }
+  .uppercase-description {
+    font-weight: 600;
+    font-size: $inbox-counter;
+    color: #1F1F1F;
+    text-transform: uppercase;
+    padding: 20px 30px 24px;
+  }
+  .sms-verify-block {
+    text-align: left;
+  }
   .skill-question {
     padding: 26px 0;
   }
@@ -311,17 +321,28 @@
     font-size: 20px;
     text-transform: capitalize;
   }
+  .cycleTimerBox {
+    display: inline-block;
+    width:100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #fff;
+  }
 }
 
 
 .log-in-pop-up, .sign-up-pop-up, .cookie-pop-up,
 .faq-pop-up, .terms-pop-up,
 .privacy-pop-up, .support-pop-up,
-.message-pop-up, .contact-us-pop-up, .almost-pop-up, .delete-skill-pop-up {
+.message-pop-up, .contact-us-pop-up, .almost-pop-up,
+.delete-skill-pop-up, .verify-pop-up, .balance-pop-up {
   display: none;
 }
 
-.sign-up-pop-up, .log-in-pop-up, .cookie-pop-up, .almost-pop-up, .delete-skill-pop-up {
+.sign-up-pop-up, .log-in-pop-up, .cookie-pop-up,
+.almost-pop-up, .delete-skill-pop-up, .verify-pop-up,
+.balance-pop-up {
   animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   @keyframes fade-in {
     0% {

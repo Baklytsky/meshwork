@@ -47,26 +47,26 @@
                 </a>
             </li>
             <li class="sidebar-menu-item">
-                <a href="#" class="sidebar-menu-link">
+                <a href="creator-inbox.html" class="sidebar-menu-link">
                     Inbox
                     <img src="img/icons/inbox.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                     <span class="inbox-counter">4 new</span>
                 </a>
             </li>
             <li class="sidebar-menu-item">
-                <a href="#" class="sidebar-menu-link">
+                <a href="creator-balance.html" class="sidebar-menu-link">
                     Balance
                     <img src="img/icons/balance.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
             <li class="sidebar-menu-item">
-                <a href="#" class="sidebar-menu-link">
+                <a href="creator-projects.html" class="sidebar-menu-link">
                     My projects
                     <img src="img/icons/my-profile.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
             <li class="sidebar-menu-item">
-                <a href="#" class="sidebar-menu-link">
+                <a href="creator-portfolio.html" class="sidebar-menu-link">
                     My portfolio
                     <img src="img/icons/portfolio.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
@@ -77,7 +77,7 @@
         <div class="account-block">
             <ul class="sidebar-menu account-menu">
                 <!------------------------------- My account ------------------------->
-                <li class="sidebar-menu-item">
+                <li class="sidebar-menu-item active-sidebar-menu">
                     <a href="#" class="sidebar-menu-link account-link">
                         My account
                         <span class="account-mail">aleksdesigner@.com</span>
@@ -240,6 +240,22 @@
             </div>
         </div>
     </div>
+    <!------------------------------- Verify by SMS ----------------------->
+    <div class="pop-up verify-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <p class="pop-up-description uppercase-description">
+                Your SMS parol will be available
+            </p>
+            <span class="cycleTimerBox">
+                <canvas width="100" height="100" id="cycleTimer"></canvas>
+            </span>
+            <div class="profile-input-item sms-verify-block">
+                <label for="sms-parol" class="profile-label">Your SMS parol:</label>
+                <input id="sms-parol" type="text" name="sms-parol" class="profile-input">
+            </div>
+        </div>
+    </div>
     <!------------------------------- DASHBOARD SECTION ----------------------->
     <!------------------------------------------------------------------------->
     <section id="dashboard-section">
@@ -252,7 +268,7 @@
                 <div class="dashboard-header-top">
                     <h2 class="dashboard-header-title">Edit profile</h2>
                     <div class="creator">
-                        <span class="creator-text">Create brief</span>
+                        <span class="creator-text">Create portfolio</span>
                         <a href="business-create-brief-key.html" class="creator-plus icon-android-add"></a>
                     </div>
                 </div>
@@ -261,7 +277,7 @@
         <div class="dashboard-section-wrapper">
             <!----------------------- DASHBOARD BUSINESS PROFILE CONTENT ---------------->
             <div class="business-profile-content">
-                <form action="#" method="POST">
+                <form action="#" method="">
 
                     <ul class="profile-parts">
 

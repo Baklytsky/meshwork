@@ -1737,3 +1737,75 @@
   flex-grow: 1;
   justify-content: flex-end;
 }
+
+//************************************************************************************
+//*********************************** CREATORS BALANCE *******************************
+//************************************************************************************
+
+.creator-balance-content {
+  padding-top: 95px;
+}
+.creator-balance-card {
+  width: 100%;
+  max-width: 540px;
+  background: $white;
+  box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.balance-card-header {
+  text-align: center;
+  background-color: $balance-header;
+  padding: 28px 0 20px;
+}
+.balance-card-header-subtitle, .balance-card-header-headline,
+.balance-card-body-title, .quantity-of-mesh {
+  color: $black;
+}
+.balance-card-header-headline {
+  font-weight: 700;
+  font-size: $normal-description;
+  line-height: 45px;
+}
+.balance-card-header-subtitle {
+  font-size: $card-description;
+  line-height: 28px;
+}
+.balance-card-body {
+  text-align: center;
+  padding: 24px 0;
+}
+.balance-card-body-title {
+  font-size: 20px;
+  line-height: 28px;
+  padding-bottom: 4px;
+}
+.quantity-of-mesh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: $fav-customer-description;
+  width: 92px;
+  height: 92px;
+  background-color: $alabaster;
+  border-radius: 50%;
+  padding: 14px;
+  margin: 0 auto;
+}
+.buy-mesh-btn {
+  @include btn;
+  font-size: $normal;
+  padding: 14px 33px;
+  &:hover {
+    @include btn-hover;
+  }
+}
+
+//************************************************************************************
+//*********************************** CREATORS PORTFOLIO *****************************
+//************************************************************************************
+
+.creator-portfolio-content {
+  padding-top: 40px;
+}
