@@ -101,7 +101,13 @@ if (dropdownLocation) {
         // outSelectorClick()
     });
 }
-
+$(document).on('click', function (e) {
+    e.stopPropagation();
+    if ($(e.target) !== ('.dropdownOption-roles')) {
+        console.log(e.target)
+        $('.dropholder-roles').removeClass('active-roles');
+    }
+});
 // function outSelectorClick() {
 //     if (dropholderRoles.classList.contains('active-roles')) {
 //         document.body.addEventListener('mousedown', function (e) {

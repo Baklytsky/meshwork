@@ -26,7 +26,6 @@ function outBlockClick() {
 }
 
 //--------------------------- Pop-up on click sub menu links -----------------
-
 let faq = document.querySelector('.faq'),
     terms = document.querySelector('.terms'),
     privacy = document.querySelector('.privacy'),
@@ -38,11 +37,10 @@ let faq = document.querySelector('.faq'),
     supportSubmit = document.querySelector('.support-submit'),
     messagePopUp = document.querySelectorAll('.message-pop-up'),
     supportPopUp = document.querySelectorAll('.support-pop-up'),
-    // almostPopUp = document.querySelectorAll('.almost-pop-up'),
-    popUPLinks = [faq, terms, privacy, support, contactUs, almostPopUp];
+    subMenuLinks = [faq, terms, privacy, support, contactUs];
 
 
-popUPLinks.forEach(i => i.addEventListener('click', () => {
+subMenuLinks.forEach(i => i.addEventListener('click', () => {
     let linkName = i.className.split(' ')[1],
         pop = document.querySelector('.' + linkName + '-pop-up');
     pop.style.display = 'block'
@@ -135,6 +133,16 @@ function addAttachment(field) {
         msg.slideDown("fast");
     }
 }
+//-------------------------------------------------------------- Choose Roles
+let input = document.querySelector('input[name=tags-outside]')
+// init Tagify script on the above inputs
+let tagify = new Tagify(input, {
+    whitelist: ["videographer", "director", "documentary", "cameraman", "goodman", "superman"],
+    dropdown: {
+        position: "input",
+        enabled : 0 // always opens dropdown when input gets focus
+    }
+})
 
 
 

@@ -16,13 +16,13 @@
 
 //************************************* Dashboard section wrapper ******************************
 .dashboard-section-wrapper {
-  max-width: 100%;
+  max-width: 1440px;
   position: relative;
   padding: 0 3%;
   margin: 0 auto;
 }
 .small-section-wrapper {
-  width: 940px;
+  max-width: 940px;
   margin: 0 auto;
   position: relative;
 }
@@ -1250,7 +1250,74 @@
   display: block;
 }
 
-//*********************************** CREATE BRIEF Calendar style *************
+//*********************************** CREATE BRIEF Roles selector *************
+.tagify--outside{
+  border: 0;
+}
+
+.tagify--outside .tagify__input {
+  order: -1;
+  flex: 100%;
+  width: 100%;
+  @include input-style;
+  font-size: $lang-item;
+  color: $black;
+  position: relative;
+  background: url("../img/icons/selector-icon.svg") no-repeat center right 10px;
+  margin: 0 0 15px 0;
+  &:focus {
+    border: 1px solid $alto;
+    border-radius: 4px;
+  }
+}
+.tagify--outside.tagify--focus .tagify__input{
+  transition:0s;
+  border: 1px solid $alto;
+  border-radius: 4px;
+}
+.tagify.tagify--focus {
+  border: none;
+}
+.tagify__dropdown {
+  color: $black;
+  border: 1px solid $alto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.11);
+  border-radius: 4px;
+}
+.tagify__dropdown__wrapper {
+  border: none;
+}
+.tagify__dropdown__item {
+  font-size: $log-in;
+  padding: 2px 15px;
+}
+.tagify__tag {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  background-color: #e2ffff;
+  border-radius: 80px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.tagify__tag>div {
+  background-color: #e2ffff;
+  border-radius: 80px;
+  padding: 8px 12px;
+}
+.tagify--tag-bg {
+  background-color: #e2ffff;
+}
+.tagify__tag__removeBtn {
+  font-size: 20px;
+}
+
+
+  //*********************************** CREATE BRIEF Calendar style *************
 
 .ui-datepicker {
   width: 412px;
@@ -1681,6 +1748,7 @@
   padding: 45px 0 72px;
 }
 .creator-post-type {
+  max-width: 70%;
   background-color: $white;
   box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
   border-radius: 4px;
@@ -1706,27 +1774,21 @@
   color: $black;
   padding: 16px 0 8px;
 }
-
-.creator-avatar-item-style {
-  box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
-  border-radius: 4px;
-  padding: 16px 0 0;
-  margin-left: 23px;
-  .open-chat-btn {
-    margin-bottom: 24px;
-  }
+.creator-avatar-item-block {
+  display: flex;
+  align-items: center;
+  padding: 16px 0 24px;
+}
+.mini-avatar-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
 .creator-name-item {
-  display: flex;
-  flex-direction: row;
-  padding: 16px 0;
-  .first-name {
-    padding-right: 8px;
-  }
-}
-.creator-info-item {
-  padding: 24px 26px;
-  background-color: $white;
+  font-weight: 500;
+  font-size: $normal;
+  color: $black;
+  padding: 0 16px 0 5px;
 }
 
 //************************************************************************************
