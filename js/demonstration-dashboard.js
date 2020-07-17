@@ -89,7 +89,6 @@ if (dropdownRoles) {
     dropdownRoles.addEventListener('click', ()=> {
         dropholderRoles.classList.toggle('active-roles')
         dropholderLocation.classList.remove('active-location')
-        // outSelectorClick()
     });
 }
 
@@ -98,23 +97,5 @@ if (dropdownLocation) {
     dropdownLocation.addEventListener('click', ()=> {
         dropholderLocation.classList.toggle('active-location')
         dropholderRoles.classList.remove('active-roles')
-        // outSelectorClick()
     });
 }
-$(document).on('click', function (e) {
-    e.stopPropagation();
-    if ($(e.target) !== ('.dropdownOption-roles')) {
-        console.log(e.target)
-        $('.dropholder-roles').removeClass('active-roles');
-    }
-});
-// function outSelectorClick() {
-//     if (dropholderRoles.classList.contains('active-roles')) {
-//         document.body.addEventListener('mousedown', function (e) {
-//             if (e.target === dropdownRolesOption) {
-//                 console.log (e.target)
-//                 dropholderRoles.classList.remove('active-roles')
-//             }
-//         })
-//     }
-// }

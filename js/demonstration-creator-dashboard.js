@@ -116,7 +116,6 @@ if (dropdownRoles) {
         dropholderRoles.classList.toggle('active-roles')
         dropholderLocation.classList.remove('active-location')
         dropholderProjects.classList.remove('active-project')
-        // outSelectorClick()
     });
 }
 
@@ -126,7 +125,6 @@ if (dropdownLocation) {
         dropholderLocation.classList.toggle('active-location')
         dropholderRoles.classList.remove('active-roles')
         dropholderProjects.classList.remove('active-project')
-        // outSelectorClick()
     });
 }
 //----------------------------------- Location ---------------------------------
@@ -135,17 +133,5 @@ if (dropdownProjects) {
         dropholderProjects.classList.toggle('active-project')
         dropholderRoles.classList.remove('active-roles')
         dropholderLocation.classList.remove('active-location')
-        // outSelectorClick()
     });
 }
-
-// function outSelectorClick() {
-//     if (dropholderRoles.classList.contains('active-roles')) {
-//         document.body.addEventListener('mousedown', function (e) {
-//             if (e.target === dropdownRolesOption) {
-//                 console.log (e.target)
-//                 dropholderRoles.classList.remove('active-roles')
-//             }
-//         })
-//     }
-// }
