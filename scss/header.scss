@@ -3,21 +3,21 @@
 
 .show-menu {
   overflow: visible;
-  transition: all .4s linear;
+  //transition: all .4s linear;
 }
 
 header {
   width: 100%;
   position: absolute;
   overflow: hidden;
-  transition: all .4s ease-in;
+  //transition: all .4s ease-in;
   z-index: 10;
 
   .wrapper-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px 0;
     @media (min-width: 768px) {
       padding: 40px 0 40px;
     }
@@ -25,21 +25,27 @@ header {
 
   //********************************************** Logo ************************************
   .logo {
-    margin-right: 65px;
     z-index: 5;
-    @include logo;
+    .logo-img {
+      width: 146px;
+      height: 19px;
+      display: block;
+    }
+    @media (min-width: 576px) {
+      margin-right: 65px;
+    }
   }
 
   //********************************************** Main menu ********************************
   .main-menu {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: $black;
     position: absolute;
     top: 0;
     right: -100%;
     transition: transform 0.4s ease-in;
-    z-index: 3;
+    z-index: 4;
     @media (min-width: 992px) {
       width: 100%;
       height: auto;
@@ -51,7 +57,9 @@ header {
       right: 0;
       padding: 0;
     }
-
+    nav {
+      flex-grow: 1;
+    }
     .menu-list {
       display: flex;
       flex-direction: column;
@@ -60,6 +68,7 @@ header {
       padding-top: 82px;
       @media (min-width: 992px) {
         flex-direction: row;
+        justify-content: center;
         padding-top: 0;
       }
     }
@@ -239,6 +248,12 @@ header {
   top: 0;
   background-color: $black;
   animation: slide-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  .wrapper-header {
+    padding: 10px 20px;
+    @media (min-width: 992px) {
+      padding: 20px 20px;
+    }
+  }
   @keyframes slide-bottom {
     0% {
       transform: translateY(-100px);
