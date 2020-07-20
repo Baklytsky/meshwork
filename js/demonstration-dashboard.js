@@ -25,10 +25,7 @@ function outBlockClick() {
 }
 //--------------------------- Pop-up on click sub menu links -----------------
 
-let faq = document.querySelector('.faq'),
-    terms = document.querySelector('.terms'),
-    privacy = document.querySelector('.privacy'),
-    support = document.querySelector('.support'),
+let support = document.querySelector('.support'),
     contactUs = document.querySelector('.contact-us'),
     gotIt = document.querySelectorAll('.got-it'),
     closeX = document.querySelectorAll('.close-x'),

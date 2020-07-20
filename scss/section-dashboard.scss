@@ -1983,3 +1983,30 @@
 .submit-textarea {
   background-color: $white;
 }
+
+//************************************************************************************
+//*********************************** FAQ, TERMS, POLICY *****************************
+//************************************************************************************
+.text-content-wrapper {
+  padding: 24px 0;
+}
+.text-content-headline, .text-content-title, .text-content-description {
+  color: $black;
+}
+.text-content-headline {
+  font-weight: 700;
+  font-size: $normal-plus;
+  line-height: 34px;
+  padding-bottom: 8px;
+}
+.text-content-title {
+  font-weight: 700;
+  font-size: $menu-link;
+  line-height: 25px;
+  padding-bottom: 8px;
+}
+.text-content-description {
+  font-size: $normal;
+  line-height: 22px;
+  padding-bottom: 24px;
+}
