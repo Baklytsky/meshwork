@@ -46,7 +46,7 @@
 }
 
 .dashboard-header-title {
-  font-size: $normal-description;
+  font-size: $running-line-size;
   font-weight: 500;
   color: $black;
 }
@@ -57,7 +57,7 @@
 
   .pages-item-link {
     position: relative;
-    font-size: $normal-description;
+    font-size: $running-line-size;
     font-weight: 500;
     color: $waterloo;
     margin-right: 20px;
@@ -665,37 +665,6 @@
 .skills-block {
   min-height: 212px;
   position: relative;
-  padding-bottom: 100px;
-}
-.skills-wrapper {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  background-color: $white;
-  z-index: 2;
-}
-.ui-tagify-wrap {
-  overflow-y: auto;
-}
-.ui-tagify-tag {
-  background: $skills-bg;
-  display: inline-block;
-  text-transform: capitalize;
-  font-weight: 700;
-  font-size: 14px;
-  color: $black;
-  padding: 8px 12px;
-  margin: 4px 4px 4px 0;
-  border-radius: 80px;
-}
-.ui-tagify-remove {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 14px;
-  color: $black;
-  margin-left: 8px;
-  cursor: pointer;
 }
 //*********************************** Save and Reset btn *********************************
 
@@ -766,7 +735,7 @@
 
 //********************************************* counter ************************
 .briefs-counter {
-  font-size: $briefs-counter;
+  font-size: 10px;
   line-height: 14px;
   color: $black;
   background-color: $mystic;
@@ -1298,6 +1267,7 @@
   color: #000;
   background-color: #e2ffff;
   border-radius: 80px;
+  margin: 0 0 5px 5px;
   position: relative;
   top: 0;
   bottom: 0;
@@ -1315,7 +1285,6 @@
 .tagify__tag__removeBtn {
   font-size: 20px;
 }
-
 
   //*********************************** CREATE BRIEF Calendar style *************
 
@@ -1574,7 +1543,7 @@
 }
 .attachment-description {
   font-weight: 600;
-  font-size: $description-text;
+  font-size: $tags-mobile;
   color: $description;
   padding-left: 16px;
 }
@@ -1606,7 +1575,7 @@
   width: 100%;
   max-width: 427px;
   font-weight: 600;
-  font-size: $description-text;
+  font-size: $tags-mobile;
   color: $description;
   padding: 0 24px 0 40px;
 }
@@ -1826,7 +1795,7 @@
 }
 .balance-card-header-headline {
   font-weight: 700;
-  font-size: $normal-description;
+  font-size: $running-line-size;
   line-height: 45px;
 }
 .balance-card-header-subtitle {

@@ -132,14 +132,20 @@ function addAttachment(field) {
 }
 //-------------------------------------------------------------- Choose Roles
 let input = document.querySelector('input[name=tags-outside]')
+let tagifyInput = document.querySelector('.tagify__input')
 // init Tagify script on the above inputs
 let tagify = new Tagify(input, {
     whitelist: ["videographer", "director", "documentary", "cameraman", "goodman", "superman"],
+    enforceWhitelist: true,
     dropdown: {
         position: "input",
         enabled : 0 // always opens dropdown when input gets focus
     }
 })
+tagify
+    .on('input', function (e) {
+        e.target.value = '';
+    });
 
 
 

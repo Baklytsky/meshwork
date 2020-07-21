@@ -101,73 +101,25 @@ showPassword.forEach(i => i.addEventListener('click', () => {
     }
 }));
 
-//----------------------- Add skills ----------------------------
+//-------------------------------------------------------------- Choose skills
+let inputSelector = document.querySelector('input[name=tags-outside]')
+// init Tagify script on the above inputs
+let tagify = new Tagify(inputSelector, {
+    whitelist: ["videographer", "director", "documentary", "cameraman", "goodman", "superman"],
+    enforceWhitelist: true,
+    dropdown: {
+        position: "input",
+        enabled : 0 // always opens dropdown when input gets focus
+    }
+})
+tagify
+    .on('input', function (e) {
+        e.target.value = '';
+    });
 
-(function($) {
-    $.fn.tagify = function() {
-        $('body').on('click', '.ui-tagify-remove', function() {
-            let tag = $(this).parent('div'),
-                tagText = tag.text().split('⨉');
-            $(".delete-skill-pop-up").css('display', 'block')
-            $(".skill-name").text(tagText[0]);
-            $(".delete-skill").on('click', function() {
-                tag.remove();
-                $(".delete-skill-pop-up").css('display', 'none')
-            })
-            $(".cancel-skill").on('click', function() {
-                $(".delete-skill-pop-up").css('display', 'none')
-            })
-            $(".close-x").on('click', function() {
-                $(".delete-skill-pop-up").css('display', 'none')
-            })
-        });
-
-        let wrap = document.createElement('div'),
-            delimeters = [13], // comma
-            length = delimeters.length,
-            i = 0;
-        $(wrap).addClass('ui-tagify-wrap').click(function() {
-            this.focus();
-        });
-        this.css('display', 'block')
-            .css('width', '100%')
-            .wrap(wrap)
-            .addClass('profile-input')
-            .bind('keypress', function(event) {
-                let charCode = event.which || event.keyCode,
-                    charStr, tagContent;
-                for (i = 0; i < length; i++) {
-                    if (delimeters[i] === charCode) {
-                        charStr = String.fromCharCode(charCode);
-                        tagContent = $(this).val().split(charStr)[0].trim();
-                        if (0 < tagContent.length) {
-                            $("#skills-wrapper").before('<div class="ui-tagify-tag">'+ '#' + tagContent + '<a href="#" class="ui-tagify-remove">⨉</a></div>').val('');
-                        }
-                        event.preventDefault();
-                        $(".tagify").val('');
-                        break;
-                    }
-                }
-            })
-            .bind('keydown', function(event) {
-                let charCode = event.which || event.keyCode;
-                if(charCode === 8 && 0 === $(this).val().length) {
-                    if ($('.ui-tagify-selected').length) {
-                        $('.ui-tagify-selected').remove();
-                    }
-                    else if ($(this).prev().length) {
-                        $(this).prev().addClass('ui-tagify-selected');
-                    }
-                }
-            });
-        // returns the div wrapper, does this make the most sense?
-        return this.parent();
-    };
-})(jQuery);
-
-$(".tagify").tagify();
-
-
+$(window).scroll(function () {
+    $('.tagify__dropdown').hide();
+})
 
 //----------------------- Verify btn ----------------------------
 $('body').on('click', '.verify-btn', function () {

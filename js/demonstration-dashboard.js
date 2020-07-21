@@ -32,7 +32,7 @@ let support = document.querySelector('.support'),
     supportSubmit = document.querySelector('.support-submit'),
     messagePopUp = document.querySelectorAll('.message-pop-up'),
     supportPopUp = document.querySelectorAll('.support-pop-up'),
-    subMenuLinks = [faq, terms, privacy, support, contactUs];
+    subMenuLinks = [support, contactUs];
 
 
 subMenuLinks.forEach(i => i.addEventListener('click', () => {
