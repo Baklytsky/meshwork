@@ -1,5 +1,14 @@
 @import "variables";
 
+@mixin logo {
+  a {
+    font-size: $menu-link;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
+
 @mixin btn {
   font-size: $lang-item;
   font-weight: 700;

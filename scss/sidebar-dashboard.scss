@@ -8,21 +8,37 @@
   margin: 0;
   padding: 0;
   height: 100vh;
+  position: relative;
 }
 
 //********************************************** Dashboard sidebar ******************************
 //***********************************************************************************************
-#dashboard-sidebar {
+.dashboard-sidebar {
   width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: $dashboard-bg;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  transform: translateX(-200px);
+  transition: all .3s linear;
+  @media (min-width: 992px) {
+    transform: translateX(0);
+    position: relative;
+    z-index: 0;
+  }
 
   .dashboard-nav {
     min-height: 100vh;
-    position: sticky;
-    top: 0;
-    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (min-width: 992px) {
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
   }
 
   .logo {
@@ -208,12 +224,19 @@
   }
 
   .account-block {
-    width: 110%;
+    width: 100%;
     background-color: $dashboard-bg-dark;
+    @media (min-width: 992px) {
+      width: 110%;
+    }
 
     .account-menu {
       padding-top: 15px;
     }
   }
+}
+//************************************** Toggle class to menu ***********************
+.mobile-menu-active {
+  transform: translateX(0);
 }
 
