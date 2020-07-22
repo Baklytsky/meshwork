@@ -107,19 +107,18 @@ let inputSelector = document.querySelector('input[name=tags-outside]')
 let tagify = new Tagify(inputSelector, {
     whitelist: ["videographer", "director", "documentary", "cameraman", "goodman", "superman"],
     enforceWhitelist: true,
+    skipInvalid: true,
     dropdown: {
         position: "input",
         enabled : 0 // always opens dropdown when input gets focus
     }
 })
-tagify
-    .on('input', function (e) {
-        e.target.value = '';
-    });
 
-$(window).scroll(function () {
-    $('.tagify__dropdown').hide();
-})
+jQuery(function ($) {
+    $(window).scroll(function () {
+        $('.tagify__dropdown').hide();
+    })
+});
 
 //----------------------- Verify btn ----------------------------
 $('body').on('click', '.verify-btn', function () {

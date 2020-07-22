@@ -137,15 +137,16 @@ let tagifyInput = document.querySelector('.tagify__input')
 let tagify = new Tagify(input, {
     whitelist: ["videographer", "director", "documentary", "cameraman", "goodman", "superman"],
     enforceWhitelist: true,
+    skipInvalid: true,
     dropdown: {
         position: "input",
         enabled : 0 // always opens dropdown when input gets focus
     }
 })
-tagify
-    .on('input', function (e) {
-        e.target.value = '';
-    });
-
+jQuery(function ($) {
+    $(window).scroll(function () {
+        $('.tagify__dropdown--input').hide();
+    })
+});
 
 
