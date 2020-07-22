@@ -439,6 +439,43 @@
 
 //********************************************** Customers Section ******************************
 //***********************************************************************************************
+@keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp;
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+.owl-carousel .animated {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
 #customers {
   width: 100%;
@@ -459,34 +496,64 @@
     }
     .fav-customers-list {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
       line-height: 0;
+    }
+    .fav-customers-item {
+      padding: 15px;
     }
   }
   //********************************************** Find customer block ***************************
   .find-customer {
     width: 100%;
-    background: url("../img/photo-colage.png") no-repeat center;
+    background: url("../img/photo-colage.png") no-repeat center / contain;
     .text-block {
-      max-width: 588px;
+      width: 90%;
       text-align: center;
-      padding: 212px 0 149px;
+      padding: 100px 0;
       margin: 0 auto;
+      @media (min-width: 768px) {
+        width: 60%;
+      }
+      @media (min-width: 1200px) {
+        padding: 272px 0 219px;
+      }
       .find-customer-headline {
-        font-size: $fav-customer-headline;
+        font-size: $card-headline;
         font-weight: 600;
-        line-height: 76px;
-        padding-bottom: 15px;
+        text-transform: uppercase;
+        color: $aquamarine;
+        padding-bottom: 25px;
+
+        @media (min-width: 768px) {
+          font-size: $hero-title;
+          line-height: 63px;
+          padding-bottom: 61px;
+        }
+        @media (min-width: 992px) {
+          font-size: $find-customer;
+          line-height: 80px;
+          padding-bottom: 61px;
+        }
+        span {
+          display: block;
+        }
       }
       .find-customer-description {
-        font-size: $fav-customer-description;
-        line-height: 33px;
-        padding-bottom: 80px;
+        font-size: $normal-description;
+        padding-bottom: 30px;
+        margin: 0 auto;
+        @media (min-width: 576px) {
+          font-size: $card-headline;
+        }
       }
       .find-customer-btn {
         @include btn;
-        width: 218px;
-        height: 68px;
+        padding: 15px 25px;
+        @media (min-width: 768px) {
+          padding: 15px 25px;
+        }
         &:hover {
           @include btn-hover;
         }
@@ -513,6 +580,11 @@
     bottom: 90px;
     right: 0;
     z-index: 1;
+    display: none;
+    @media (min-width: 576px) {
+      display: block;
+    }
+
   }
   &:before {
     content: "";
@@ -523,6 +595,10 @@
     bottom: 90px;
     left: 0;
     z-index: 1;
+    display: none;
+    @media (min-width: 576px) {
+      display: block;
+    }
   }
 
   //********************************************** Solutions text ***************************
@@ -531,12 +607,19 @@
     text-align: center;
     padding-bottom: 45px;
     margin: 0 auto;
+    z-index: 5;
     .solutions-headline {
       @include headline;
     }
     .solution-description {
-      font-size: $normal-plus;
+      font-size: $normal;
       color: $silver;
+      @media (min-width: 576px) {
+        font-size: $normal-description;
+      }
+      @media (min-width: 768px) {
+        font-size: $big-description;
+      }
     }
   }
 
@@ -544,53 +627,111 @@
   .solutions-cards {
     text-align: center;
     .solutions-cards-headline {
-      font-size: $big-description;
+      font-size: $normal-plus;
       font-weight: 500;
       line-height: 46px;
       z-index: 4;
+      @media (min-width: 576px) {
+        font-size: $normal-description;
+        line-height: 40px;
+      }
+      @media (min-width: 768px) {
+        font-size: $running-line-size;
+        line-height: 40px;
+      }
     }
     .solutions-cards-list {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 17px 0 53px;
       z-index: 4;
-
+      @media (min-width: 768px) {
+        flex-direction: row;
+        padding: 17px 0 53px;
+      }
       //********************************************** Card item *******************************
       .solutions-cards-item {
-        width: 33%;
-        min-height: 389px;
-        padding: 46px 35px 28px;
-        margin: 0 10px;
+        width: 100%;
+        max-width: 360px;
+        min-height: 350px;
+        padding: 46px 25px 28px;
+        margin: 20px 10px;
         box-sizing: border-box;
         z-index: 4;
+        @media (min-width: 576px) {
+          min-height: 389px;
+        }
+        @media (min-width: 768px) {
+          width: 33%;
+          margin: 0 10px;
+        }
+        @media (min-width: 992px) {
+          padding: 46px 35px 28px;
+        }
         .card-number {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
-
+          @media (min-width: 768px) {
+            justify-content: space-between;
+          }
+          img {
+            width: 60px;
+            height: auto;
+          }
           span {
-            font-size: $big-description;
+            font-size: $normal-plus;
             font-weight: 700;
             color: $black;
+            @media (min-width: 576px) {
+              font-size: $normal-description;
+            }
+            @media (min-width: 992px) {
+              font-size: $big-description;
+            }
           }
         }
         .card-text {
-          text-align: left;
+          text-align: center;
           padding-top: 50px;
+          @media (min-width: 768px) {
+            text-align: left;
+          }
           .card-headline {
-            font-size: $card-headline;
+            font-size: $normal-plus;
             font-weight: 700;
-            line-height: 44px;
+            line-height: 24px;
             color: $black;
+            padding-bottom: 10px;
+            @media (min-width: 576px) {
+              font-size: $normal-description;
+              line-height: 25px;
+            }
+            @media (min-width: 992px) {
+              font-size: $big-description;
+              line-height: 25px;
+
+            }
             span {
-              display: block;
+              display: inline-block;
+              @media (min-width: 768px) {
+                display: block;
+              }
             }
           }
           .card-description {
-            font-size: $card-description;
-            line-height: 27px;
+            font-size: $normal;
+            line-height: 20px;
             color: $black;
+            @media (min-width: 576px) {
+              font-size: $menu-link;
+              line-height: 23px;
+            }
+            @media (min-width: 992px) {
+              font-size: $card-description;
+            }
           }
         }
       }
@@ -611,11 +752,13 @@
   //********************************************** Solutions btn ********************************
   .solutions-btn {
     @include btn;
-    width: 218px;
-    height: 64px;
+    padding: 15px 25px;
     display: block;
     margin: 0 auto;
-    z-index: 4;
+    z-index: 5;
+    @media (min-width: 768px) {
+      padding: 15px 25px;
+    }
     &:hover {
       @include btn-hover;
     }
@@ -624,13 +767,11 @@
     position: absolute;
     top: 30%;
     left: 0;
-    z-index: 1;
   }
   .second-bg-element {
     position: absolute;
     bottom: 6%;
     right: 0;
-    z-index: 2;
   }
 }
 
@@ -638,19 +779,31 @@
 //***********************************************************************************************
 #digital {
   background-color: $code-gray;
-  padding: 97px 0 143px;
+  padding: 100px 0 50px;
+  @media (min-width: 768px) {
+    padding: 97px 0 143px;
+  }
   //********************************************** Digital text block ***************************
     .digital-text {
-      max-width: 870px;
+      width: 90%;
       text-align: center;
       margin: 0 auto;
-      padding-bottom: 65px;
+      padding-bottom: 50px;
+      @media (min-width: 768px) {
+        padding-bottom: 65px;
+      }
       .digital-headline {
         @include headline;
       }
       .digital-description {
-        font-size: $normal-description;
+        font-size: $normal;
         color: $silver;
+        @media (min-width: 576px) {
+          font-size: $normal-description;
+        }
+        @media (min-width: 768px) {
+          font-size: $big-description;
+        }
       }
     }
   //********************************************** Digital slider ********************************
@@ -720,13 +873,20 @@
   //********************************************** Projects ***************************************
   .projects {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-top: 125px;
+    align-items: center;
     position: relative;
+    padding-top: 100px;
+    @media (min-width: 992px) {
+      flex-direction: row;
+      align-items: start;
+      padding-top: 143px;
+    }
     &:after {
       content: url("../img/digital-bg-element.png");
       position: absolute;
-      top: 60px;
+      top: -67px;
       left: -50px;
     }
   }
@@ -752,28 +912,48 @@
   }
   //********************************************** Project list block *****************************
   .project-list-block {
-    width: 65%;
-    padding-left: 25px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    @media (min-width: 768px) {
+      width: 80%;
+      padding-left: 25px;
+    }
+    @media (min-width: 992px) {
+      width: 65%;
+      padding-left: 25px;
+    }
     .project-list {
       padding-bottom: 68px;
     }
     .project-item {
-      height: 127px;
       display: flex;
       border-radius: 6px;
       margin-bottom: 5px;
       overflow: hidden;
-      img {
-        width: 147px;
+      @media (min-width: 992px) {
         height: 127px;
+      }
+      img {
+        display: none;
+        @media (min-width: 576px) {
+          display: block;
+          width: 147px;
+          height: 127px;
+        }
+        @media (min-width: 992px) {
+          width: 147px;
+          height: 127px;
+        }
       }
       .project-card {
         width: 100%;
         flex-grow: 2;
         background: $project-card-gradient;
-        padding: 20px 24px 20px 16px;
+        padding: 10px;
+        @media (min-width: 992px) {
+          padding: 20px 24px 20px 16px;
+        }
       }
       //********************************************** Project card header *****************************
       .project-card-header {
@@ -781,16 +961,19 @@
         justify-content: space-between;
         align-items: center;
         .project-name {
-          font-size: $card-description;
+          font-size: $normal;
           font-weight: 700;
           color: $white;
           transition: all .3s linear;
+          @media (min-width: 992px) {
+            font-size: $card-description;
+          }
           &:hover {
             color: $aquamarine;
           }
         }
         .project-price {
-          font-size: 16px;
+          font-size: $normal;
           font-weight: 700;
         }
       }
@@ -805,11 +988,14 @@
       //********************************************** Project card tags *****************************
       .project-card-tags {
         display: flex;
+        flex-flow: wrap;
         align-items: center;
+
         .card-tag-item {
           display: inline-block;
           line-height: 28px;
           padding-right: 4px;
+          margin-bottom: 4px;
           a {
             font-size: $sign-up;
             font-weight: 700;
@@ -852,20 +1038,47 @@
   padding: 99px 0 96px;
   background: url("../img/newsletter-bg.jpg") no-repeat center / cover;
   .newsletter-headline {
-    @include headline;
-    text-transform: none;
+    font-size: $btn-size;
+    font-weight: 700;
+    text-align: center;
     padding-bottom: 20px;
+    @media (min-width: 576px) {
+      font-size: $normal-description;
+    }
+    @media (min-width: 768px) {
+      width: 90%;
+      margin: 0 auto;
+      font-size: $big-description;
+    }
   }
   .newsletter-form {
-    width: 75%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     border-radius: 6px;
-    overflow: hidden;
     margin: 0 auto;
+    @media (min-width: 576px) {
+      flex-direction: row;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) {
+      width: 75%;
+    }
   }
   .newsletter-input, .newsletter-submit {
-    height: 64px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 6px;
+
+    @media (min-width: 576px) {
+      width: auto;
+      border-radius: 0;
+    }
+    @media (min-width: 768px) {
+      height: 64px;
+    }
   }
   .newsletter-input {
     flex-grow: 2;
@@ -874,19 +1087,34 @@
     color: $black;
     border: none;
   }
+  .newsletter-input[type="search"]::-webkit-search-decoration,
+  .newsletter-input[type="search"]::-webkit-search-cancel-button,
+  .newsletter-input[type="search"]::-webkit-search-results-button,
+  .newsletter-input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance:none;
+    display: none;
+  }
   .newsletter-input::placeholder {
     font-size: $menu-link;
     color: $black;
   }
   .newsletter-submit {
-    font-size: $btn-size;
+    font-size: $normal;
     font-weight: 700;
     color: $black;
     background-color: $aquamarine;
     border: 1px solid $aquamarine;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     padding: 0 62px;
+    margin-top: 10px;
+    cursor: pointer;
     transition: all .3s linear;
+    @media (min-width: 576px) {
+      margin-top: 0;
+    }
+    @media (min-width: 768px) {
+      font-size: $btn-size;
+    }
     &:hover {
       @include btn-hover;
     }
@@ -896,35 +1124,54 @@
 //********************************************** Benefits section ********************************
 //************************************************************************************************
 #benefits {
-  background: $benefits-gradient;
+  background: $newsletter-gradient;
   padding: 101px 0 77px;
   .benefits-headline {
     @include headline;
-    color: $black;
+    color: $white;
     padding-bottom: 30px;
   }
   .benefits-list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
   .benefits-list-item {
-    width: 25%;
+    width: 100%;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 10px;
+    @media (min-width: 768px) {
+      width: 25%;
+      align-items: flex-start;
+    }
   }
   .benefits-icons {
     width: 59px;
     height: 70px;
   }
   .benefits-list-title {
-    font-size: $benefits-title;
-    color: $black;
+    font-size: $big-description;
+    color: $white;
     padding: 20px 0 10px;
+    @media (min-width: 768px) {
+      font-size: $benefits-title;
+    }
   }
   .benefits-list-description {
     font-size: $normal;
-    color: $black;
+    color: $silver;
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
   }
 }
 
@@ -932,28 +1179,34 @@
 //********************************************** Footer ******************************************
 //************************************************************************************************
 #footer {
-  background: $benefits-gradient;
-  .footer-menu {
-    border-top: 2px solid $black;
-    padding: 30px 0;
-  }
-  .menu-list {
+  background: $newsletter-gradient;
+  .footer-wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 20px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
-  .footer-menu-item {
-    padding-right: 124px;
+  .logo {
+    padding-bottom: 20px;
+    img {
+      width: 146px;
+      height: 19px;
+      display: block;
+    }
+    @media (min-width: 768px) {
+      padding: 0;
+    }
   }
-  .footer-menu-item:last-child {
-    padding-right: 0;
-  }
-  .footer-menu-link {
-    font-size: $log-in;
-    font-weight: 700;
-    color: $black;
-    transition: all .3s linear;
-    &:hover {
-      color: $aquamarine;
+  .copyright {
+    font-size: $lang-item;
+    color: $silver;
+    padding-bottom: 5px;
+    @media (min-width: 768px) {
+      padding: 0;
     }
   }
 }

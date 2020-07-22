@@ -1,16 +1,7 @@
 @import "variables";
 
-@mixin logo {
-  a {
-    font-size: $normal-plus;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: $white;
-  }
-}
-
 @mixin btn {
-  font-size: $btn-size;
+  font-size: $lang-item;
   font-weight: 700;
   color: $black;
   background-color: $aquamarine;
@@ -19,26 +10,35 @@
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   transition: all .3s linear;
+  @media (min-width: 768px) {
+    font-size: $btn-size;
+  }
 }
 @mixin btn-hover {
   background-color: $aquamarine-hover;
 }
 
 @mixin headline {
-  font-size: $h3;
+  font-size: $btn-size;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  @media (min-width: 576px) {
+    font-size: $normal-description;
+  }
+  @media (min-width: 768px) {
+    font-size: $h3;
+  }
 }
 
 @mixin discover-link {
   display: inline-block;
-  font-size: $btn-size;
-  line-height: 31px;
+  font-size: $normal;
+  line-height: 20px;
   color: $aquamarine;
   border: 1px solid $tundora;
   border-radius: 4px;
-  padding: 10px 55px 10px 40px;
+  padding: 10px 45px 10px 30px;
   position: relative;
   transition: all .3s linear;
   &:before {
@@ -60,10 +60,15 @@
       color: $aquamarine;
     }
   }
+  @media (min-width: 768px) {
+    font-size: $btn-size;
+    line-height: 31px;
+    padding: 10px 55px 10px 40px;
+  }
 }
 
 @mixin pop-up-window {
-  width: 460px;
+  width: 300px;
   text-align: center;
   background-color: $white;
   position: relative;
@@ -74,13 +79,19 @@
   box-sizing: border-box;
   border-radius: 4px;
   padding: 24px 35px;
+  @media (min-width: 768px) {
+    width: 460px;
+  }
 }
 
 @mixin pop-up-headline {
-  font-size: $normal-plus;
+  font-size: $normal;
   color: $black;
   font-weight: 700;
   text-align: center;
+  @media (min-width: 768px) {
+    font-size: $normal-plus;
+  }
 }
 
 @mixin close-x {

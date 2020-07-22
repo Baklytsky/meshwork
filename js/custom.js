@@ -60,11 +60,34 @@ function initSelect(elem) {
 initSelect(navigationSelect);
 
 //------------------------------- Digital sliders ---------------------------------------
-//----------------------------------- Top slider ----------------------------------------
+
 
 jQuery(function ($) {
     $(document).ready(function () {
-
+        //----------------------------------- Top slider ----------------------------------------
+        $('.fav-customers-list').owlCarousel({
+            lazyLoad: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            loop: true,
+            smartSpeed: 1500,
+            responsive: {
+                0: {
+                    items: 3
+                },
+                600: {
+                    items: 6
+                },
+                800: {
+                    items: 8
+                }
+            }
+        });
+//----------------------------------- Top slider ----------------------------------------
         $('.top-slider').owlCarousel({
             lazyLoad: true,
             nav: false,
@@ -109,6 +132,20 @@ jQuery(function ($) {
                     items: 4
                 }
             }
+        });
+        //----------------------------------- text slider ----------------------------------------
+        $('.text-slider').owlCarousel({
+            lazyLoad: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            loop: true,
+            items: 1,
+            animateOut: 'slideOutUp',
+            animateIn: 'slideInUp',
         });
 
     });

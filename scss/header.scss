@@ -136,6 +136,9 @@ header {
           margin: 0 9px;
           cursor: pointer;
           transition: all .3s linear;
+          @media (min-width: 768px) {
+            font-size: $sign-up;
+          }
           &:hover {
             @include btn-hover;
           }
