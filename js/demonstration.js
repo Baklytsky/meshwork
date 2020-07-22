@@ -1,19 +1,19 @@
 'use strict'
-// ********************************************MENU*******************************************
-// $("#main-nav-menu").on("click","a", function (event) {
-//     event.preventDefault();
-//     let id  = $(this).attr('href'),
-//         top = $(id).offset().top;
-//     $('body,html').animate({scrollTop: top}, 1500);
-//     if (parseInt($(window).width()) < 992) {
-//         setTimeout(function(){
-//                 $(".burger-icon").toggleClass("burger-icon-active")
-//                 $(".main-menu").toggleClass("mobile-menu-active")
-//                 $("header").removeClass("show-menu")
-//             },
-//             400);
-//     }
-// });
+//********************************************MENU*******************************************
+$(".delay-link").on("click","a", function (event) {
+    event.preventDefault();
+    let id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+    if (parseInt($(window).width()) < 992) {
+        setTimeout(function(){
+                $(".burger-icon").toggleClass("burger-icon-active")
+                $(".main-menu").toggleClass("mobile-menu-active")
+                $("header").removeClass("show-menu")
+            },
+            400);
+    }
+});
 
 // ******************************************** Footer - MENU *******************************************
 $("#footer-menu").on("click","a", function (event) {
