@@ -17,7 +17,8 @@
 <div class="dashboard-block">
     <!------------------------------- DASHBOARD NAVIGATION -------------------->
     <!------------------------------------------------------------------------->
-    <nav id="dashboard-sidebar" class="dashboard-nav">
+    <div class="dashboard-sidebar">
+    <nav class="dashboard-nav">
 
         <!------------------------------- LOGO -------------------------------->
         <div class="logo">
@@ -113,6 +114,7 @@
             </ul>
         </div>
     </nav>
+    </div>
 
     <!------------------------------- POP`S-UP SUB MENU ----------------------->
     <!------------------------------------------------------------------------->
@@ -171,7 +173,16 @@
     </div>
     <!------------------------------- DASHBOARD SECTION ----------------------->
     <!------------------------------------------------------------------------->
-    <section id="dashboard-section">
+    <section class="dashboard-section">
+        <div class="menu-overlay"></div>
+        <!------------------------------- MOBILE BLOCK ---------------->
+        <div class="mobile-block">
+            <h3 class="mobile-block-title">Find creators</h3>
+            <!------------------------------- Burger btn ------------------------------->
+            <div class="burger-icon">
+                <div class="burger-icon-line"></div>
+            </div>
+        </div>
 
         <!------------------------------- DASHBOARD HEADER ---------------->
         <div class="dashboard-section-header">
@@ -372,5 +383,6 @@
 <script src="js/tagify.min.js" defer></script>
 <script src="js/jquery-ui.min.js" defer></script>
 <script src="js/demonstration-create-brief.js" defer></script>
+<script src="js/mobile-sidebar.js" defer></script>
 </body>
 </html>
