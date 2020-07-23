@@ -25,7 +25,7 @@
   display: none;
   background: rgba(62, 62, 62, 0.8);
   position: fixed;
-  top: 44px;
+  top: 43px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -42,6 +42,18 @@
 }
 .active-menu-overlay {
   display: block;
+}
+.mobile-create-brief {
+  width: 100%;
+  display: block;
+  @include btn;
+  font-size: $normal;
+  text-transform: uppercase;
+  padding: 12px 0;
+  margin-top: 12px;
+  @media (min-width: 768px) {
+    font-size: $normal;
+  }
 }
 //************************************* Dashboard section wrapper ******************************
 .dashboard-section-wrapper {
@@ -63,7 +75,6 @@
   justify-content: space-between;
   align-items: center;
   background: $white;
-  border-bottom: 1px solid $mobile-border;
   padding: 10px 15px;
   position: sticky;
   top: 0;
@@ -140,10 +151,12 @@
 //**************************************** Dashboard section header ****************************
 .dashboard-section-header {
   background: $dashboard-section-bg;
+  border-top: 1px solid $mobile-border;
   position: sticky;
-  top: 44px;
+  top: 43px;
   z-index: 2;
   @media (min-width: 992px) {
+    border: none;
     padding-top: 64px;
     top: 0;
   }
@@ -515,7 +528,11 @@
   //*********************************** Creators list **************************************
   .creators-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
     .creator-card-item {
