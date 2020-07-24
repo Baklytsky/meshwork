@@ -166,23 +166,39 @@
 //*********************************** Dashboard section header top *****************************
 .dashboard-header-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: $white;
   border-top: 1px solid $mobile-border;
   border-bottom: 1px solid $mobile-border;
+  padding: 0 10px;
   @media (min-width: 992px) {
+    justify-content: space-between;
     background-color: transparent;
     padding-bottom: 12px;
     border-top: none;
     border-bottom: 1px solid $mystic;
   }
 }
+.mobile-dashboard-header-top {
+  display: none;
+  @media (min-width: 992px) {
+    display: flex;
+  }
+}
 
 .dashboard-header-title {
-  font-size: $running-line-size;
+  font-size: $log-in;
   font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
   color: $black;
+  padding: 12px 0;
+  @media (min-width: 992px) {
+    font-size: $running-line-size;
+    text-transform: none;
+    padding: 0;
+  }
 }
 
 .pages-list {
@@ -528,26 +544,40 @@
 }
 
 //*********************************** Section business cabinet content *********************
-.business-cabinet-content {}
+.business-cabinet-content {
+  margin: 0 auto;
+}
   //*********************************** Creators list **************************************
   .creators-list {
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
+
+    margin: 0 auto;
     @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
     }
   }
 
+
     .creator-card-item {
-      width: 100%;
-      max-width: 320px;
+      width: 80%;
+      max-width: none;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
       overflow: hidden;
-      margin: 0 auto 20px;
+      margin: 0 10% 20px;
       display: flex;
       flex-direction: column;
+      @media (min-width: 440px) {
+        width: 60%;
+        margin: 0 20% 20px;
+      }
+      @media (min-width: 576px) {
+        width: 50%;
+        margin: 0 25% 20px;
+      }
       @media (min-width: 768px) {
         width: calc(33.3% - 20px);
         margin: 0 10px 20px;
@@ -613,20 +643,35 @@
 
 //*********************************** Section business profile content *********************
 .business-profile-content {
-  width: 940px;
-  padding: 32px 0 40px;
+  max-width: 940px;
+  padding: 32px 10px 40px;
   margin: 0 auto;
+  @media (min-width: 992px) {
+    padding: 32px 0 40px;
+  }
 }
 
 .profile-parts {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .profile-parts-item {
-  width: calc(50% - 10px);
+  width: 100%;
   box-sizing: border-box;
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+  @media (min-width: 1200px) {
+    width: calc(50% - 10px);
+  }
 
   .profile-part-headline {
     @include h3-title;
@@ -656,8 +701,15 @@
 
 .upload-block {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  @media (min-width: 576px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @media (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 .upload-photo {
@@ -665,11 +717,18 @@
   height: 158px;
   border-radius: 4px;
   overflow: hidden;
+  margin-bottom: 20px;
+  @media (min-width: 576px) {
+    margin-bottom: 0;
+  }
 }
 
 .upload-options {
-  flex-grow: 1;
+
   text-align: center;
+  @media (min-width: 1200px) {
+    flex-grow: 1;
+  }
 
   input[type="file"] {
     display: none;
@@ -722,18 +781,34 @@
   align-items: center;
 }
 .profile-selector-item {
-  width: calc(50% - 8px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.profile-selector-item:last-child {
   width: 100%;
-  padding-top: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 24px;
+  &:first-child {
+    padding-top: 0;
+  }
+  @media (min-width: 768px) {
+    width: calc(50% - 8px);
+    padding-top: 0;
+    &:last-child {
+      width: 100%;
+      padding-top: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
 }
+
+//.profile-selector-item:last-child {
+//  width: 100%;
+//  padding-top: 24px;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//}
 
 .profile-label {
   @include label;
@@ -787,10 +862,13 @@
 //*********************************** Wrong password class *********************
 
 .wrong-pass-description {
-  font-size: $inbox-counter;
+  font-size: $wrong-pass-font;
   color: $wrong-pass;
   position: absolute;
   bottom: -20px;
+  @media (min-width: 768px) {
+    font-size: $inbox-counter;
+  }
 }
 .wrong-password {
   .profile-input {
@@ -821,10 +899,19 @@
 
 .phone-verify-block {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  @media (min-width: 576px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @media (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
-
+#result {
+  display: none;
+}
 .iti__country-name {
   color: $black;
 }
@@ -839,18 +926,24 @@
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 9px 16px;
+  margin-top: 20px;
   cursor: pointer;
   transition: background-color .3s linear;
+  @media (min-width: 576px) {
+    margin-top: 0;
+  }
   &:hover {
     background-color: $mercury;
   }
 }
 
 .location-phone-block {
-  height: 454px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (min-width: 1200px) {
+    height: 454px;
+  }
 }
 //*********************************** Skills selector *********************************
 .skills-block {
@@ -872,8 +965,11 @@
   box-sizing: border-box;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  padding: 13px 21px;
+  padding: 10px;
   cursor: pointer;
+  @media (min-width: 768px) {
+    padding: 13px 21px;
+  }
 }
 .save-btn {
   margin-left: 8px;
@@ -900,28 +996,40 @@
 //********************************************* Filter btn ***************************
 
 .filters-button-group {
-  width: 296px;
+  width: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 24px;
+  @media (min-width: 576px) {
+    width: 296px;
+  }
+  @media (min-width: 768px) {
+    padding-left: 24px;
+  }
   li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 5px;
+    @media (min-width: 768px) {
+      margin-right: 24px;
+    }
   }
 }
 
 //********************************************* btn ***************************
 .btn-filter {
-  font-size: $normal;
+  font-size: $sign-up;
   line-height: 22px;
   color: $black;
   background-color: transparent;
   border: none;
   cursor: pointer;
   padding-left: 4px;
+  @media (min-width: 768px) {
+    font-size: $normal;
+    line-height: 22px;
+  }
 }
 
 //********************************************* counter ************************
@@ -931,7 +1039,10 @@
   color: $black;
   background-color: $mystic;
   border-radius: 80px;
-  padding: 4px 8px;
+  padding: 2px 6px;
+  @media (min-width: 768px) {
+    padding: 4px 8px;
+  }
 }
 
 //********************************************* active btn *********************
@@ -992,7 +1103,7 @@
 //*********************************** Section business INBOX *********************
 
 .business-inbox-content {
-  width: 940px;
+  max-width: 940px;
   max-height: 70vh;
   background: $white;
   box-shadow: 0 2px 12px rgba(219, 219, 219, 0.8);

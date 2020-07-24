@@ -7,7 +7,7 @@ jQuery(function ($) {
     $(document).ready(function () {
         let $grid = $('.creators-list').isotope({
             itemSelector: '.creator-card-item',
-            layoutMode: 'fitRows'
+            layoutMode: 'fitRows',
         });
         $('.filters-button-group').on( 'click', 'button', function() {
             let filterValue = $( this ).attr('data-filter');

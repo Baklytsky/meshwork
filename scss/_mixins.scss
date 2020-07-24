@@ -159,10 +159,14 @@
 }
 
 @mixin h3-title {
-  font-size: $card-description;
+  font-size: $normal;
   font-weight: 700;
   color: $black;
-  line-height: 28px;
+  line-height: 20px;
+  @media (min-width: 768px) {
+    font-size: $card-description;
+    line-height: 28px;
+  }
 }
 
 @mixin label {
