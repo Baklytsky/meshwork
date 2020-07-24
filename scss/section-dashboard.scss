@@ -2076,15 +2076,18 @@
 //************************************************************************************
 
 .creator-balance-content {
-  padding-top: 95px;
+  padding: 95px 15px 0;
 }
 .creator-balance-card {
   width: 100%;
-  max-width: 540px;
+  max-width: 400px;
   background: $white;
   box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
   border-radius: 4px;
   margin: 0 auto;
+  @media (min-width: 768px) {
+    max-width: 540px;
+  }
 }
 .balance-card-header {
   text-align: center;
@@ -2097,12 +2100,20 @@
 }
 .balance-card-header-headline {
   font-weight: 700;
-  font-size: $running-line-size;
-  line-height: 45px;
+  font-size: $normal-plus;
+  line-height: 25px;
+  @media (min-width: 768px) {
+    font-size: $running-line-size;
+    line-height: 45px;
+  }
 }
 .balance-card-header-subtitle {
-  font-size: $card-description;
-  line-height: 28px;
+  font-size: $normal;
+  line-height: 18px;
+  @media (min-width: 768px) {
+    font-size: $card-description;
+    line-height: 28px;
+  }
 }
 .balance-card-body {
   text-align: center;
@@ -2118,13 +2129,16 @@
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  font-size: $fav-customer-description;
+  font-size: $h3;
   width: 92px;
   height: 92px;
   background-color: $alabaster;
   border-radius: 50%;
   padding: 14px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
+  @media (min-width: 768px) {
+    font-size: $fav-customer-description;
+  }
 }
 .buy-mesh-btn {
   @include btn;
@@ -2140,7 +2154,10 @@
 //************************************************************************************
 
 .creator-portfolio-content {
-  padding-top: 40px;
+  padding-top: 0;
+  @media (min-width: 992px) {
+    padding-top: 40px;
+  }
 }
 
 //************************************************************************************
@@ -2259,16 +2276,19 @@
 //*********************************** FAQ, TERMS, POLICY *****************************
 //************************************************************************************
 .text-content-wrapper {
-  padding: 24px 0;
+  padding: 24px 15px;
 }
 .text-content-headline, .text-content-title, .text-content-description {
   color: $black;
 }
 .text-content-headline {
   font-weight: 700;
-  font-size: $normal-plus;
+  font-size: $normal-description;
   line-height: 34px;
   padding-bottom: 8px;
+  @media (min-width: 768px) {
+    font-size: $normal-plus;
+  }
 }
 .text-content-title {
   font-weight: 700;
