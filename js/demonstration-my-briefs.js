@@ -22,6 +22,25 @@ jQuery(function ($) {
         });
     });
 });
+//----------------------------------- Filter dropdown -----------------------------------
+jQuery(function ($) {
+    if (parseInt($(window).width()) < 992) {
+        $('.dropdown-toggle').click(function(){
+            $(this).next('.filters-button-group').toggle();
+            $('.btn-filter').click(function() {
+                let filterValue = $(this).text();
+                $('.dropdown-toggle').text(filterValue);
+            });
+        });
+
+        $(document).click(function(e) {
+            let target = e.target;
+            if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) {
+                $('.filters-button-group').hide();
+            }
+        });
+    }
+});
 
 //--------------------------- Sub menu on click "My account" -----------------
 

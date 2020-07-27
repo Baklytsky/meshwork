@@ -302,16 +302,19 @@
 
   .selectors-list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     position: relative;
-
-    .selectors-items {
-      padding-right: 16px;
-      position: relative;
-    }
     .selectors-items:first-child {
-      padding-right: 51px;
+      padding-right: 0;
     }
+    .selectors-items {
+      padding-right: 5px;
+      @media (min-width: 992px) {
+        padding-right: 16px;
+      }
+    }
+
     .selectors-items:last-child {
       padding-right: 0;
     }
@@ -319,8 +322,8 @@
     //*********************************** Search **************************************************
     .search-input {
       display: block;
-      width: 33px;
-      height: 33px;
+      width: 25px;
+      height: 25px;
       border: 1px solid $selector-border;
       box-sizing: border-box;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
@@ -333,24 +336,36 @@
       transition: all 0.4s ease-in-out;
       position: absolute;
       top: 50%;
-      left: 0;
+      right: 0;
       transform: translateY(-50%);
       z-index: 2;
       overflow: hidden;
+      @media (min-width: 992px) {
+        width: 33px;
+        height: 33px;
+      }
       &::placeholder {
         color: transparent;
       }
     }
-
+    .search-input-mobile {
+      bottom: 0;
+      transform: translateY(0);
+      @media (min-width: 576px) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
     .search-input:focus {
-      width: 280px;
+      width: 100%;
+      right: 0;
       background-position: 90% 50%;
       padding-left: 16px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.11);
       &::placeholder {
         color: $placeholder;
       }
-      @media (min-width: 576px) {
+      @media (min-width: 1600px) {
         width: 420px;
       }
     }
@@ -368,21 +383,30 @@
         cursor: pointer;
 
         .holder {
-          font-size: $lang-item;
+          font-size: $inbox-counter;
           color: $black;
           border: 1px solid $selector-border;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
           box-sizing: border-box;
           border-radius: 4px;
-          padding: 6px 34px 7px 16px;
+          padding: 4px 20px 4px 10px;
+          @media (min-width: 992px) {
+            font-size: $lang-item;
+            padding: 6px 34px 7px 16px;
+          }
         }
 
         .selector-icon {
+          width: 10px;
           position: absolute;
           top: 50%;
-          right: 10px;
+          right: 5px;
           transform: translateY(-50%);
           transition: transform .3s linear;
+          @media (min-width: 992px) {
+            width: 14px;
+            right: 10px;
+          }
 
           &:before {
             font-weight: 700;
@@ -584,29 +608,34 @@
     }
     .card-picture-block {
       display: flex;
+      height: auto;
+      border-bottom: 1px solid $alto;
       @media (min-width: 768px) {
         flex-direction: column;
+        border: none;
       }
     }
     .creator-data {
-      flex-grow: 1;
-      border-bottom: 1px solid $alto;
+      width: 65%;
+      border-bottom: none;
       box-sizing: border-box;
       padding: 5px;
       @media (min-width: 768px) {
-        flex-grow: 0;
+        width: 100%;
+        border-bottom: 1px solid $alto;
         padding: 10px;
       }
     }
     .creator-image-block {
-      width: 40%;
+      width: 35%;
       @media (min-width: 768px) {
         width: 100%;
       }
     }
     .creator-image {
+      display: block;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
 
     .card-content {
@@ -628,11 +657,17 @@
     }
 
     .tags-list {
-      padding: 6px 0 16px;
+      padding: 6px 0 10px;
+      @media (min-width: 768px) {
+        padding: 6px 0 16px;
+      }
 
       .tag-item {
         display: inline-block;
-        padding: 6px 4px;
+        padding: 6px 0;
+        @media (min-width: 768px) {
+          padding: 6px 2px;
+        }
 
         .tag-link {
           @include tag-link;
@@ -1009,31 +1044,24 @@
 
 
 //********************************************* Filter btn ***************************
-
-.filters-button-group {
-  width: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.filter-menu-block {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
   @media (min-width: 576px) {
-    width: 296px;
-  }
-  @media (min-width: 768px) {
-    padding-left: 24px;
-  }
-  li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5px;
-    @media (min-width: 768px) {
-      margin-right: 24px;
-    }
+    flex-grow: 0;
+    width: auto;
   }
 }
-
-//********************************************* btn ***************************
-.btn-filter {
+.filter-menu-block-mobile {
+  margin-top: 10px;
+  @media (min-width: 576px) {
+    margin: 0;
+  }
+}
+.dropdown-toggle {
+  display: block;
+  position: relative;
   font-size: $sign-up;
   line-height: 22px;
   color: $black;
@@ -1041,7 +1069,73 @@
   border: none;
   cursor: pointer;
   padding-left: 4px;
-  @media (min-width: 768px) {
+  padding-right: 20px;
+  @media (min-width: 992px) {
+    font-size: $normal;
+    line-height: 22px;
+  }
+  &:before {
+    content: "\61";
+    font-family: untitled-font-1, sans-serif;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+.filters-button-group {
+  width: auto;
+  display:none;
+  background-color: $white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 4px 4px rgba(0,0,0,.25);
+  border-radius: 4px;
+  padding: 16px;
+  overflow: hidden;
+  z-index: 5;
+  box-sizing: border-box;
+  @media (min-width: 992px) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    cursor: auto;
+    overflow: hidden;
+    z-index: 1;
+    padding: 0 24px 0 0;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    @media (min-width: 992px) {
+      justify-content: center;
+      margin-right: 24px;
+    }
+  }
+}
+
+//********************************************* btn ***************************
+.btn-filter {
+  width: 100%;
+  font-size: $lang-item;
+  line-height: 22px;
+  text-align: left;
+  color: $black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-left: 4px;
+  @media (min-width: 992px) {
     font-size: $normal;
     line-height: 22px;
   }
@@ -1072,7 +1166,7 @@
     height: 2px;
     background-color: $black;
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     right: 0;
   }
@@ -1081,10 +1175,7 @@
 .column {
   column-count: 3;
 }
-.brief-data {
-  border-bottom: 1px solid $alto;
-  padding-bottom: 16px;
-}
+
 .brief-description {
   @include dashboard-card-description;
 }
@@ -1098,7 +1189,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 16px;
+  padding: 5px 0 10px;
+  @media (min-width: 768px) {
+    padding: 10px 0 16px;
+  }
 }
 .brief-status, .brief-price{
   font-size: $lang-item;
@@ -2084,6 +2178,9 @@
 .creator-button-group {
   flex-grow: 1;
   justify-content: flex-end;
+  .filters-button-group {
+    justify-content: flex-end;
+  }
 }
 
 //************************************************************************************
