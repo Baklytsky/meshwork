@@ -562,21 +562,17 @@
 
 
     .creator-card-item {
-      width: 80%;
+      width: 90%;
       max-width: none;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
       overflow: hidden;
-      margin: 0 10% 20px;
+      margin: 0 5% 20px;
       display: flex;
       flex-direction: column;
-      @media (min-width: 440px) {
-        width: 60%;
-        margin: 0 20% 20px;
-      }
       @media (min-width: 576px) {
-        width: 50%;
-        margin: 0 25% 20px;
+        width: 80%;
+        margin: 0 10% 20px;
       }
       @media (min-width: 768px) {
         width: calc(33.3% - 20px);
@@ -586,22 +582,41 @@
         width: calc(25% - 20px);
       }
     }
-
-    .creator-data {
-      border-bottom: 1px solid $alto;
-      padding-bottom: 6px;
+    .card-picture-block {
+      display: flex;
+      @media (min-width: 768px) {
+        flex-direction: column;
+      }
     }
-
+    .creator-data {
+      flex-grow: 1;
+      border-bottom: 1px solid $alto;
+      box-sizing: border-box;
+      padding: 5px;
+      @media (min-width: 768px) {
+        flex-grow: 0;
+        padding: 10px;
+      }
+    }
+    .creator-image-block {
+      width: 40%;
+      @media (min-width: 768px) {
+        width: 100%;
+      }
+    }
     .creator-image {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
     .card-content {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      padding: 16px;
+      padding: 5px;
+      @media (min-width: 768px) {
+        padding: 10px;
+      }
     }
 
     .creator-name {

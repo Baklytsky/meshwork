@@ -117,9 +117,12 @@
 }
 
 @mixin dashboard-card-headline {
-  font-size: $card-description;
+  font-size: $normal;
   font-weight: 700;
   color: $black;
+  @media (min-width: 768px) {
+    font-size: $card-description;
+  }
 }
 
 @mixin dashboard-card-description {
@@ -147,12 +150,16 @@
   display: inline-block;
   width: 100%;
   text-align: center;
-  font-size: $lang-item;
+  font-size: $tags-mobile;
   color: $black;
   background-color: $athens;
   border-radius: 4px;
-  padding: 9px 0;
+  padding: 7px 0;
   transition: background-color .3s linear;
+  @media (min-width: 768px) {
+    font-size: $lang-item;
+    padding: 9px 0;
+  }
   &:hover {
     background-color: $athens-dark;
   }
