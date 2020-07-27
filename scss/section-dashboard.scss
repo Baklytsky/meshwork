@@ -2277,27 +2277,25 @@
 //************************************************************************************
 .text-content-wrapper {
   padding: 24px 15px;
-}
-.text-content-headline, .text-content-title, .text-content-description {
-  color: $black;
-}
-.text-content-headline {
-  font-weight: 700;
-  font-size: $normal-description;
-  line-height: 34px;
-  padding-bottom: 8px;
-  @media (min-width: 768px) {
-    font-size: $normal-plus;
+  h1, h2, h3, h4, p {color: $black;}
+  h1 {
+    font-weight: 700;
+    font-size: $normal-description;
+    line-height: 34px;
+    padding-bottom: 8px;
+    @media (min-width: 768px) {
+      font-size: $normal-plus;
+    }
   }
-}
-.text-content-title {
-  font-weight: 700;
-  font-size: $menu-link;
-  line-height: 25px;
-  padding-bottom: 8px;
-}
-.text-content-description {
-  font-size: $normal;
-  line-height: 22px;
-  padding-bottom: 24px;
+  h2 {
+    font-weight: 700;
+    font-size: $menu-link;
+    line-height: 25px;
+    padding-bottom: 8px;
+  }
+  p {
+    font-size: $normal;
+    line-height: 22px;
+    padding-bottom: 24px;
+  }
 }
