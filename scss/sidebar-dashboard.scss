@@ -130,18 +130,17 @@
 
       //******************************** Sub menu block ******************************
       .sub-menu-block {
+        display: none;
         min-width: 174px;
         background-color: $white;
         position: absolute;
         top: -300px;
         left: 45px;
-        transform: scale(0);
         box-shadow: 0 3px 24px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
         z-index: 3;
         transition: transform .4s linear;
         @media (min-width: 992px) {
-          top: -350px;
           left: 13px;
         }
 
@@ -194,17 +193,6 @@
           }
           .faq {
             text-transform: uppercase;
-          }
-        }
-      }
-      .active-sub-menu {
-        animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        @keyframes slide-top {
-          0% {
-            transform: translateY(50px);
-          }
-          100% {
-            transform: translateY(0px);
           }
         }
       }

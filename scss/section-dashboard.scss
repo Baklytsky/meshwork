@@ -419,10 +419,6 @@
         .selector-icon {
           transform: translateY(-50%) rotate(180deg);
         }
-
-        .dropdownOption-roles, .dropdownOption-location, .dropdownOption-project  {
-          display: block;
-        }
       }
 
       //********************** Active search toggle class ******************************
@@ -432,32 +428,38 @@
         height: 100%;
         color: $black;
         background-color: $white;
-        position: relative;
+        @media (min-width: 576px) {
+          position: relative;
+        }
       }
 
       .dropdownOption-roles, .dropdownOption-location, .dropdownOption-project {
         display: none;
         width: 100%;
+        height: auto;
+        max-height: 300px;
         position: fixed;
         top: 138px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
         background: $white;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
-        margin: 16px 0;
+        margin: 16px auto;
         padding: 16px;
         cursor: pointer;
-        overflow: hidden;
+        overflow-y: scroll;
         z-index: 5;
         box-sizing: border-box;
+        ::-webkit-scrollbar {
+          width: 0;
+        }
         @media (min-width: 576px) {
           width: 300px;
+          max-height: none;
           position: absolute;
-          left: 0;
           top: 100%;
-          right: 0;
-          transform: translateX(0);
+          overflow: hidden;
         }
 
         form:nth-child(2) {
@@ -964,6 +966,10 @@
 }
 .iti__country-name {
   color: $black;
+}
+.iti__selected-dial-code {
+  color: $black;
+  font-size: $lang-item;
 }
 
 .verify-btn {
