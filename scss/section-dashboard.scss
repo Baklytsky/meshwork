@@ -1237,27 +1237,71 @@
 
 .left-inbox-block {
   width: 35%;
-  background-color: $athens-gray;
-  padding-top: 20px;
+  background-color: $white;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.08);
   overflow-y: scroll;
+  position: relative;
 }
-
-.massage-author {
-  background-color: $athens-gray;
+.author-search-block {
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  padding: 24px 16px;
+}
+.author-search-form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 15px 13px 28px;
-  border-bottom: 1px solid $white;
+}
+.author-search-input {
+  flex-grow: 1;
+  background-color: $white;
+  border: none;
+  outline: none;
+  &::placeholder {
+    text-transform: uppercase;
+    color: $black;
+  }
+  &:focus {
+    outline: none;
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+.author-search-btn {
+  background-color: $white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
+.massage-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  padding: 6px 10px;
+  border-bottom: 1px solid $inbox-border;
   cursor: pointer;
 }
-.active-chat {
-  background-color: $mystic;
-  border-left: 3px solid $black;
-}
+
 .author {
+  width: 100%;
   display: flex;
   align-items: center;
+}
+.massage-author-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 .massage-author-photo {
   display: block;
@@ -1265,22 +1309,46 @@
   height: 48px;
   border-radius: 50%;
   margin-right: 8px;
+  box-sizing: border-box;
 }
-.massage-author-name {
-  color: $black;
+.massage-author-name-block, .massage-author-description-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .massage-time {
   color: $black;
+}
+.last-massage {
+  font-size: $lang-item;
+  line-height: 17px;
+  color: $last-massage-color;
+}
+.new-massage-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.new-massage-active {
+  background-color: $aquamarine;
+}
+.active-chat {
+  background-color: $athens-gray;
+  .massage-author-photo {
+    border: 2px solid $aquamarine;
+  }
 }
 
 //*********************************** RIGHT INBOX BLOCK **************************
 
 .right-inbox-block {
   width: 65%;
+  background-color: $athens-gray;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 32px 24px 24px;
+  padding: 32px 24px 56px;
 }
 
 .right-inbox-massage {
@@ -1315,7 +1383,7 @@
 }
 
 .incoming-message, .outgoing-message {
-  background: $massage-gradient;
+  background: $white;
   border: 1px solid $iron;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1326,7 +1394,7 @@
     content: "";
     display: block;
     border: 10px solid transparent;
-    border-bottom: 10px solid $gallery;
+    border-bottom: 10px solid $white;
     position: absolute;
   }
 }
@@ -1346,9 +1414,13 @@
 }
 
 .send-massage-block {
-  border: 1px solid $silver;
-  border-radius: 6px;
-  padding: 6px;
+  background-color: $white;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 16px;
 }
 .send-textarea-form {
   display: flex;
@@ -1357,11 +1429,15 @@
 
 .massage-textarea {
   height: 16px;
-  padding: 8px 0 8px 10px;
+  font-size: $lang-item;
+  line-height: 19px;
+  color: $black;
+  padding: 20px 10px 20px 10px;
   flex-grow: 1;
   border: none;
   &::placeholder {
     font-size: $lang-item;
+    line-height: 19px;
     color: $black;
   }
 }
