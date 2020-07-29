@@ -1218,7 +1218,7 @@
 
 .business-inbox-content {
   max-width: 940px;
-  max-height: 70vh;
+  height: calc(100vh - 73px);
   background-color: $athens-gray;
   box-shadow: 0 2px 12px rgba(219, 219, 219, 0.8);
   border-radius: 4px;
@@ -1227,6 +1227,7 @@
   display: flex;
   padding: 0 15px;
   @media (min-width: 768px) {
+    height: 70vh;
     padding: 0;
     margin: 32px auto 0;
   }
@@ -1280,7 +1281,6 @@
 
 .left-inbox-block {
   width: 100%;
-  background-color: $white;
   box-shadow: 1px 0 10px rgba(0, 0, 0, 0.08);
   overflow-y: scroll;
   position: relative;
