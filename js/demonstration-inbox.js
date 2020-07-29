@@ -10,16 +10,16 @@ jQuery(function ($) {
             $(".left-inbox-block").css("display","none")
             $(".mobile-inbox-search-block").css("display","none")
             $(".business-inbox-content").css("padding","0")
-            $(".mobile-block-title").css("display","none")
+            $(".back-to-main").css("display","none")
             $(".selected-author-name-block").css("display","flex")
             scrollToBottom();
         });
-        $('.back-to-inbox').on('click', function() {
+        $('.back-to').on('click', function() {
             $(".right-inbox-block").css("display","none")
             $(".left-inbox-block").css("display","block")
             $(".mobile-inbox-search-block").css("display","block")
             $(".business-inbox-content").css("padding","0 15px")
-            $(".mobile-block-title").css("display","block")
+            $(".back-to-main").css("display","flex")
             $(".selected-author-name-block").css("display","none")
         });
     }

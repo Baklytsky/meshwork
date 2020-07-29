@@ -89,6 +89,10 @@
   font-size: $card-description;
   color: $black;
 }
+.back-to-main {
+  display: flex;
+  align-items: center;
+}
 
 //********************************************** Burger btn ********************************
 
@@ -1253,14 +1257,22 @@
 .selected-author-name-block {
   display: none;
   align-items: center;
-  .back-to-inbox {
+}
+  .back-to {
     background-color: transparent;
     border: none;
     margin-right: 9px;
     padding: 0;
     cursor: pointer;
     position: relative;
+    top: 2px;
     left: -8px;
+    outline: none;
+    &:focus, &:active {
+      outline: none;
+      color: black;
+      background-color: transparent;
+    }
     &:before {
       font-size: 24px;
     }
@@ -1270,7 +1282,7 @@
     font-size: $card-description;
     color: $black;
   }
-}
+
 
 .incoming-message-counter {
   color: $aquamarine;
