@@ -715,6 +715,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 }
 
@@ -2277,8 +2278,15 @@
 
 .open-chat-btn {
   @include btn;
-  font-size: $lang-item;
-  padding: 10px 41px;
+  font-size: $normal;
+  padding: 5px 15px;
+  @media (min-width: 768px) {
+    font-size: $normal;
+  }
+  @media (min-width: 992px) {
+    font-size: $menu-link;
+    padding: 10px 41px;
+  }
   &:hover {
     @include btn-hover;
   }
@@ -2393,25 +2401,37 @@
 .creator-post-type-block {
   display: flex;
   align-items: flex-start;
-  padding: 45px 0 72px;
+  padding: 15px 0;
+  @media (min-width: 992px) {
+    padding: 45px 0 72px;
+  }
 }
 .creator-post-type {
-  max-width: 70%;
+  max-width: 100%;
   background-color: $white;
   box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
   border-radius: 4px;
+  @media (min-width: 1200px) {
+    max-width: 70%;
+  }
   .post-type-img {
     width: 100%;
     height: auto;
   }
 }
 .project-info-block {
-  padding: 24px 32px 24px;
+  padding: 15px;
+  @media (min-width: 992px) {
+    padding: 24px 32px 24px;
+  }
 }
 .projects-item-title {
   font-weight: 700;
-  font-size: $benefits-title;
+  font-size: $menu-link;
   color: $black;
+  @media (min-width: 992px) {
+    font-size: $benefits-title;
+  }
 }
 .about-project-text {
   padding: 8px 0 24px;
