@@ -756,10 +756,9 @@
 
 .upload-block {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   @media (min-width: 576px) {
-    flex-direction: row;
     justify-content: space-around;
   }
   @media (min-width: 1200px) {
@@ -768,13 +767,13 @@
 }
 
 .upload-photo {
-  width: 158px;
-  height: 158px;
+  width: 118px;
+  height: 118px;
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 20px;
   @media (min-width: 576px) {
-    margin-bottom: 0;
+    width: 158px;
+    height: 158px;
   }
 }
 
@@ -800,19 +799,21 @@
   box-sizing: border-box;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
-  padding: 10px 30px;
+  padding: 5px 15px;
   margin: 0 auto;
   cursor: pointer;
   transition: background-color .3s linear;
+  @media (min-width: 576px) {
+    padding: 10px 30px;
+  }
   &:hover {
     background-color: $mercury;
   }
+
 }
 
 .change-pass-btn {
-  width: 165px;
   display: block;
-  padding: 11px 0;
   margin: 32px 0 0 auto;
 }
 
@@ -967,6 +968,12 @@
 #result {
   display: none;
 }
+.iti {
+  width: 100%;
+  @media (min-width: 576px) {
+    width: auto;
+  }
+}
 .iti__country-name {
   color: $black;
 }
@@ -984,12 +991,13 @@
   box-sizing: border-box;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  padding: 9px 16px;
+  padding: 5px 15px;
   margin-top: 20px;
   cursor: pointer;
   transition: background-color .3s linear;
   @media (min-width: 576px) {
     margin-top: 0;
+    padding: 9px 16px;
   }
   &:hover {
     background-color: $mercury;
@@ -1014,7 +1022,10 @@
 .profile-btn-block {
   border-top: 1px solid $mystic;
   padding-top: 30px;
-  text-align: right;
+  text-align: center;
+  @media (min-width: 992px) {
+    text-align: right;
+  }
 }
 .save-btn, .reset-btn {
   font-size: $normal;
@@ -1259,6 +1270,7 @@
   align-items: center;
 }
   .back-to {
+    color: $black;
     background-color: transparent;
     border: none;
     margin-right: 9px;
@@ -1268,9 +1280,9 @@
     top: 2px;
     left: -8px;
     outline: none;
-    &:focus, &:active {
+    &:focus, &:active, &:visited {
       outline: none;
-      color: black;
+      color: $black;
       background-color: transparent;
     }
     &:before {
@@ -1296,17 +1308,6 @@
   box-shadow: 1px 0 10px rgba(0, 0, 0, 0.08);
   overflow-y: scroll;
   position: relative;
-  animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  @keyframes scale-up-hor-left {
-    0% {
-      transform: scaleX(0.4);
-      transform-origin: 0 0;
-    }
-    100% {
-      transform: scaleX(1);
-      transform-origin: 0 0;
-    }
-  }
   @media (min-width: 768px) {
     width: 40%;
   }
@@ -1425,17 +1426,6 @@
   display: none;
   flex-direction: column;
   padding: 32px 10px 56px;
-  animation: scale-up-hor-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  @keyframes scale-up-hor-right {
-    0% {
-      transform: scaleX(0.4);
-      transform-origin: 100% 100%;
-    }
-    100% {
-      transform: scaleX(1);
-      transform-origin: 100% 100%;
-    }
-  }
   @media (min-width: 768px) {
     width: 60%;
     display: flex;
@@ -1595,13 +1585,20 @@
   box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  padding: 20px 40px;
-  margin-top: 24px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  @media (min-width: 768px) {
+    padding: 20px 40px;
+    margin-top: 24px;
+  }
 }
 .step-item {
   display: flex;
   align-items: center;
-  padding-right: 24px;
+  padding-right: 15px;
+  @media (min-width: 768px) {
+    padding-right: 24px;
+  }
   &:before {
     display: flex;
     justify-content: center;
@@ -1628,8 +1625,11 @@
 }
 .create-step-title {
   font-weight: 700;
-  font-size: $menu-link;
+  font-size: $normal;
   color: $create-steps-title;
+  @media (min-width: 768px) {
+    font-size: $menu-link;
+  }
 }
 .active-step-item {
   .create-step-title {
@@ -1644,11 +1644,13 @@
 
 .business-create-brief-content {
   background-color: $white;
-  padding: 0 40px 32px;
+  padding: 0 15px 15px;
   box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  margin-bottom: 300px;
+  @media (min-width: 768px) {
+    padding: 0 40px 32px;
+  }
 }
 .key-details-list {
   padding-top: 10px;
@@ -1656,7 +1658,10 @@
 .key-details-item {
   background-color: $white;
   border-bottom: 1px solid $mystic;
-  padding: 24px 0 32px;
+  padding: 20px 0;
+  @media (min-width: 768px) {
+    padding: 24px 0 32px;
+  }
 }
 .key-details-headline {
   @include h3-title;
@@ -1671,11 +1676,20 @@
 }
 .brief-preview-photo {
   display: block;
-  width: 302px;
+  width: 150px;
   height: auto;
+  @media (min-width: 576px) {
+    width: 250px;
+  }
+  @media (min-width: 768px) {
+    width: 302px;
+  }
 }
 .upload-image-options {
-  padding-left: 40px;
+  padding-left: 20px;
+  @media (min-width: 768px) {
+    padding-left: 40px;
+  }
   .image-upload {
     display: none;
   }
@@ -1699,13 +1713,17 @@
     font-size: 14px;
     font-weight: 300;
     color: $white;
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background-color: $create-steps-title;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (min-width: 768px) {
+      width: 34px;
+      height: 34px;
+    }
   }
 }
 .active-check-icon-style {
@@ -1798,8 +1816,11 @@
 //*********************************** CREATE BRIEF Budget *************
 
 .currency-wrapper {
-  width: 100%;
   max-width: 118px;
+  padding-right: 10px;
+  @media (min-width: 576px) {
+    width: 100%;
+  }
 }
 
 .budget-wrapper {
@@ -2015,9 +2036,13 @@
   position: absolute;
 }
 .file-block {
-  padding: 30px 0 20px;
-  margin-right: 45px;
+  padding: 20px 0 20px;
+  margin-right: 15px;
   position: relative;
+  @media (min-width: 768px) {
+    padding: 30px 0 20px;
+    margin-right: 45px;
+  }
 }
 .input-file-label {
   font-weight: 600;
@@ -2115,9 +2140,12 @@
   box-sizing: border-box;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  padding: 13px 24px;
+  padding: 5px 15px;
   cursor:pointer;
   transition: all .3s linear;
+  @media (min-width: 768px) {
+    padding: 13px 24px;
+  }
   &:hover {
     background-color: $mercury;
   }
@@ -2147,8 +2175,12 @@
 //*********************************** CREATE BRIEF Publish brief *************
 .publish-brief-block {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   padding-top: 24px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 .publish-brief-btn {
   font-size: $normal;
@@ -2160,9 +2192,11 @@
   border-radius: 4px;
   padding: 13px 37px;
   cursor: pointer;
-  margin-right: 8px;
   background-color: $aquamarine;
   transition: background-color .3s linear;
+  @media (min-width: 768px) {
+    margin-right: 8px;
+  }
   &:hover {
     background-color: $aquamarine-hover;
   }
@@ -2173,7 +2207,10 @@
   font-weight: 600;
   font-size: $tags-mobile;
   color: $description;
-  padding: 0 24px 0 40px;
+  padding: 0 0 15px 0;
+  @media (min-width: 768px) {
+    padding: 0 24px 0 40px;
+  }
 }
 //************************************************************************************
 //*********************************** Section business CREATOR PAGE ******************
@@ -2181,19 +2218,28 @@
 
 .creator-info-wrapper {
   display: flex;
+  flex-direction: column;
   background-color: $white;
   box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
   border-radius: 4px;
-  margin: 40px 0 48px;
+  margin: 15px 0;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin: 40px 0 48px;
+  }
 }
 
 //*********************************** CREATOR PAGE avatar block ******************
 .creator-avatar-block {
-  width: 300px;
-  min-width: 300px;
+  width: 100%;
   text-align: center;
   background-color: $pop-up-input-gradient;
-  padding: 32px 0 57px;
+  padding: 10px 0 20px;
+  @media (min-width: 768px) {
+    width: 300px;
+    min-width: 300px;
+    padding: 32px 0 57px;
+  }
 }
 
 .creator-avatar-img {
@@ -2208,15 +2254,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 16px 0 32px;
+  padding: 10px 0;
+  @media (min-width: 768px) {
+    padding: 16px 0 32px;
+  }
 }
 
 .first-name, .second-name {
   font-weight: 400;
-  font-size: $btn-size;
+  font-size: $normal;
   line-height: 22px;
   text-align: center;
   color: $black;
+  @media (min-width: 768px) {
+    font-size: $btn-size;
+  }
 }
 
 .second-name {
@@ -2235,7 +2287,10 @@
 //*********************************** CREATOR PAGE info block ******************
 .creator-info-block {
   flex-grow: 1;
-  padding: 49px 74px 32px 32px;
+  padding: 10px 15px;
+  @media (min-width: 768px) {
+    padding: 49px 74px 32px 32px;
+  }
 }
 .creator-title-block {
   display: flex;
@@ -2249,28 +2304,42 @@
 }
 .creator-title {
   font-weight: 700;
-  font-size: $menu-link;
-  color: $black;
-  padding-right: 5px;
-}
-.creator-description {
   font-size: $normal;
   color: $black;
+  padding-right: 5px;
+  @media (min-width: 768px) {
+    font-size: $menu-link;
+  }
+}
+.creator-description {
+  font-size: $lang-item;
+  color: $black;
+  @media (min-width: 768px) {
+    font-size: $normal;
+  }
 }
 .about-creator-text {
-  padding: 24px 0;
+  padding: 10px 0;
+  @media (min-width: 768px) {
+    padding: 24px 0;
+  }
 }
 .creator-tags {
   display: inline-block;
   font-weight: 700;
-  font-size: $lang-item;
+  font-size: $inbox-counter;
   color: $black;
-  padding: 8px 12px;
+  padding: 5px 8px;
   background-color: $humming-bird;
-  border-radius: 160px;
-  margin-right: 5px;
-  margin-bottom: 8px;
+  border-radius: 80px;
+  margin-bottom: 6px;
   transition: all .3s linear;
+  @media (min-width: 768px) {
+    font-size: $lang-item;
+    padding: 8px 12px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+  }
   &:hover {
     background-color: darken($humming-bird, 10%);
   }
@@ -2286,22 +2355,36 @@
 .creator-projects-content {}
 .creator-projects-title {
   font-weight: 700;
-  font-size: $benefits-title;
+  font-size: $menu-link;
   color: $black;
   border-bottom: 1px solid $mystic;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
+  padding: 0 15px 5px;
+  margin-bottom: 10px;
+  @media (min-width: 7678px) {
+    font-size: $card-description;
+  }
+  @media (min-width: 992px) {
+    font-size: $benefits-title;
+    padding: 0 0 12px;
+    margin-bottom: 20px;
+  }
 }
 
 .creator-project-name {
   font-weight: 700;
-  font-size: $card-description;
+  font-size: $normal;
   color: $black;
+  @media (min-width: 768px) {
+    font-size: $card-description;
+  }
 }
 .creator-project-description {
-  font-size: $lang-item;
+  font-size: $sign-up;
   color: $black;
-  padding-bottom: 16px;
+  @media (min-width: 768px) {
+    font-size: $lang-item;
+    padding-bottom: 16px;
+  }
 }
 
 //************************************************************************************
@@ -2455,6 +2538,64 @@
   @media (min-width: 992px) {
     padding-top: 40px;
   }
+}
+.add-video-card {
+  box-shadow: none;
+}
+.add-video-block {
+  height: 100%;
+  background: $white;
+  border: 2px dashed $aquamarine;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.add-video-plus {
+  height: 100%;
+  min-height: 120px;
+  font-size: $normal;
+  font-weight: 700;
+  text-align: center;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 768px) {
+    font-size: $card-description;
+  }
+  .green-circle {
+    width: 44px;
+    height: 44px;
+    background-color: $aquamarine;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 10px;
+    &:before {
+      content: "\e016";
+      font-family: untitled-font-1, sans-serif;
+      font-size: $normal;
+      color: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    @media (min-width: 768px) {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 15px;
+      &:before {
+        font-size: $normal-plus;
+      }
+    }
+  }
+}
+.edit-personal-information-block {
+  text-align: right;
+}
+.edit-personal-btn {
+  display: inline-block;
+  margin: 0;
 }
 
 //************************************************************************************

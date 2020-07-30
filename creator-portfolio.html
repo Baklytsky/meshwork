@@ -207,19 +207,14 @@
                     </div>
                 </div>
                 <!----------------------- DASHBOARD HEADER TOP ---------------->
-                <div class="dashboard-header-top">
-                    <ul class="pages-list">
-                        <li class="pages-item">
+                <div class="dashboard-header-top mobile-dashboard-header-top">
+                    <div class="pages-list">
+                        <div class="pages-item">
                             <h2>
-                                <a href="business-cabinet.html" class="pages-item-link">Creators</a>
+                                <a href="#" class="pages-item-link inbox-page-headline">My portfolio</a>
                             </h2>
-                        </li>
-                        <li class="pages-item">
-                            <h2>
-                                <a href="creator-dashboard.html" class="pages-item-link active-page-link">Projects</a>
-                            </h2>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                     <div class="creator">
                         <span class="creator-text">Create portfolio</span>
                         <a href="business-create-brief-key.html" class="creator-plus icon-android-add"></a>
@@ -230,402 +225,334 @@
         <div class="dashboard-section-wrapper">
             <!----------------------- DASHBOARD SECTION CONTENT ---------------->
             <div class="creator-portfolio-content">
-                <!----------------------- CREATORS LIST ------------------------>
-                <ul class="creators-list">
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
-                            </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
+                <div class="creator-info-wrapper">
+                    <div class="creator-avatar-block">
+                        <picture>
+                            <source srcset="img/max-holden-avatar.webp" type="image/webp">
+                            <img src="img/max-holden-avatar.jpg" alt="User photo" title="User photo" class="creator-avatar-img">
+                        </picture>
+                        <h3 class="creator-name-block">
+                            <span class="first-name">Max</span>
+                            <span class="second-name">Holden</span>
+                        </h3>
+                        <button class="open-chat-btn">Open chat</button>
+                    </div>
+                    <div class="creator-info-block">
+                        <div class="creator-title-block">
+                            <img src="img/icons/location-svg.svg" alt="Location icon">
+                            <h3 class="creator-title">Location:</h3>
+                            <p class="creator-description">Madrid, Spain</p>
+                        </div>
+                        <div class="creator-title-block">
+                            <img src="img/icons/publish-projects.svg" alt="Publish icon">
+                            <h3 class="creator-title">Published projects:</h3>
+                            <p class="creator-description">6</p>
+                        </div>
+                        <p class="creator-description about-creator-text">
+                            I'm a professional producer from Spain with 10 years of expirience in video production.
+                            I'm a professional producer from Spain with 10 years of expirience in video production.
+                        </p>
+                        <a href="#" class="creator-tags">#Director</a>
+                        <a href="#" class="creator-tags">#Documentary</a>
+                        <a href="#" class="creator-tags">#Ads</a>
+                        <a href="#" class="creator-tags">#Cinematographer</a>
+                        <a href="#" class="creator-tags">#Director</a>
+                        <a href="#" class="creator-tags">#Documentary</a>
+                        <a href="#" class="creator-tags">#Director</a>
+                        <a href="#" class="creator-tags">#Documentary</a>
+                        <a href="#" class="creator-tags">#Ads</a>
+                    </div>
+                </div>
+                <!----------------------- Edit personal information ------------------------>
+                <div class="edit-personal-information-block">
+                    <a href="creator-edit-personal-info.html" class="change-pass-btn edit-personal-btn">Edit personal information</a>
+                </div>
+                <div class="creator-projects-content">
+                    <h3 class="creator-projects-title">
+                       My projects
+                    </h3>
+                    <!----------------------- CREATORS LIST ------------------------>
+                    <ul class="creators-list">
+                        <!----------------------- add video ------------------------>
+                        <li class="creator-card-item add-video-card">
+                            <div class="add-video-block">
+                                <a href="creator-add-video.html" class="add-video-plus">
+                                    <span class="green-circle"></span>
+                                    <span class="add-video-title">Add new video</span>
                                 </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
                             </div>
-                        </div>
-                        <div class="card-content">
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                        </li>
+                        <!----------------------- CREATOR Project ITEM ------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
+                            </div>
+                        </li>
 
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
+                        <!----------------------- CREATOR ITEM --------------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
                             </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-content">
+                        </li>
 
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
+                        <!----------------------- CREATOR ITEM --------------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
                             </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-content">
+                        </li>
 
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
+                        <!----------------------- CREATOR ITEM --------------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
                             </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-content">
+                        </li>
 
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
+                        <!----------------------- CREATOR ITEM --------------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
                             </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-content">
+                        </li>
 
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
+                        <!----------------------- CREATOR ITEM --------------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
                             </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-content">
+                        </li>
 
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
+                        <!----------------------- CREATOR ITEM --------------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
                             </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-content">
+                        </li>
 
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
+                        <!----------------------- CREATOR ITEM --------------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
                             </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-content">
+                        </li>
 
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
+                        <!----------------------- CREATOR ITEM --------------------->
+                        <li class="creator-card-item">
+                            <div class="card-picture-block">
+                                <div class="creator-image-block">
+                                    <picture>
+                                        <source srcset="img/creators-image.webp" type="image/webp">
+                                        <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
+                                             class="creator-image">
+                                    </picture>
+                                </div>
+                                <div class="creator-data">
+                                    <!-------------- Project name --------------->
+                                    <h3 class="creator-project-name">
+                                        Rexona
+                                    </h3>
+                                    <!-------------- Project description ------------------->
+                                    <div class="creator-project-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt
+                                    </div>
+                                </div>
                             </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
+                            <div class="card-content">
+                                <!-------------- LEARN MORE & ASK PRICE --------------->
+                                <div class="card-links-list">
+                                    <a href="business-creator-item-project.html" class="card-link">Learn more</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-content">
-
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!----------------------- CREATOR ITEM --------------------->
-                    <li class="creator-card-item">
-                        <div class="card-picture-block">
-                            <div class="creator-image-block">
-                                <picture>
-                                    <source srcset="img/creators-image.webp" type="image/webp">
-                                    <img src="img/creators-image.jpg" alt="Creator image" title="Creator image"
-                                         class="creator-image">
-                                </picture>
-                            </div>
-                            <!-------------- CREATOR INFORMATION --------------->
-                            <div class="creator-data">
-                                <a href="business-creator-page.html" class="creator-name">
-                                    Max Holden
-                                </a>
-                                <address>
-                                    <p class="creator-address">
-                                        Minneapolis, Minnesota
-                                    </p>
-                                </address>
-                            </div>
-                        </div>
-                        <div class="card-content">
-
-                            <!-------------- CREATOR TAG LIST ------------------->
-                            <ul class="tags-list">
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Documentary</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Ads</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Director</a></li>
-                                <li class="tag-item"><a href="#" class="tag-link">Cinematographer</a></li>
-                            </ul>
-                            <!-------------- LEARN MORE & ASK PRICE --------------->
-                            <ul class="card-links-list">
-                                <li class="card-link-item"><a href="#" class="card-link">Learn more</a></li>
-                                <li class="card-link-item"><a href="#" class="card-link">Ask for price</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
