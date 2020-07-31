@@ -201,6 +201,7 @@
                 <div class="mobile-block">
                     <div class="back-to-main">
                         <a href="creator-dashboard.html" class="back-to icon-angle-left"></a>
+                        <a href="creator-dashboard.html" class="business-link">Projects</a>
                         <h3 class="mobile-block-title">Nike UK Brief</h3>
                     </div>
                     <!------------------------------- Burger btn ------------------------------->
@@ -209,7 +210,7 @@
                     </div>
                 </div>
                 <!----------------------- DASHBOARD HEADER TOP ---------------->
-                <div class="dashboard-header-top">
+                <div class="dashboard-header-top mobile-dashboard-header-top">
                     <div class="project-name-block">
                         <a href="creator-dashboard.html" class="business-link">Projects</a>
                         <h2 class="dashboard-header-title">Nike UK Brief</h2>
@@ -223,140 +224,93 @@
             </div>
         </div>
         <div class="small-section-wrapper">
-            <!----------------------- DASHBOARD SECTION CONTENT ---------------->
-            <div class="brief-info-wrapper">
-                <div class="brief-img-wrapper">
-                    <picture>
-                        <source srcset="img/nike-brief.webp" type="image/webp">
-                        <img src="img/nike-brief.jpg" alt="Brief photo" title="Brief photo" class="brief-title-img">
-                    </picture>
+            <div class="brief-wrapper">
+                <!----------------------- DASHBOARD SECTION CONTENT ---------------->
+                <div class="brief-info-wrapper">
+                    <div class="brief-img-wrapper">
+                        <picture>
+                            <source srcset="img/nike-brief.webp" type="image/webp">
+                            <img src="img/nike-brief.jpg" alt="Brief photo" title="Brief photo" class="brief-title-img">
+                        </picture>
+                    </div>
+                    <ul class="brief-info-block">
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/client-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Client</h3>
+                                <p class="info-subtitle">NIKE UK</p>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/location-svg.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Location</h3>
+                                <p class="info-subtitle">United Kingdom</p>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/budget-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Budget</h3>
+                                <p class="info-subtitle">$20 000</p>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/project-type-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Project type</h3>
+                                <p class="info-subtitle">Product video</p>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/project-roles-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Project roles</h3>
+                                <a href="#" class="creator-tags project-roles-tag">#Director</a>
+                                <a href="#" class="creator-tags project-roles-tag">#Documentary</a>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/calendar-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Submission date</h3>
+                                <time datetime="2020-05-24" class="info-subtitle">24/05/20</time>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="brief-info-block">
-                    <li class="brief-info-item">
-                        <div class="brief-icon-wrapper">
-                            <img src="img/icons/client-icon.svg" alt="icon" class="brief-info-icon">
-                        </div>
-                        <div class="info-item-text">
-                            <h3 class="info-title">Client</h3>
-                            <p class="info-subtitle">NIKE UK</p>
-                        </div>
-                    </li>
-                    <li class="brief-info-item">
-                        <div class="brief-icon-wrapper">
-                            <img src="img/icons/location-svg.svg" alt="icon" class="brief-info-icon">
-                        </div>
-                        <div class="info-item-text">
-                            <h3 class="info-title">Location</h3>
-                            <p class="info-subtitle">United Kingdom</p>
-                        </div>
-                    </li>
-                    <li class="brief-info-item">
-                        <div class="brief-icon-wrapper">
-                            <img src="img/icons/budget-icon.svg" alt="icon" class="brief-info-icon">
-                        </div>
-                        <div class="info-item-text">
-                            <h3 class="info-title">Budget</h3>
-                            <p class="info-subtitle">$20 000</p>
-                        </div>
-                    </li>
-                    <li class="brief-info-item">
-                        <div class="brief-icon-wrapper">
-                            <img src="img/icons/calendar-icon.svg" alt="icon" class="brief-info-icon">
-                        </div>
-                        <div class="info-item-text">
-                            <h3 class="info-title">Submission date</h3>
-                            <time datetime="2020-05-24" class="info-subtitle">24/05/20</time>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <h2 class="brief-details-headline">Brief details</h2>
-            <h3 class="brief-details-subtitle">The brief</h3>
-            <p class="brief-details-description">
-                The Shift is looking for a creator to concept and produce a 60-second video plus cutdowns to
-                communicate their vision for the business. Communications Objective: To promote the brand and inspire
-                limitless creation and opportunities to the events industry. Our Purpose: The Shift Agency's purpose is
-                to make a positive change to the world, inspiring the creation of unique events, products and assets,
-                bringing brands to life and igniting their future into the next era
-            </p>
-            <h3 class="brief-details-subtitle">Key messaging</h3>
-            <p class="brief-details-description">
-                Uncover - What clients and consumers needs are. We find your purpose Inspire - The evolution of
-                Creative ideas, concepts and events. Pushing the boundaries of sport, fundraising, technology,
-                creativity, connection. Ignite - How we execute events and ignite growth
-            </p>
-            <h3 class="brief-details-subtitle">Further messaging</h3>
-            <p class="brief-details-description">
-                We see opportunity We see the potential growth in your existing asset Our capability of implementing
-                processes and assisting in guiding thought processes in your business to see new opportunities for
-                growth through marketing and events The Shift develops assets for clients to utilise within their
-                business to encourage pushing beyond existing boundaries and positive change. Maximum attention is
-                given to product and asset quality, attention to detail, maximum exposure for positive change and
-                pushing creative boundaries. Any asset that is produced by The Shift can stand against other
-                world-class events of its type and be the leader. Through our work, we take the purpose of our
-                client or consumer and help change the language around social responsibility and shift perspectives
-                into a new broader and bigger way of thinking. ANYTHING'S POSSIBLE
-            </p>
-            <h3 class="brief-details-subtitle">Intended platforms</h3>
-            <p class="brief-details-description">
-                Website, social media, presentation
-            </p>
-            <h3 class="brief-details-subtitle">Target audience primary</h3>
-            <p class="brief-details-description">
-                CEO, CMO's, COO's, Marketing Managers, Brand Managers of Major Global Brands and Not-For-Profits
-                of purpose-driven brands. Think Red Bull, Patagonia, Vans. Creatives and visionaries looking for
-                an agency to bring their brands to life.
-            </p>
-            <h3 class="brief-details-subtitle">Target audience secondary</h3>
-            <p class="brief-details-description">
-                Purpose-driven individuals looking to align with a brand that 'does good',
-                looks after its people and the planet whilst pushing the boundaries of what's possible.
-            </p>
-            <h3 class="brief-details-subtitle">We want people to</h3>
-            <p class="brief-details-description">
-                Feel: Inspired – we lead the way in positive change and work towards a shift in
-                alignment with the industry Confident – We are open in our communication and keep our business
-                direction transparent. We deliver the same high value events and products we always have.
-                Relaxed – That we will provide the same level of management and aligned with their brand values.
-                Connected – they have an understanding of the direction we are going in Loved – we remember the
-                details Do: Get in touch to find out how we can develop an asset for their business which will align
-                with their purpose and get them the results they want. Creative direction Mood Forward thinking
-                creative brand, uplifting, inspiring, authentic and bold.
-            </p>
-            <h3 class="brief-details-headline">Attachemts</h3>
-            <ul class="brief-attachemts-block">
-                <li class="attachemts-item">
-                    <img src="img/append-docx.png" alt="File format image">
-                    <a href="#">Name of attachment</a>
-                </li>
-                <li class="attachemts-item">
-                    <img src="img/append-jpeg.png" alt="File format image">
-                    <a href="#">Name of attachment</a>
-                </li>
-                <li class="attachemts-item">
-                    <img src="img/append-pdf.png" alt="File format image">
-                    <a href="#">Name of attachment</a>
-                </li>
-                <li class="attachemts-item">
-                    <img src="img/append-docx.png" alt="File format image">
-                    <a href="#">Name of attachment</a>
-                </li>
-                <li class="attachemts-item">
-                    <img src="img/append-jpeg.png" alt="File format image">
-                    <a href="#">Name of attachment</a>
-                </li>
-                <li class="attachemts-item">
-                    <img src="img/append-pdf.png" alt="File format image">
-                    <a href="#">Name of attachment</a>
-                </li>
-            </ul>
-            <div class="submit-brief-block">
-                <p class="publish-description almost">
-                    I understand that this Brief contains Confidential Information or Assets,
-                    and I am bound by Genero's Terms which requires me to keep secret, secure and not disclose,
-                    share or publish any and all Confidential Information or Assets.
+                <h3 class="brief-details-subtitle">Brief summary</h3>
+                <p class="brief-details-description">
+                    We see the potential growth in your existing asset Our capability of implementing processes and
+                    assisting in guiding thought processes in your business to see new opportunities for growth through
+                    marketing and events The Shift develops assets for clients to utilise within their business to
+                    encourage pushing beyond existing boundaries and positive change. Maximum attention is given to
+                    product and asset quality, attention to detail, maximum exposure for positive change and pushing
+                    creative boundaries. Any asset that is produced by The Shift can stand against other world-class
+                    events of its type and be the leader. Through our work, we take the purpose of our client or
+                    consumer and help change the language around social responsibility and shift perspectives into a new
+                    broader and bigger way of thinking. ANYTHING'S POSSIBLE
                 </p>
-                <button type="submit" class="submit-brief-btn">Submit a brief</button>
+                <div class="submit-brief-block first-brief-page">
+                    <p class="publish-description almost">
+                        I understand that this Brief contains Confidential Information or Assets,
+                        and I am bound by Genero's Terms which requires me to keep secret, secure and not disclose,
+                        share or publish any and all Confidential Information or Assets.
+                    </p>
+                    <a href="creator-all-brief.html" class="submit-brief-btn">I agree, show me the brief</a>
+                </div>
             </div>
         </div>
     </section>

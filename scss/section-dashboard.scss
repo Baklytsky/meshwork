@@ -1990,7 +1990,8 @@
 }
 
 .submit-brief-btn {
-  width: 200px;
+  display: block;
+  min-width: 200px;
   font-size: $normal;
   font-weight: 700;
   color: $black;
@@ -1999,9 +2000,12 @@
   box-sizing: border-box;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  padding: 13px 0;
+  padding: 10px 15px;
   cursor: pointer;
   transition: all .3s linear;
+  @media (min-width: 768px) {
+    padding: 13px 25px;
+  }
   &:hover {
     background-color: $aquamarine-hover;
   }
@@ -2209,7 +2213,7 @@
   font-size: $tags-mobile;
   color: $description;
   padding: 0 0 15px 0;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     padding: 0 24px 0 40px;
   }
 }
@@ -2621,52 +2625,82 @@
 //************************************************************************************
 //*********************************** CREATORS BRIEF *********************************
 //************************************************************************************
-
+.brief-wrapper {
+  padding: 0 15px;
+  @media (min-width: 1200px) {
+    padding: 0;
+  }
+}
 .brief-info-wrapper {
   width: 100%;
-  height: 336px;
+  height: auto;
   border-radius: 4px;
+  background-color: $white;
   box-shadow: 0 2px 10px rgba(208, 218, 228, 0.6);
   display: flex;
-  align-items: stretch;
-  margin: 24px 0 51px;
+  flex-direction: column;
+  margin: 15px 0;
+  box-sizing: border-box;
   overflow: hidden;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 24px;
+    margin: 24px 0 51px;
+  }
 }
 .brief-img-wrapper {
-  width: 65%;
+  width: 100%;
+  @media (min-width: 1200px) {
+    width: 65%;
+  }
 }
 .brief-title-img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .brief-info-block {
-  width: 35%;
-}
-.brief-info-block {
-  padding: 8px 0 28px 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
   background-color: $white;
+  box-sizing: border-box;
+  @media (min-width: 1200px) {
+    width: 35%;
+    display: block;
+    padding-left: 24px;
+  }
 }
 .brief-info-item {
   display: flex;
-  padding-top: 24px;
+  padding-bottom: 10px;
+  @media (min-width: 992px) {
+    padding-bottom: 16px;
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 .brief-icon-wrapper {
-  min-width: 55px;
+  min-width: 45px;
   text-align: center;
-}
-.brief-info-icon {
-
+  @media (min-width: 992px) {
+    min-width: 55px;
+  }
 }
 .info-title {
   font-weight: 700;
-  font-size: $menu-link;
-  line-height: 25px;
-  color: $black;
-  padding-bottom: 4px;
-}
-.info-subtitle {
   font-size: $normal;
   color: $black;
+}
+.info-subtitle {
+  font-size: $lang-item;
+  color: $black;
+}
+.project-roles-tag {
+  padding: 4px 8px;
+  margin: 4px 4px 4px 0;
 }
 //*********************************** Brief details *********************************
 
@@ -2677,21 +2711,34 @@
 
 .brief-details-headline {
   font-weight: bold;
-  font-size: $benefits-title;
-  line-height: 39px;
-  padding-bottom: 12px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid $mystic;
+  font-size: $card-description;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  @media (min-width: 992px) {
+    font-size: $benefits-title;
+    line-height: 39px;
+    margin-bottom: 32px;
+  }
 }
 .brief-details-subtitle {
-  font-size: $card-description;
+  font-size: $normal;
   font-weight: 700;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
+  @media (min-width: 992px) {
+    font-size: $card-description;
+    padding-bottom: 8px;
+  }
+  @media (min-width: 1200px) {
+    font-size: $btn-size;
+    padding-bottom: 8px;
+  }
 }
 .brief-details-description {
   font-size: $normal;
   line-height: 22px;
-  padding-bottom: 40px;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid $mystic;
 }
 //*********************************** Brief attachemts *********************************
 
@@ -2704,9 +2751,18 @@
   padding-bottom: 32px;
 }
 .attachemts-item {
-  padding: 0 60px 10px 0;
+  padding: 0 15px 10px 0;
+  @media (min-width: 992px) {
+    padding: 0 60px 10px 0;
+  }
   img {
-    padding-right: 16px;
+    width: 50px;
+    display: block;
+    box-sizing: border-box;
+    margin-right: 16px;
+    @media (min-width: 992px) {
+      width: 62px;
+    }
   }
   a {
     font-weight: 600;
@@ -2717,11 +2773,20 @@
 
 .submit-brief-block {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
   border-top: 1px solid $mystic;
   padding: 32px 0 87px;
+  @media (min-width: 992px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
 }
-
+.first-brief-page {
+  padding: 0 0 87px;
+  border: none;
+}
 
 .brief-submit-item {
   padding-bottom: 40px;
@@ -2755,5 +2820,66 @@
     font-size: $normal;
     line-height: 22px;
     padding-bottom: 24px;
+  }
+}
+//************************************************************************************
+//*********************************** Add video **************************************
+//************************************************************************************
+
+.add-video-wrapper {
+  padding: 0 15px;
+  margin-top: 15px;
+  @media (min-width: 1200px) {
+    padding: 0;
+    margin-top: 24px;
+  }
+}
+.add-video-check-header {
+  padding-bottom: 16px;
+}
+.video-description-textarea {
+  max-width: 492px;
+  height: 144px;
+}
+.video-link-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+.video-link-description {
+  max-width: 250px;
+  font-size: $tags-mobile;
+  line-height: 13px;
+  color: $small-description;
+  padding: 16px 0 0 0;
+  @media (min-width: 768px) {
+    padding: 0 0 0 24px;
+  }
+}
+.video-link-block {
+  position: relative;
+}
+.vimeo-icon, .youtube-icon {
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vimeo-icon {
+  left: 5px;
+}
+.youtube-icon {
+  left: 34px;
+}
+.video-link-input {
+  padding-left: 75px;
+}
+.add-video-btn-block {
+  margin: 0 auto;
+  @media (min-width: 992px) {
+    margin: 0 0 0 auto;
   }
 }

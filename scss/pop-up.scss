@@ -23,8 +23,11 @@
   }
 
   .pop-up-title {
-    font-size: $card-description;
+    font-size: $normal;
     color: $black;
+    @media (min-width: 768px) {
+      font-size: $card-description;
+    }
 
     .free-upp {
       text-transform: uppercase;
@@ -202,9 +205,13 @@
   }
 
   .pop-up-description {
-    font-size: $card-description;
+    font-size: $normal;
     color: $black;
-    padding: 0 30px 24px;
+    padding: 0 0 16px;
+    @media (min-width: 768px) {
+      font-size: $card-description;
+      padding: 0 30px 24px;
+    }
   }
   .uppercase-description {
     font-weight: 600;
@@ -270,21 +277,31 @@
     align-items: start;
     border-bottom: 1px solid $alto;
     margin: 0 auto;
-    padding: 0 0 17px 35px;
+    padding: 0 0 10px 35px;
     box-sizing: border-box;
+    @media (min-width: 768px) {
+      padding: 0 0 17px 35px;
+    }
   }
 
   .address-info {
     width: 254px;
     text-align: left;
     margin: 0 auto;
-    padding: 17px 0 17px 35px;
+    padding: 10px 0 10px 35px;
     box-sizing: border-box;
+    @media (min-width: 768px) {
+      padding: 17px 0 17px 35px;
+    }
 
     span {
-      font: normal $card-description sans-serif;
-      line-height: 28px;
+      font: normal $normal sans-serif;
+      line-height: 23px;
       color: $black;
+      @media (min-width: 768px) {
+        font: normal 700 $card-description sans-serif;
+        line-height: 28px;
+      }
     }
 
     .street-bold {
@@ -294,15 +311,23 @@
   }
 
   .pop-up-mail {
-    font: normal 700 $card-description sans-serif;
-    line-height: 28px;
+    font: normal 700 $normal sans-serif;
+    line-height: 23px;
     color: $aquamarine-hover;
+    @media (min-width: 768px) {
+      font: normal 700 $card-description sans-serif;
+      line-height: 28px;
+    }
   }
 
   .pop-up-phone {
-    font: normal $card-description sans-serif;
-    line-height: 28px;
+    font: normal $normal sans-serif;
+    line-height: 23px;
     color: $black;
+    @media (min-width: 768px) {
+      font: normal 700 $card-description sans-serif;
+      line-height: 28px;
+    }
   }
   .cancel-skill {
     background-color: $white;
