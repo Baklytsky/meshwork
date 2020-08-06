@@ -148,5 +148,9 @@ jQuery(function ($) {
             animateIn: 'slideInUp',
         });
 
+        if ($(".warning-input")) {
+            $(".warning-input").after( "<p class='warning-massage-style'>Warning massage</p>" );
+        }
+
     });
 });

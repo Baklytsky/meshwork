@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creators</title>
+    <link rel="stylesheet" href="./css/creators.css">
+</head>
+<body>
+
+<!------------------------------- DASHBOARD BLOCK ------------------------->
+<!------------------------------------------------------------------------->
+<div class="dashboard-block">
+    <!------------------------------- DASHBOARD NAVIGATION -------------------->
+    <!------------------------------------------------------------------------->
+    <div class="dashboard-sidebar">
+    <nav class="dashboard-nav">
+
+        <!------------------------------- LOGO -------------------------------->
+        <div class="logo">
+            <a href="creator-dashboard.html">Meshwork</a>
+        </div>
+
+        <!------------------------------- USER DATA --------------------------->
+        <ul class="user-data-list">
+            <li class="user-data-item">
+                <a href="creator-dashboard.html">
+                    <picture>
+                        <source srcset="img/user-photo.webp" type="image/webp">
+                        <img src="img/user-photo.jpg" alt="User photo" title="User photo" class="user-photo">
+                    </picture>
+                </a>
+            </li>
+            <li class="user-data-item">
+                <h3 class="user-name">Alex</h3>
+            </li>
+            <li class="user-data-item">
+                <a href="creator-balance.html"><span class="user-meshes">80 meshes</span></a>
+            </li>
+            <li class="user-data-item">
+                <a href="business-create-brief-key.html" class="mobile-create-brief">Create portfolio</a>
+            </li>
+        </ul>
+
+        <!------------------------------- SIDEBAR MENU ------------------------->
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                <a href="creator-dashboard.html" class="sidebar-menu-link">
+                    Dashboard
+                    <img src="img/icons/dashboard-active.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="creator-inbox.html" class="sidebar-menu-link">
+                    Inbox
+                    <img src="img/icons/inbox.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                    <span class="inbox-counter">4 new</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="creator-balance.html" class="sidebar-menu-link">
+                    Balance
+                    <img src="img/icons/balance.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item active-sidebar-menu">
+                <a href="creator-projects.html" class="sidebar-menu-link">
+                    My projects
+                    <img src="img/icons/my-profile.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="creator-portfolio.html" class="sidebar-menu-link">
+                    My portfolio
+                    <img src="img/icons/portfolio.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+                </a>
+            </li>
+        </ul>
+
+        <!------------------------------- ACCOUNT BLOCK ------------------------->
+        <div class="account-block">
+            <ul class="sidebar-menu account-menu">
+                <!------------------------------- My account ------------------------->
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link account-link">
+                        My account
+                        <span class="account-mail">aleksdesigner@.com</span>
+                    </a>
+
+                    <!------------------------------- MY ACCOUNT SUB MENU ------------------------->
+                    <div class="sub-menu-block">
+
+                        <!------------------------------- User info ------------------------->
+                        <div class="user-sub-info">
+                            <picture>
+                                <source srcset="img/user-photo.webp" type="image/webp">
+                                <img src="img/user-photo.jpg" alt="User photo" title="User photo"
+                                     class="user-min-photo">
+                            </picture>
+                            <ul class="user-sub-data">
+                                <li><h4 class="user-sub-name">Alex</h4></li>
+                                <li><span class="user-sub-nickname">@aleksdesigner</span></li>
+                            </ul>
+                        </div>
+
+                        <!------------------------------- Edit Profile ------------------------->
+
+                        <a href="creator-profile.html" class="edit-profile">Edit profile</a>
+
+                        <!------------------------------- Sub menu list ------------------------->
+                        <ul class="sub-menu-list">
+                            <li class="sub-menu-item"><a href="faq-creator.html" class="sub-menu-link faq">Faq</a></li>
+                            <li class="sub-menu-item"><a href="terms-of-use-creator.html" class="sub-menu-link terms">Terms of use</a></li>
+                            <li class="sub-menu-item"><a href="privacy-policy-creator.html" class="sub-menu-link privacy">Privacy policy</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link support">Support</a></li>
+                            <li class="sub-menu-item"><a href="#" class="sub-menu-link contact-us">Contact us</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!------------------------------- Log out ------------------------->
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link log-out-link">
+                        log out
+                        <img src="img/icons/log-out-icon.svg" alt="Log out icon" class="log-out-icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+
+    <!------------------------------- POP`S-UP SUB MENU ----------------------->
+    <!------------------------------------------------------------------------->
+    <!------------------------------- support ----------------------->
+    <div class="pop-up support-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/support-icon.svg" alt="Faq icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline">Support</h3>
+            <h4 class="pop-up-title">Seems something goes wrong?</h4>
+            <p class="pop-up-description">
+                Write your question and our manager will soon helps you:
+            </p>
+            <form action="#">
+                <label for="support">
+                    <textarea name="support" id="support" cols="40" rows="5" class="support-textarea"></textarea>
+                </label>
+                <button type="submit" class="pop-up-btn support-submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <!------------------------------- Message submit ----------------------->
+    <div class="pop-up message-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/message-icon.svg" alt="Message icon" class="pop-up-icon">
+            </div>
+            <h4 class="pop-up-title">Your message has been successfully sent!</h4>
+            <p class="pop-up-description">
+                We will contact you shortly
+            </p>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- Contact Us ----------------------->
+    <div class="pop-up contact-us-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <div class="icon-area">
+                <img src="img/icons/contact-icon.svg" alt="Contact icon" class="pop-up-icon">
+            </div>
+            <h3 class="pop-up-headline contact-after-icon">Contact us</h3>
+            <address>
+                <ul class="contact-info">
+                    <li><a href="mailto:sayhi@meshwork.pro" class="pop-up-mail">sayhi@meshwork.pro</a></li>
+                    <li><a href="tel:+380505555777" class="pop-up-phone">+380505555777</a></li>
+                </ul>
+                <div class="address-info">
+                    <span>Ukraine, Kyiv, 12000</span>
+                    <span class="street-bold">Reheneratorna 4</span>
+                </div>
+            </address>
+            <button class="pop-up-btn got-it">Got it</button>
+        </div>
+    </div>
+    <!------------------------------- Delete brief ----------------------->
+    <div class="pop-up delete-brief-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <h3 class="pop-up-headline headline-padding">
+                Do you really want to delete your offer
+            </h3>
+            <p class="delete-brief-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+            <div class="pop-up-btn-block">
+                <button class="delete-brief-btn discard-btn got-it">Discard</button>
+                <button class="delete-brief-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <!------------------------------- DASHBOARD SECTION ----------------------->
+    <!------------------------------------------------------------------------->
+    <section class="dashboard-section">
+        <div class="menu-overlay"></div>
+
+
+        <!------------------------------- DASHBOARD HEADER ---------------->
+        <div class="dashboard-section-header">
+            <div class="dashboard-section-wrapper">
+                <!------------------------------- MOBILE BLOCK ---------------->
+                <div class="mobile-block">
+                    <div class="back-to-main">
+                        <a href="creator-dashboard.html" class="back-to icon-angle-left"></a>
+                        <a href="creator-dashboard.html" class="business-link">Projects</a>
+                        <h3 class="mobile-block-title">Nike UK Brief</h3>
+                    </div>
+                    <!------------------------------- Burger btn ------------------------------->
+                    <div class="burger-icon">
+                        <div class="burger-icon-line"></div>
+                    </div>
+                </div>
+                <!----------------------- DASHBOARD HEADER TOP ---------------->
+                <div class="dashboard-header-top mobile-dashboard-header-top">
+                    <div class="project-name-block">
+                        <a href="creator-dashboard.html" class="business-link">Projects</a>
+                        <h2 class="dashboard-header-title">Nike UK Brief</h2>
+                    </div>
+                    <div class="creator">
+                        <span class="creator-text">Create portfolio</span>
+                        <a href="business-create-brief-key.html" class="creator-plus icon-android-add"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="small-section-wrapper">
+            <div class="brief-wrapper">
+                <!----------------------- DASHBOARD SECTION CONTENT ---------------->
+                <div class="brief-info-wrapper">
+                    <div class="brief-img-wrapper">
+                        <picture>
+                            <source srcset="img/nike-brief.webp" type="image/webp">
+                            <img src="img/nike-brief.jpg" alt="Brief photo" title="Brief photo" class="brief-title-img">
+                        </picture>
+                    </div>
+                    <ul class="brief-info-block">
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/client-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Client</h3>
+                                <p class="info-subtitle">NIKE UK</p>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/location-svg.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Location</h3>
+                                <p class="info-subtitle">United Kingdom</p>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/budget-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Budget</h3>
+                                <p class="info-subtitle">$20 000</p>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/project-type-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Project type</h3>
+                                <p class="info-subtitle">Product video</p>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/project-roles-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Project roles</h3>
+                                <a href="#" class="creator-tags project-roles-tag">#Director</a>
+                                <a href="#" class="creator-tags project-roles-tag">#Documentary</a>
+                            </div>
+                        </li>
+                        <li class="brief-info-item">
+                            <div class="brief-icon-wrapper">
+                                <img src="img/icons/calendar-icon.svg" alt="icon" class="brief-info-icon">
+                            </div>
+                            <div class="info-item-text">
+                                <h3 class="info-title">Submission date</h3>
+                                <time datetime="2020-05-24" class="info-subtitle">24/05/20</time>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <h3 class="brief-details-subtitle">Your idea</h3>
+                <p class="brief-details-description">
+                    We see the potential growth in your existing asset Our capability of implementing processes and
+                    assisting in guiding thought processes in your business to see new opportunities for growth through
+                    marketing and events
+                </p>
+                <h3 class="brief-details-subtitle">About your team</h3>
+                <p class="brief-details-description">
+                    We see the potential growth in your existing asset Our capability of implementing processes and
+                    assisting in guiding thought processes in your business to see new opportunities for growth through
+                    marketing and events
+                </p>
+                <h3 class="brief-details-subtitle">Additional information</h3>
+                <p class="brief-details-description">
+                    We see the potential growth in your existing asset Our capability of implementing processes and
+                    assisting in guiding thought processes in your business to see new opportunities for growth through
+                    marketing and events
+                </p>
+                <h3 class="brief-details-headline">Attachemts</h3>
+                <ul class="brief-attachemts-block">
+                    <li class="attachemts-item">
+                        <img src="img/append-docx.png" alt="File format image">
+                        <a href="#">Name of attachment</a>
+                    </li>
+                    <li class="attachemts-item">
+                        <img src="img/append-jpeg.png" alt="File format image">
+                        <a href="#">Name of attachment</a>
+                    </li>
+                    <li class="attachemts-item">
+                        <img src="img/append-docx.png" alt="File format image">
+                        <a href="#">Name of attachment</a>
+                    </li>
+                    <li class="attachemts-item">
+                        <img src="img/append-jpeg.png" alt="File format image">
+                        <a href="#">Name of attachment</a>
+                    </li>
+                </ul>
+                <div class="submit-brief-block">
+                    <button type="button" class="reset-btn delete-brief">Delete</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/demonstration-dashboard.js" defer></script>
+<script src="js/dashboard-sub-menu.js" defer></script>
+<script src="js/delete-brief.js" defer></script>
+<script src="js/mobile-sidebar.js" defer></script>
+</body>
+</html>

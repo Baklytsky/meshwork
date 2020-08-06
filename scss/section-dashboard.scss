@@ -733,6 +733,21 @@
     @include h3-title;
   }
 }
+
+.edit-profile-title {
+  font-weight: 700;
+  font-size: $card-description;
+  color: $black;
+  border-bottom: 1px solid $mystic;
+  padding: 67px 0 16px;
+  margin-bottom: 32px;
+  @media (min-width: 992px) {
+    font-size: $normal-plus;
+  }
+  &:first-child {
+    padding: 0 0 16px;
+  }
+}
 //*********************************** profile block *********************
 .profile-block {
   width: 100%;
@@ -779,7 +794,6 @@
 }
 
 .upload-options {
-
   text-align: center;
   @media (min-width: 1200px) {
     flex-grow: 1;
@@ -859,14 +873,6 @@
   }
 }
 
-//.profile-selector-item:last-child {
-//  width: 100%;
-//  padding-top: 24px;
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: space-between;
-//}
-
 .profile-label {
   @include label;
 }
@@ -902,7 +908,32 @@
     background-color: $mercury;
   }
 }
-
+.profile-textarea-block {
+  position: relative;
+}
+.profile-textarea {
+  height: 134px;
+  resize: none;
+}
+.add-profile-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  @media (min-width: 1200px) {
+    margin-top: 36px;
+  }
+}
+.add-profile-video-description {
+  font-size: $lang-item;
+  line-height: 20px;
+  color: $black;
+  max-width: 365px;
+  margin: 0 auto;
+  span {
+    font-weight: 700;
+  }
+}
 #show-current-password, #show-new-password, #show-confirm-password {
   display: none;
 }
@@ -1203,6 +1234,12 @@
 
 .brief-link {
   @include card-btn;
+}
+.second-view-btn {
+  margin-top: 8px;
+}
+.delete-brief {
+  min-width: 127px;
 }
 //********************************************* BRIEF INFO *********************
 
@@ -1840,8 +1877,13 @@
 //*********************************** CREATE BRIEF Roles selector *************
 .tagify--outside{
   border: 0;
+  &::placeholder {
+    color: $black;
+  }
 }
-
+.tagify__input::before {
+  color: $black;
+}
 .tagify--outside .tagify__input {
   order: -1;
   flex: 100%;
@@ -1856,9 +1898,13 @@
     border: 1px solid $alto;
     border-radius: 4px;
   }
+  &::placeholder {
+    color: $black;
+  }
 }
 .tagify--outside.tagify--focus .tagify__input{
-  transition:0s;
+  text-align: left;
+  transition: 0s;
   border: 1px solid $alto;
   border-radius: 4px;
 }
@@ -2574,26 +2620,41 @@
   border-radius: 4px;
 }
 .add-video-plus {
+  width: 100%;
   height: 100%;
   min-height: 120px;
   font-size: $normal;
   font-weight: 700;
   text-align: center;
   color: $black;
+  background-color: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
   @media (min-width: 768px) {
     font-size: $card-description;
   }
+}
   .green-circle {
     width: 44px;
     height: 44px;
     background-color: $aquamarine;
     border-radius: 50%;
     position: relative;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
     &:before {
       content: "\e016";
       font-family: untitled-font-1, sans-serif;
@@ -2613,9 +2674,13 @@
       }
     }
   }
-}
+
 .edit-personal-information-block {
   text-align: right;
+  padding: 0 15px;
+  @media (min-width: 992px) {
+    padding: 0;
+  }
 }
 .edit-personal-btn {
   display: inline-block;
@@ -2834,6 +2899,9 @@
 .add-video-check-header {
   padding-bottom: 16px;
 }
+.video-description-block {
+  text-align: left;
+}
 .video-description-textarea {
   max-width: 492px;
   height: 144px;
@@ -2842,19 +2910,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
 }
 .video-link-description {
-  max-width: 250px;
+  max-width: 412px;
   font-size: $tags-mobile;
   line-height: 13px;
+  text-align: left;
   color: $small-description;
   padding: 16px 0 0 0;
-  @media (min-width: 768px) {
-    padding: 0 0 0 24px;
-  }
 }
 .video-link-block {
   position: relative;

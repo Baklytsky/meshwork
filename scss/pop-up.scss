@@ -13,13 +13,55 @@
   .pop-up-window {
     @include pop-up-window;
   }
-
+  .add-video-window {
+    width: 100%;
+    max-width: 685px;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 0;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $add-video-header-bg;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: $create-steps-title;
+    }
+  }
+  .add-video-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $add-video-header-bg;
+    padding: 22px 24px 18px;
+    @media (min-width: 768px) {
+      padding: 22px 24px 18px 40px;
+    }
+  }
+  .add-video-form {
+    padding: 0 24px 24px 24px;
+    @media (min-width: 768px) {
+      padding: 0 24px 24px 40px;
+    }
+  }
   .close-x {
     @include close-x;
+  }
+  .close-x-block {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    right: inherit;
   }
 
   .pop-up-headline {
     @include pop-up-headline;
+  }
+  .headline-padding {
+    padding-top: 58px;
+    max-width: 348px;
+    margin: 0 auto;
   }
 
   .pop-up-title {
@@ -32,6 +74,12 @@
     .free-upp {
       text-transform: uppercase;
     }
+  }
+  .delete-brief-description {
+    max-width: 348px;
+    color: $black;
+    padding: 8px 0 32px;
+    margin: 0 auto;
   }
 
   .form-list {
@@ -58,19 +106,48 @@
         border-radius: 4px;
         padding-left: 10px;
       }
+      .warning-input {
+        border: 1px solid $wrong-pass;
+      }
     }
   }
 
+  .warning-massage-style {
+    font-size: $lang-item;
+    line-height: 20px;
+    color: $wrong-pass;
+    padding-top: 8px;
+  }
   .pop-up-btn {
     @include btn;
     font-size: $normal;
-    padding: 14px 41px;
-
+    padding: 10px 15px;
+    @media (min-width: 768px) {
+      padding: 14px 41px;
+    }
     &:hover {
       @include btn-hover;
     }
   }
-
+  .delete-brief-btn {
+    @include btn;
+    min-width: 90px;
+    font-size: $normal;
+    padding: 10px 0;
+    @media (min-width: 768px) {
+      min-width: 127px;
+    }
+    &:hover {
+      @include btn-hover;
+    }
+  }
+  .discard-btn {
+    background-color: $white;
+    border: 1px solid $mercury;
+    &:hover {
+      background-color: $mercury;
+    }
+  }
   .sign-up-link-wrapper {
     padding-top: 40px;
   }
@@ -360,13 +437,8 @@
 .faq-pop-up, .terms-pop-up,
 .privacy-pop-up, .support-pop-up,
 .message-pop-up, .contact-us-pop-up, .almost-pop-up,
-.delete-skill-pop-up, .verify-pop-up, .balance-pop-up {
+.delete-skill-pop-up, .verify-pop-up, .balance-pop-up, .add-video-pop-up, .delete-brief-pop-up {
   display: none;
-}
-
-.sign-up-pop-up, .log-in-pop-up, .cookie-pop-up,
-.almost-pop-up, .delete-skill-pop-up, .verify-pop-up,
-.balance-pop-up {
   animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   @keyframes fade-in {
     0% {

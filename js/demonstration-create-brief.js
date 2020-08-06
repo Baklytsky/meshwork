@@ -68,7 +68,7 @@ let tagify = new Tagify(input, {
 })
 jQuery(function ($) {
     $(document).scroll(function () {
-        $('.tagify__dropdown--input').slideUp("fast");
+        $('.tagify__dropdown--input').hide("fast");
     })
 });
 

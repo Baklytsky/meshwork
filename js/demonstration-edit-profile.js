@@ -29,7 +29,8 @@ showPassword.forEach(i => i.addEventListener('click', () => {
 }));
 
 //-------------------------------------------------------------- Choose skills
-let inputSelector = document.querySelector('input[name=tags-outside]')
+let inputSelector = document.querySelector('input[name=tags-outside]'),
+    inputSelectorProfile = document.querySelector('input[name=tags-outside-profile]');
 // init Tagify script on the above inputs
 let tagify = new Tagify(inputSelector, {
     whitelist: ["videographer", "director", "documentary", "cameraman", "goodman", "superman"],
@@ -41,6 +42,15 @@ let tagify = new Tagify(inputSelector, {
     }
 })
 
+let tagifyProfile = new Tagify(inputSelectorProfile, {
+    whitelist: ["videographer", "director", "documentary", "cameraman", "goodman", "superman"],
+    enforceWhitelist: true,
+    skipInvalid: true,
+    dropdown: {
+        position: "input",
+        enabled : 0 // always opens dropdown when input gets focus
+    }
+})
 jQuery(function ($) {
     $(window).scroll(function () {
         $('.tagify__dropdown').hide();
