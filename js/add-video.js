@@ -1,4 +1,4 @@
-'use strict';
+
 
 //--------------------------- Pop-up on click sub menu links -----------------
 
@@ -38,3 +38,15 @@ function outPopUpClick(pop) {
         })
     }
 }
+//-------------------------------------------------------------- Choose skills
+let inputSelector = document.querySelector('input[name=tags-outside]');
+// init Tagify script on the above inputs
+let tagify = new Tagify(inputSelector, {
+    whitelist: ["videographer", "director", "documentary", "cameraman", "goodman", "superman"],
+    enforceWhitelist: true,
+    skipInvalid: true,
+    dropdown: {
+        position: "input",
+        enabled : 0 // always opens dropdown when input gets focus
+    }
+})
