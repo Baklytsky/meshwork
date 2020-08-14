@@ -108,9 +108,13 @@
   color: $silver;
   cursor: pointer;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 10px;
+  right: 10px;
   transition: color .3s linear;
+  @media (min-width: 768px) {
+    top: 16px;
+    right: 16px;
+  }
   &:hover {
     color: $aquamarine;
   }
@@ -197,5 +201,20 @@
 
   &:focus {
     background-color: $white;
+  }
+}
+@mixin white-btn {
+  font-weight: 700;
+  font-size: $normal;
+  color: $black;
+  background-color: $white;
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: all .3s linear;
+  cursor: pointer;
+  &:hover {
+    background-color: $mercury;
   }
 }

@@ -1,10 +1,27 @@
 'use strict'
 
-//----------------------------------- Date picker ----------------------------------------
+
 jQuery(function ($) {
     $(document).ready(function () {
+        //----------------------------------- Date picker ----------------------------------------
         $('#submission-date').datepicker({
             minDate: 0,
+        });
+        //----------------------------------- Publish pop-up ----------------------------------------
+        $('.publish-brief-btn').on('click', function (e) {
+            e.preventDefault();
+            $('.brief-publish-pop-up').css('display', 'block');
+        })
+        $('.close-x').on('click', function () {
+            $('.brief-publish-pop-up').css('display', 'none');
+        })
+        $('.got-it').on('click', function () {
+            $('.brief-publish-pop-up').css('display', 'none');
+        })
+        $(document).on('click', function(e) {
+            if ($(e.target).is($('.brief-publish-pop-up'))) {
+                $('.brief-publish-pop-up').css('display', 'none');
+            }
         });
     });
 });

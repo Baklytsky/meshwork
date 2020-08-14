@@ -633,6 +633,7 @@
     }
     .creator-image-block {
       width: 35%;
+      position: relative;
       @media (min-width: 768px) {
         width: 100%;
       }
@@ -642,7 +643,30 @@
       width: 100%;
       height: auto;
     }
-
+    .published, .verification, .rejected {
+      font-weight: 500;
+      font-size: $wrong-pass-font;
+      color: $black;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 4px 8px;
+      @media (min-width: 768px) {
+        font-size: $inbox-counter;
+        top: 8px;
+        right: 8px;
+        border-radius: 60px;
+      }
+    }
+    .published {
+      background-color: $published;
+    }
+    .verification {
+      background-color: $verification;
+    }
+    .rejected {
+      background-color: $rejected;
+    }
     .card-content {
       display: flex;
       flex-direction: column;
@@ -2717,7 +2741,7 @@
 .brief-img-wrapper {
   width: 100%;
   @media (min-width: 1200px) {
-    width: 65%;
+    width: 60%;
   }
 }
 .brief-title-img {
@@ -2730,7 +2754,7 @@
   background-color: $white;
   box-sizing: border-box;
   @media (min-width: 1200px) {
-    width: 35%;
+    width: 40%;
     padding-left: 24px;
   }
 }
@@ -2941,5 +2965,89 @@
   margin: 0 auto;
   @media (min-width: 992px) {
     margin: 0 0 0 auto;
+  }
+}
+
+//************************************************************************************
+//*********************************** Edit brief page ********************************
+//************************************************************************************
+.brief-edit-item {
+  border-bottom: 1px solid #DBE2EA;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+
+}
+.edit-btn {
+  height: 26px;
+  font-weight: 600;
+  font-size: $lang-item;
+  background-color: $white;
+  border: 1px solid $mercury;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 0 12px;
+  margin-left: auto;
+  margin-top: auto;
+  cursor: pointer;
+  transition: all .3s linear;
+  &:hover {
+    background-color: $mercury;
+  }
+}
+.upload-brief-img {
+  font-weight: 600;
+  padding: 3px 12px;
+  font-size: $lang-item;
+  margin-top: 16px;
+}
+.edit-block {
+  display: flex;
+  align-items: center;
+  .edit-btn {
+    margin-left: 16px;
+    margin-top: 0;
+  }
+}
+.editable-block {
+  border: 1px solid #E5EAEE;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: $white;
+  padding: 15px 24px;
+  margin-top: 20px;
+}
+.edit-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e5eaee;
+  @media (min-width: 728px) {
+    justify-content: flex-end;
+  }
+}
+.summary-btns, .details-btns {
+  display: none;
+}
+
+.edit-cancel-btn {
+  @include btn;
+  @include white-btn;
+  margin-right: 16px;
+}
+.edit-save-btn {
+  @include btn;
+  &:hover {
+    @include btn-hover;
+  }
+}
+.edit-save-btn, .edit-cancel-btn {
+  font-size: $normal;
+  min-width: 132px;
+  height: 40px;
+  @media (min-width: 728px) {
+    height: 48px;
   }
 }

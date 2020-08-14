@@ -13,6 +13,12 @@
   .pop-up-window {
     @include pop-up-window;
   }
+  .edit-pop-up-window {
+    padding: 24px 10px;
+    @media (min-width: 768px) {
+      padding: 24px 35px;
+    }
+  }
   .add-video-window {
     width: 100%;
     max-width: 685px;
@@ -332,6 +338,9 @@
       transform: translate(-50%, -50%);
     }
   }
+  .icon-white-area {
+    background-color: inherit;
+  }
 
   .support-textarea {
     max-width: 100%;
@@ -431,13 +440,52 @@
     background-color: #fff;
   }
 }
+.edit-pop-up-item {
+  width: 100%;
+  text-align: left;
+}
+.edit-pop-up-block {
+  box-shadow: none;
+  padding: 0;
+}
+.edit-pop-up-label {
+  font-weight: normal;
+  font-size: $normal;
+}
+.edit-pop-up-btn-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
+}
+.edit-pop-up-radio-block {
+  display: flex;
+  flex-direction: column;
+  .location-label:first-child {
+    padding-bottom: 5px;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    .location-label:first-child {
+      padding-bottom: 0;
+    }
+  }
+}
+.edit-pop-up-selector {
+  margin-bottom: 16px;
+}
 
 
 .log-in-pop-up, .sign-up-pop-up, .cookie-pop-up,
 .faq-pop-up, .terms-pop-up,
 .privacy-pop-up, .support-pop-up,
 .message-pop-up, .contact-us-pop-up, .almost-pop-up,
-.delete-skill-pop-up, .verify-pop-up, .balance-pop-up, .add-video-pop-up, .delete-brief-pop-up {
+.delete-skill-pop-up, .verify-pop-up, .balance-pop-up, .add-video-pop-up,
+.delete-brief-pop-up, .brief-publish-pop-up, .client-edit-pop-up,
+.location-edit-pop-up, .budget-edit-pop-up, .project-edit-pop-up,
+.project-roles-pop-up {
   display: none;
   animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   @keyframes fade-in {
