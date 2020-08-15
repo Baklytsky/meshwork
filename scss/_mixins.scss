@@ -97,9 +97,11 @@
   font-size: $normal;
   color: $black;
   font-weight: 700;
+  line-height: 18px;
   text-align: center;
   @media (min-width: 768px) {
     font-size: $normal-plus;
+    line-height: 34px;
   }
 }
 

@@ -142,6 +142,7 @@
     padding: 10px 0;
     @media (min-width: 768px) {
       min-width: 127px;
+      font-size: $normal;
     }
     &:hover {
       @include btn-hover;
@@ -150,6 +151,7 @@
   .discard-btn {
     background-color: $white;
     border: 1px solid $mercury;
+    margin-right: 16px;
     &:hover {
       background-color: $mercury;
     }
@@ -289,11 +291,34 @@
 
   .pop-up-description {
     font-size: $normal;
+    line-height: 18px;
     color: $black;
     padding: 0 0 16px;
     @media (min-width: 768px) {
       font-size: $card-description;
+      line-height: 22px;
       padding: 0 30px 24px;
+    }
+  }
+  .second-description {
+    font-size: $normal;
+    color: $black;
+    padding: 10px 0 32px;
+    @media (min-width: 768px) {
+      font-size: $card-description;
+    }
+  }
+  .submit-btn {
+    @include btn;
+    display: inline-block;
+    font-size: $normal;
+    padding: 10px 15px;
+    @media (min-width: 768px) {
+      padding: 14px 41px;
+      font-size: $normal;
+    }
+    &:hover {
+      @include btn-hover;
     }
   }
   .uppercase-description {
@@ -478,6 +503,8 @@
 }
 
 
+
+
 .log-in-pop-up, .sign-up-pop-up, .cookie-pop-up,
 .faq-pop-up, .terms-pop-up,
 .privacy-pop-up, .support-pop-up,
@@ -485,7 +512,8 @@
 .delete-skill-pop-up, .verify-pop-up, .balance-pop-up, .add-video-pop-up,
 .delete-brief-pop-up, .brief-publish-pop-up, .client-edit-pop-up,
 .location-edit-pop-up, .budget-edit-pop-up, .project-edit-pop-up,
-.project-roles-pop-up {
+.project-roles-pop-up, .date-edit-pop-up, .attachment-pop-up,
+.submission-price-pop-up, .congrats-pop-up, .oops-pop-up {
   display: none;
   animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   @keyframes fade-in {

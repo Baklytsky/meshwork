@@ -20,13 +20,13 @@
 
         <!------------------------------- LOGO -------------------------------->
         <div class="logo">
-            <a href="creator-dashboard.html">Meshwork</a>
+            <a href="business-cabinet.html">Meshwork</a>
         </div>
 
         <!------------------------------- USER DATA --------------------------->
         <ul class="user-data-list">
             <li class="user-data-item">
-                <a href="creator-dashboard.html">
+                <a href="business-cabinet.html">
                     <picture>
                         <source srcset="img/user-photo.webp" type="image/webp">
                         <img src="img/user-photo.jpg" alt="User photo" title="User photo" class="user-photo">
@@ -40,41 +40,29 @@
                 <a href="creator-balance.html"><span class="user-meshes">80 meshes</span></a>
             </li>
             <li class="user-data-item">
-                <a href="business-create-brief-key.html" class="mobile-create-brief">Create portfolio</a>
+                <a href="business-create-brief-key.html" class="mobile-create-brief">Create brief</a>
             </li>
         </ul>
 
         <!------------------------------- SIDEBAR MENU ------------------------->
         <ul class="sidebar-menu">
-            <li class="sidebar-menu-item active-sidebar-menu">
-                <a href="creator-dashboard.html" class="sidebar-menu-link">
-                    Dashboard
-                    <img src="img/icons/dashboard-active.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+            <li class="sidebar-menu-item">
+                <a href="business-cabinet.html" class="sidebar-menu-link">
+                    Find creators
+                    <img src="img/icons/find-creator.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
             <li class="sidebar-menu-item">
-                <a href="creator-inbox.html" class="sidebar-menu-link">
+                <a href="business-inbox.html" class="sidebar-menu-link">
                     Inbox
                     <img src="img/icons/inbox.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                     <span class="inbox-counter">4 new</span>
                 </a>
             </li>
-            <li class="sidebar-menu-item">
-                <a href="creator-balance.html" class="sidebar-menu-link">
-                    Balance
-                    <img src="img/icons/balance.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
-                </a>
-            </li>
-            <li class="sidebar-menu-item">
-                <a href="creator-projects.html" class="sidebar-menu-link">
-                    My projects
-                    <img src="img/icons/my-profile.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
-                </a>
-            </li>
-            <li class="sidebar-menu-item">
-                <a href="creator-portfolio.html" class="sidebar-menu-link">
-                    My portfolio
-                    <img src="img/icons/portfolio.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
+            <li class="sidebar-menu-item active-sidebar-menu">
+                <a href="business-my-briefs.html" class="sidebar-menu-link">
+                    My briefs
+                    <img src="img/icons/my-briefs-active.svg" alt="Sidebar menu icon" class="sidebar-menu-icon">
                 </a>
             </li>
         </ul>
@@ -107,13 +95,13 @@
 
                         <!------------------------------- Edit Profile ------------------------->
 
-                        <a href="creator-profile.html" class="edit-profile">Edit profile</a>
+                        <a href="business-profile.html" class="edit-profile">Edit profile</a>
 
                         <!------------------------------- Sub menu list ------------------------->
                         <ul class="sub-menu-list">
-                            <li class="sub-menu-item"><a href="faq-creator.html" class="sub-menu-link faq">Faq</a></li>
-                            <li class="sub-menu-item"><a href="terms-of-use-creator.html" class="sub-menu-link terms">Terms of use</a></li>
-                            <li class="sub-menu-item"><a href="privacy-policy-creator.html" class="sub-menu-link privacy">Privacy policy</a></li>
+                            <li class="sub-menu-item"><a href="faq.html" class="sub-menu-link faq">Faq</a></li>
+                            <li class="sub-menu-item"><a href="terms-of-use.html" class="sub-menu-link terms">Terms of use</a></li>
+                            <li class="sub-menu-item"><a href="privacy-policy.html" class="sub-menu-link privacy">Privacy policy</a></li>
                             <li class="sub-menu-item"><a href="#" class="sub-menu-link support">Support</a></li>
                             <li class="sub-menu-item"><a href="#" class="sub-menu-link contact-us">Contact us</a></li>
                         </ul>
@@ -146,9 +134,7 @@
                 Write your question and our manager will soon helps you:
             </p>
             <form action="#">
-                <label for="support">
-                    <textarea name="support" id="support" cols="40" rows="5" class="support-textarea"></textarea>
-                </label>
+                <textarea name="support" id="support" cols="40" rows="5" class="support-textarea"></textarea>
                 <button type="submit" class="pop-up-btn support-submit">Send</button>
             </form>
         </div>
@@ -188,45 +174,6 @@
             <button class="pop-up-btn got-it">Got it</button>
         </div>
     </div>
-    <!------------------------------- Submission price ----------------------->
-    <div class="pop-up submission-price-pop-up">
-        <div class="pop-up-window edit-pop-up-window">
-            <span class="icon-close-round close-x"></span>
-            <h3 class="pop-up-headline">Submission price</h3>
-            <p class="pop-up-description second-description">
-                10 meshes will be debited from your account
-            </p>
-
-            <button type="button" class="submit-btn congrats">Submit on a project</button>
-        </div>
-    </div>
-    <!------------------------------- Congratulations ----------------------->
-    <div class="pop-up congrats-pop-up">
-        <div class="pop-up-window edit-pop-up-window">
-            <span class="icon-close-round close-x"></span>
-            <div class="icon-area icon-white-area">
-                <img src="img/icons/clap-hands.svg" alt="Brief icon" class="pop-up-icon">
-            </div>
-            <h3 class="pop-up-headline">Congratulations!</h3>
-            <p class="pop-up-description second-description">
-                Your submission has been successfully sent
-            </p>
-
-            <button type="button" class="submit-btn oops">Got it</button>
-        </div>
-    </div>
-    <!------------------------------- Oops ----------------------->
-    <div class="pop-up oops-pop-up">
-        <div class="pop-up-window edit-pop-up-window">
-            <span class="icon-close-round close-x"></span>
-            <h3 class="pop-up-headline">Oops...</h3>
-            <h3 class="pop-up-headline">You don't have enough meshes</h3>
-            <p class="pop-up-description second-description">
-                You can refill your amount of meshes by going to the balance page
-            </p>
-            <a href="creator-balance.html" class="submit-btn">Go to Balance</a>
-        </div>
-    </div>
     <!------------------------------- DASHBOARD SECTION ----------------------->
     <!------------------------------------------------------------------------->
     <section class="dashboard-section">
@@ -239,9 +186,9 @@
                 <!------------------------------- MOBILE BLOCK ---------------->
                 <div class="mobile-block">
                     <div class="back-to-main">
-                        <a href="creator-dashboard.html" class="back-to icon-angle-left"></a>
-                        <a href="creator-dashboard.html" class="business-link">Projects</a>
-                        <h3 class="mobile-block-title">Nike UK Brief</h3>
+                        <a href="business-cabinet.html" class="back-to icon-angle-left"></a>
+                        <a href="business-my-briefs.html" class="business-link">My briefs</a>
+                        <h3 class="mobile-block-title">Submission details</h3>
                     </div>
                     <!------------------------------- Burger btn ------------------------------->
                     <div class="burger-icon">
@@ -251,11 +198,12 @@
                 <!----------------------- DASHBOARD HEADER TOP ---------------->
                 <div class="dashboard-header-top mobile-dashboard-header-top">
                     <div class="project-name-block">
-                        <a href="creator-dashboard.html" class="business-link">Projects</a>
-                        <h2 class="dashboard-header-title">Nike UK Brief</h2>
+                        <a href="business-my-briefs.html" class="business-link">My briefs</a>
+                        <a href="business-edit-briefs.html" class="business-link">Nike UK Brief</a>
+                        <h2 class="dashboard-header-title">Submission details</h2>
                     </div>
                     <div class="creator">
-                        <span class="creator-text">Create portfolio</span>
+                        <span class="creator-text">Create brief</span>
                         <a href="business-create-brief-key.html" class="creator-plus icon-android-add"></a>
                     </div>
                 </div>
@@ -330,29 +278,23 @@
                         </li>
                     </ul>
                 </div>
-                <h3 class="brief-details-subtitle">Brief summary</h3>
+                <h3 class="brief-details-subtitle">Your idea</h3>
                 <p class="brief-details-description">
                     We see the potential growth in your existing asset Our capability of implementing processes and
                     assisting in guiding thought processes in your business to see new opportunities for growth through
-                    marketing and events The Shift develops assets for clients to utilise within their business to
-                    encourage pushing beyond existing boundaries and positive change. Maximum attention is given to
-                    product and asset quality, attention to detail, maximum exposure for positive change and pushing
-                    creative boundaries. Any asset that is produced by The Shift can stand against other world-class
-                    events of its type and be the leader. Through our work, we take the purpose of our client or
-                    consumer and help change the language around social responsibility and shift perspectives into a new
-                    broader and bigger way of thinking. ANYTHING'S POSSIBLE
+                    marketing and events
                 </p>
-                <h3 class="brief-details-subtitle">Brief details</h3>
+                <h3 class="brief-details-subtitle">About your team</h3>
                 <p class="brief-details-description">
                     We see the potential growth in your existing asset Our capability of implementing processes and
                     assisting in guiding thought processes in your business to see new opportunities for growth through
-                    marketing and events The Shift develops assets for clients to utilise within their business to
-                    encourage pushing beyond existing boundaries and positive change. Maximum attention is given to
-                    product and asset quality, attention to detail, maximum exposure for positive change and pushing
-                    creative boundaries. Any asset that is produced by The Shift can stand against other world-class
-                    events of its type and be the leader. Through our work, we take the purpose of our client or
-                    consumer and help change the language around social responsibility and shift perspectives into a new
-                    broader and bigger way of thinking. ANYTHING'S POSSIBLE
+                    marketing and events
+                </p>
+                <h3 class="brief-details-subtitle">Additional information</h3>
+                <p class="brief-details-description">
+                    We see the potential growth in your existing asset Our capability of implementing processes and
+                    assisting in guiding thought processes in your business to see new opportunities for growth through
+                    marketing and events
                 </p>
                 <h3 class="brief-details-headline">Attachemts</h3>
                 <ul class="brief-attachemts-block">
@@ -373,13 +315,9 @@
                         <a href="#">Name of attachment</a>
                     </li>
                 </ul>
-                <div class="submit-brief-block">
-                    <p class="publish-description almost">
-                        I understand that this Brief contains Confidential Information or Assets,
-                        and I am bound by Genero's Terms which requires me to keep secret, secure and not disclose,
-                        share or publish any and all Confidential Information or Assets.
-                    </p>
-                    <button type="submit" class="submit-brief-btn submission-price">Submit a brief</button>
+                <div class="submit-brief-block submission-btns">
+                    <button type="button" class="edit-cancel-btn cancel-details">Cancel</button>
+                    <button type="button" class="edit-save-btn save-details">Save changes</button>
                 </div>
             </div>
         </div>
@@ -390,6 +328,6 @@
 <script src="js/demonstration-dashboard.js" defer></script>
 <script src="js/dashboard-sub-menu.js" defer></script>
 <script src="js/mobile-sidebar.js" defer></script>
-<script src="js/demonstration-all-brief.js" defer></script>
+
 </body>
 </html>

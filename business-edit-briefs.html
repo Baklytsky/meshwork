@@ -8,6 +8,7 @@
     <title>Creators</title>
     <link rel="stylesheet" href="./css/tagify.css">
     <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/pop-up-datepicker.css">
     <link rel="stylesheet" href="./css/creators.css">
 </head>
 <body>
@@ -181,7 +182,7 @@
         <div class="pop-up-window">
             <span class="icon-close-round close-x"></span>
             <h3 class="pop-up-headline headline-padding">
-                Do you really want to delete your offer
+                Do you really want to delete your offer?
             </h3>
             <p class="delete-brief-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -346,6 +347,42 @@
             </form>
         </div>
     </div>
+    <!------------------------------- Client edit ----------------------->
+    <div class="pop-up date-edit-pop-up" >
+        <div class="pop-up-window edit-pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <form action="#">
+                <!----------------------- Name ------------------------>
+                <div class="profile-parts-item edit-pop-up-item">
+                    <h3 class="profile-part-headline">Company / Agency</h3>
+                    <div class="profile-block edit-pop-up-block">
+                        <label for="submission-date" class="profile-label calendar-label">Choose date</label>
+                        <input type="text" id="submission-date" name="submission-date" class="profile-input selector">
+                    </div>
+                </div>
+                <div class="edit-pop-up-btn-block">
+                    <button type="reset" class="edit-cancel-btn got-it">Cencel</button>
+                    <button type="submit" class="edit-save-btn date-save">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!------------------------------- Delete attachment ----------------------->
+    <div class="pop-up attachment-pop-up">
+        <div class="pop-up-window">
+            <span class="icon-close-round close-x"></span>
+            <h3 class="pop-up-headline headline-padding">
+                Do you really want to delete your attachment?
+            </h3>
+            <p class="delete-brief-description">
+                “Name of attachment”
+            </p>
+            <div class="pop-up-btn-block">
+                <button class="delete-brief-btn discard-btn got-it">Discard</button>
+                <button class="delete-brief-btn delete-attachment-btn">Delete</button>
+            </div>
+        </div>
+    </div>
     <!------------------------------- DASHBOARD SECTION ----------------------->
     <!------------------------------------------------------------------------->
     <section class="dashboard-section">
@@ -455,9 +492,9 @@
                             </div>
                             <div class="info-item-text">
                                 <h3 class="info-title">Submission date</h3>
-                                <time datetime="2020-05-24" class="info-subtitle">24/05/20</time>
+                                <time datetime="2020-05-24" class="info-subtitle date-subtitle">24/05/20</time>
                             </div>
-                            <button type="button" class="edit-btn">Edit</button>
+                            <button type="button" class="edit-btn date-edit">Edit</button>
                         </li>
                     </ul>
                 </div>
@@ -505,21 +542,33 @@
                 </div>
                 <h3 class="brief-details-headline">Attachemts</h3>
                 <ul class="brief-attachemts-block">
-                    <li class="attachemts-item">
-                        <img src="img/append-docx.png" alt="File format image">
-                        <a href="#">Name of attachment</a>
+                    <li class="file-block">
+                        <a href="#" class="input-file-label">Name of attachment1
+                            <img src="img/append-png.png" alt="Image icon" class="append-image">
+                        </a>
+                        <input type="file" class="input-file" id="Image1" name="Image1">
+                        <span class="input-close" onclick="clearAttachment(this)"></span>
                     </li>
-                    <li class="attachemts-item">
-                        <img src="img/append-jpeg.png" alt="File format image">
-                        <a href="#">Name of attachment</a>
+                    <li class="file-block">
+                        <a href="#" class="input-file-label">Name of attachment2
+                            <img src="img/append-png.png" alt="Image icon" class="append-image">
+                        </a>
+                        <input type="file" class="input-file" id="Image2" name="Image2">
+                        <span class="input-close" onclick="clearAttachment(this)"></span>
                     </li>
-                    <li class="attachemts-item">
-                        <img src="img/append-docx.png" alt="File format image">
-                        <a href="#">Name of attachment</a>
+                    <li class="file-block">
+                        <a href="#" class="input-file-label">Name of attachment3
+                            <img src="img/append-png.png" alt="Image icon" class="append-image">
+                        </a>
+                        <input type="file" class="input-file" id="Image3" name="Image3">
+                        <span class="input-close" onclick="clearAttachment(this)"></span>
                     </li>
-                    <li class="attachemts-item">
-                        <img src="img/append-jpeg.png" alt="File format image">
-                        <a href="#">Name of attachment</a>
+                    <li class="file-block">
+                        <a href="#" class="input-file-label">Name of attachment4
+                            <img src="img/append-png.png" alt="Image icon" class="append-image">
+                        </a>
+                        <input type="file" class="input-file" id="Image4" name="Image4">
+                        <span class="input-close" onclick="clearAttachment(this)"></span>
                     </li>
                 </ul>
                 <div class="brief-submit-item">
@@ -532,8 +581,42 @@
                     <div class="attachmentContainer"></div>
                     <div class="sureAdd"></div>
                 </div>
+
                 <div class="submit-brief-block">
-                    <button type="button" class="reset-btn delete-brief">Delete</button>
+                    <button type="button" class="reset-btn delete-brief">Delete brief</button>
+                </div>
+                <div class="submission-wrapper">
+                    <h3 class="brief-details-headline submissions-border">Submissions</h3>
+                    <div class="submissions-block">
+                        <div class="submissions-item">
+                            <img src="img/submi.png" alt="Image item">
+                            <div>
+                                <h4 class="submissions-name">John Svardstorm</h4>
+                                <time datetime="2020-05-24" class="info-subtitle date-subtitle">11 Aug 18:10</time>
+                            </div>
+                        </div>
+                        <a href="business-submission-details.html" class="upload-btn submission-link">Submission details</a>
+                    </div>
+                    <div class="submissions-block">
+                        <div class="submissions-item">
+                            <img src="img/submi.png" alt="Image item">
+                            <div>
+                                <h4 class="submissions-name">John Svardstorm</h4>
+                                <time datetime="2020-05-24" class="info-subtitle date-subtitle">11 Aug 18:10</time>
+                            </div>
+                        </div>
+                        <a href="business-submission-details.html" class="upload-btn submission-link">Submission details</a>
+                    </div>
+                    <div class="submissions-block">
+                        <div class="submissions-item">
+                            <img src="img/submi.png" alt="Image item">
+                            <div>
+                                <h4 class="submissions-name">John Svardstorm</h4>
+                                <time datetime="2020-05-24" class="info-subtitle date-subtitle">11 Aug 18:10</time>
+                            </div>
+                        </div>
+                        <a href="business-submission-details.html" class="upload-btn submission-link">Submission details</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+
+#ui-datepicker-div {
+  max-width: 280px;
+  z-index: 30 !important;
+  @media (min-width: 768px) {
+    max-width: 390px;
+  }
+}
