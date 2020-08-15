@@ -3100,10 +3100,15 @@
 }
 .submissions-block {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
   align-items: center;
   padding: 16px 0;
   border-bottom: 1px solid #DBE2EA;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .submissions-item {
   display: flex;
@@ -3113,6 +3118,10 @@
     height: 88px;
     border-radius: 50%;
     margin-right: 16px;
+    margin-bottom: 16px;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 }
 .submissions-border {
