@@ -1780,6 +1780,7 @@
   align-items: center;
   padding: 15px 0 17px;
 }
+
 .brief-preview-photo {
   display: block;
   width: 150px;
@@ -1789,6 +1790,16 @@
   }
   @media (min-width: 768px) {
     width: 302px;
+  }
+}
+.create-brief-image-wrapper {
+  max-height: 84px;
+  overflow: hidden;
+  @media (min-width: 576px) {
+    max-height: 140px;
+  }
+  @media (min-width: 576px) {
+    max-height: 170px;
   }
 }
 .upload-image-options {
@@ -2788,6 +2799,10 @@
   @media (min-width: 1200px) {
     width: 60%;
   }
+}
+.img-crop {
+  max-height: 350px;
+  overflow: hidden;
 }
 .brief-title-img {
   width: 100%;
