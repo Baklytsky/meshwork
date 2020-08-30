@@ -949,7 +949,7 @@
       .project-card {
         width: 100%;
         flex-grow: 2;
-        background: $project-card-gradient;
+        background-color: $project-card;
         padding: 10px;
         @media (min-width: 992px) {
           padding: 20px 24px 20px 16px;
@@ -1018,15 +1018,21 @@
     }
     //****************************** Project card last child gradient *****************************
     .project-item:last-child {
-      position: relative;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: $project-last-card-gradient;
+      .project-card {
+        box-shadow: inset 0 -22px 13px 0 rgba(22, 22, 22, 0.9);
+      }
+      .project-card-img {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          box-shadow: inset 0 -22px 13px 0 rgba(22, 22, 22, 0.9);
+        }
       }
     }
   }

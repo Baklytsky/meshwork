@@ -43,9 +43,28 @@
   }
 
   .logo {
-    text-align: center;
-    @include logo;
-    padding: 28px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px 20px;
+  }
+
+  .page-language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 0;
+    a {
+      color: $white;
+      padding: 0 5px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .active-language {
+      color: $aquamarine;
+      text-decoration: underline;
+    }
   }
 
   .user-data-list {
@@ -85,21 +104,22 @@
       .sidebar-menu-icon {
         position: absolute;
         top: 50%;
-        left: 41px;
+        left: 31px;
         transform: translateY(-50%);
       }
 
       .sidebar-menu-link {
         font-size: $lang-item;
         color: $white;
-        display: block;
-        padding: 17px 0 17px 73px;
+        display: flex;
+        flex-direction: column;
+        padding: 17px 0 17px 63px;
       }
 
       .inbox-counter {
         font-size: $inbox-counter;
         color: $fresh-pass;
-        padding-left: 10px;
+        padding-top: 5px;
       }
 
       &:hover {
@@ -111,15 +131,19 @@
       }
 
       .account-mail {
+        max-width: 160px;
         display: block;
         padding-bottom: 9px;
         font-size: $lang-item;
         font-weight: 500;
         color: $silver;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
 
       .log-out-link {
         display: flex;
+        flex-direction: row;
         align-items: flex-end;
         padding: 17px 0 17px 36px;
       }
@@ -131,7 +155,7 @@
       //******************************** Sub menu block ******************************
       .sub-menu-block {
         display: none;
-        min-width: 174px;
+        width: 174px;
         background-color: $white;
         position: absolute;
         top: -300px;
