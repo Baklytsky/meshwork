@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Meshwork</title>
+</head>
+<body>
+
+<!------------------------------- HEADER ---------------------------------->
+<!------------------------------------------------------------------------->
+<header id="header">
+    <div class="wrapper">
+        <div class="wrapper-header">
+            <!------------------------------- Logo ------------------------------------>
+
+            <div class="logo">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="img/meshwork.webp" type="image/webp">
+                        <img src="img/meshwork_logo_white.svg" alt="Logo" class="logo-img">
+                    </picture>
+                </a>
+            </div>
+
+            <!------------------------------- Main menu  --------------------------------->
+            <div class="main-menu">
+                <nav>
+                    <ul id="main-nav-menu" class="menu-list">
+                        <li class="menu-item"><a href="business-cabinet.html" class="menu-link">Creators</a></li>
+                        <li class="menu-item"><a href="creator-dashboard.html" class="menu-link">Projects</a></li>
+                        <li class="menu-item delay-link"><a href="#benefits" class="menu-link">Benefits</a></li>
+                        <li class="menu-item delay-link"><a href="#newsletter" class="menu-link">Support</a></li>
+                    </ul>
+                </nav>
+                <div class="secondary-menu">
+
+                    <!------------------------------- Log in & Register btn`s --------------------------------->
+                    <ul class="init-block">
+                        <li>
+                            <button class="log-in">Log in</button>
+                        </li>
+                        <li>
+                            <button class="sign-up">Sign up</button>
+                        </li>
+                    </ul>
+
+                    <!------------------------------- Select language block --------------------------------->
+                    <ul class="language">
+                        <li><a href="#" class="active-language">En</a></li>
+                        <li><a href="#">Ru</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!------------------------------- Burger btn ------------------------------->
+            <div class="burger-icon">
+                <div class="burger-icon-line"></div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!------------------------------- POP-UP`s -------------------------------->
+<!------------------------------------------------------------------------->
+
+<!------------------------------- Sign up --------------------------------->
+<div class="pop-up sign-up-pop-up">
+    <div class="pop-up-window">
+        <span class="icon-close-round close-x"></span>
+        <h3 class="pop-up-headline">Sign up</h3>
+        <p class="pop-up-title">
+            Get your <span class="free-upp">free</span> account
+        </p>
+        <form action="#" method="post">
+            <ul class="form-list">
+                <li class="form-item">
+                    <label for="name1">Name:</label>
+                    <input id="name1" type="text">
+                </li>
+                <li class="form-item">
+                    <label for="mail1">E-mail:</label>
+                    <input id="mail1" type="email">
+                </li>
+                <li class="form-item">
+                    <label for="password">Password:</label>
+                    <input id="password" type="password">
+                </li>
+                <li class="form-item">
+                    <label for="confirm">Confirm password:</label>
+                    <input id="confirm" type="password">
+                </li>
+            </ul>
+            <div class="role-radio">
+                <h4 class="role-radio-title">Select your role:</h4>
+                <div class="radio-btn">
+                    <label class="radio-label">
+                        <input type="radio" name="role" value="customer" class="role-radio-input" checked>
+                        <span class="design"></span>
+                        <span class="text">Customer</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="role" value="creator" class="role-radio-input">
+                        <span class="design"></span>
+                        <span class="text">Creator</span>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="pop-up-btn">Sign in</button>
+            <div class="subscribe-checkbox">
+                <input type="checkbox" id="subscribe" name="subscribe" value="subscribe" class="subscribe-input">
+                <label for="subscribe" class="subscribe-label">Subscribe on news</label>
+            </div>
+        </form>
+        <p class="note">You already have account?</p>
+        <p class="note">Than you should <a href="#" class="sign-link-in">Sign in</a></p>
+    </div>
+</div>
+
+<!------------------------------- Log in --------------------------------->
+<div class="pop-up log-in-pop-up">
+    <div class="pop-up-window">
+        <span class="icon-close-round close-x"></span>
+        <h3 class="pop-up-headline">log in</h3>
+        <form action="#" method="post">
+            <ul class="form-list">
+                <li class="form-item">
+                    <label for="mail2">E-mail:</label>
+                    <input id="mail2" type="email">
+                </li>
+                <li class="form-item">
+                    <label for="password2">Password</label>
+                    <input id="password2" type="password" class="warning-input">
+                </li>
+            </ul>
+            <a href="#" class="forgot-pass-link">Forgot password?</a>
+            <button type="submit" class="pop-up-btn">Sign in</button>
+        </form>
+        <div class="sign-up-link-wrapper">
+            <p class="note">No account yet?</p>
+            <p class="note">Than you should <a href="#" class="sign-link-up">Sign up</a></p>
+        </div>
+    </div>
+</div>
+
+<!------------------------------- Cookie Alert ---------------------------->
+<!------------------------------------------------------------------------->
+<div class="cookie-alert">
+    <img src="img/icons/cookie.svg" alt="Cookie icon">
+    <h3 class="cookie-headline">We use cookies</h3>
+    <p class="cookie-description">
+        Our website uses cookies to make your browsing
+        experience better. By using our website you
+        agree to our use of cookies.
+    </p>
+    <ul class="cookie-link-list">
+        <li class="cookie-list-item">
+            <button class="cookie">Learn more</button>
+        </li>
+        <li class="cookie-list-item">
+            <button class="cookie-btn">Accept</button>
+        </li>
+    </ul>
+</div>
+<!------------------------------- Cookie Pop up ---------------------------->
+<div class="pop-up cookie-pop-up">
+    <div class="pop-up-window">
+        <span class="icon-close-round close-x"></span>
+        <img src="img/icons/cookie.svg" alt="Cookies icon" class="cookies-icon">
+        <h3 class="pop-up-headline">What is cookies?</h3>
+        <p class="pop-up-description">
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt
+        </p>
+        <button class="pop-up-btn got-it">Got it</button>
+    </div>
+</div>
+
+<!------------------------------- Search section -------------------------->
+<!------------------------------------------------------------------------->
+<section id="hero-section">
+    <div class="wrapper">
+        <div class="headline-block">
+        <!------------------------ Headline & title`s --------------------->
+        <h1 class="hero-headline">
+            <span>The new way</span>
+            <span>to create <span>content</span></span>
+        </h1>
+        <p class="hero-title">
+            Meet a global creative platform for creators.
+        </p>
+        <p class="hero-title">
+            Find your perfect match and collaborate.
+        </p>
+
+        <!------------------------------- Search block --------------------->
+        <div class="search-block">
+            <!------------------------------- Status selector --------------------->
+
+            <div class="status-selector">
+                <div class="dropholder">
+                    <div class="dropdown">
+                        <p class="holder">Your status...</p>
+                        <span class="icon-down-open-big"></span>
+                    </div>
+                    <ul class="dropdownOption">
+                        <li><p>Status 1</p></li>
+                        <li><p>Status 2</p></li>
+                        <li><p>Status 3</p></li>
+                    </ul>
+                </div>
+            </div>
+            <!------------------------------- Search input ------------------------->
+            <div class="search-input">
+                <form action="#" method="GET" class="search-form">
+                    <input id="search" type="search" placeholder="Search creators or projects ..." class="search-text"
+                           autocomplete="on">
+                    <ul class="autocomplete-list">
+                        <li class="autocomplete-item"><p>videographer</p></li>
+                        <li class="autocomplete-item"><p>videoproducer</p></li>
+                        <li class="autocomplete-item"><p>videoanimator</p></li>
+                    </ul>
+                    <input type="submit" value="Find" class="search-submit">
+                </form>
+            </div>
+        </div>
+
+        <!------------------------------- Tags ------------------------------------->
+        <ul class="tag-list">
+            <li class="tag-item"><a href="#">videographer</a></li>
+            <li class="tag-item"><a href="#">2d animator</a></li>
+            <li class="tag-item"><a href="#">video production</a></li>
+            <li class="tag-item"><a href="#">cameraman</a></li>
+            <li class="tag-item"><a href="#">video production</a></li>
+            <li class="tag-item"><a href="#">2d animator</a></li>
+            <li class="tag-item"><a href="#">video production</a></li>
+            <li class="tag-item"><a href="#">video production</a></li>
+            <li class="tag-item"><a href="#">videographer</a></li>
+        </ul>
+    </div>
+    </div>
+</section>
+
+<!------------------------------- Customers ------------------------------------>
+<!------------------------------------------------------------------------------>
+<section id="customers">
+    <div class="customers-wrapper">
+        <!------------------------------- Favorite customers list -------------->
+        <div class="fav-customers">
+            <p class="fav-customers-title">Our favourite customers share their impressions</p>
+            <ul class="owl-carousel fav-customers-list">
+                <li class="fav-customers-item">
+                    <picture>
+                        <source srcset="img/cuts1.webp" type="image/webp">
+                        <img src="img/cuts1.png" alt="Favorite customers logo" title="Favorite customers logo">
+                    </picture>
+                </li>
+                <li class="fav-customers-item">
+                    <picture>
+                        <source srcset="img/cust2.webp" type="image/webp">
+                        <img src="img/cust2.png" alt="Favorite customers logo" title="Favorite customers logo">
+                    </picture>
+                </li>
+                <li class="fav-customers-item">
+                    <picture>
+                        <source srcset="img/cust3.webp" type="image/webp">
+                        <img src="img/cust3.png" alt="Favorite customers logo" title="Favorite customers logo">
+                    </picture>
+                </li>
+                <li class="fav-customers-item">
+                    <picture>
+                        <source srcset="img/cust4.webp" type="image/webp">
+                        <img src="img/cust4.png" alt="Favorite customers logo" title="Favorite customers logo">
+                    </picture>
+                </li>
+                <li class="fav-customers-item">
+                    <picture>
+                        <source srcset="img/cuts1.webp" type="image/webp">
+                        <img src="img/cuts1.png" alt="Favorite customers logo" title="Favorite customers logo">
+                    </picture>
+                </li>
+                <li class="fav-customers-item">
+                    <picture>
+                        <source srcset="img/cust2.webp" type="image/webp">
+                        <img src="img/cust2.png" alt="Favorite customers logo" title="Favorite customers logo">
+                    </picture>
+                </li>
+                <li class="fav-customers-item">
+                    <picture>
+                        <source srcset="img/cust3.webp" type="image/webp">
+                        <img src="img/cust3.png" alt="Favorite customers logo" title="Favorite customers logo">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+
+        <!------------------------------- Find customer block --------------------->
+        <div class="find-customer">
+            <div class="text-block">
+                <p class="find-customer-description">
+                    Наши клиенты ищут:
+                </p>
+                <ul class="owl-carousel text-slider">
+                    <li class="text-slider-item"><h2 class="find-customer-headline">режиссеров</h2></li>
+                    <li class="text-slider-item"><h2 class="find-customer-headline">продакшн студии</h2></li>
+                    <li class="text-slider-item"><h2 class="find-customer-headline">аниматоров</h2></li>
+                    <li class="text-slider-item"><h2 class="find-customer-headline">фотографов</h2></li>
+                    <li class="text-slider-item"><h2 class="find-customer-headline">и многих других</h2></li>
+                </ul>
+                <button class="find-customer-btn">Присоединиться к платформе</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!------------------------------- Section Solutions ------------------------------------>
+<!-------------------------------------------------------------------------------------->
+<section id="solutions">
+    <div class="wrapper">
+        <!------------------------------- Solutions text ------------------------------->
+        <div class="solutions-text">
+            <h3 class="solutions-headline">
+                Solutions for pro-creators
+            </h3>
+            <p class="solution-description">
+                We give an opportunity for creators to enter the global video production market.
+                And companies can find the right creator for their projects.
+            </p>
+        </div>
+        <div class="solutions-cards">
+            <h4 class="solutions-cards-headline">
+                How it work:
+            </h4>
+            <ul class="solutions-cards-list">
+
+                <!------------------------------- Card item 1--------------------------------------->
+                <li class="solutions-cards-item">
+                    <div class="card-number">
+                        <img src="img/icons/notebook.svg" alt="icon" title="icon">
+                    </div>
+                    <div class="card-text">
+                        <h4 class="card-headline">
+                            Create <span>account</span>
+                        </h4>
+                        <p class="card-description">
+                            Share your thoughts about
+                            the video you wish to make
+                        </p>
+                    </div>
+                </li>
+                <!------------------------------- Card item 2--------------------------------------->
+                <li class="solutions-cards-item">
+                    <div class="card-number">
+                        <img src="img/icons/eye.svg" alt="icon" title="icon">
+                    </div>
+                    <div class="card-text">
+                        <h4 class="card-headline">
+                            Find <span>your match</span>
+                        </h4>
+                        <p class="card-description">
+                            Share your thoughts about
+                            the video you wish to make
+                        </p>
+                    </div>
+                </li>
+                <!------------------------------- Card item 3--------------------------------------->
+                <li class="solutions-cards-item">
+                    <div class="card-number">
+                        <img src="img/icons/hends.svg" alt="icon" title="icon">
+                    </div>
+                    <div class="card-text">
+                        <h4 class="card-headline">
+                            Make <span>an offer</span>
+                        </h4>
+                        <p class="card-description">
+                            Share your thoughts about
+                            the video you wish to make
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="solutions-btn">Lets get started</button>
+    </div>
+    <div class="bg-element">
+        <picture>
+            <source srcset="img/solution-bg-elemen.webp" type="image/webp">
+            <img src="img/solution-bg-elemen.png" alt="Bg element">
+        </picture>
+    </div>
+    <div class="second-bg-element">
+        <picture>
+            <source srcset="img/bg-element-2.webp" type="image/webp">
+            <img src="img/bg-element-2.png" alt="Bg element">
+        </picture>
+    </div>
+</section>
+
+<!------------------------------- Digital Section -------------------------------------->
+<!-------------------------------------------------------------------------------------->
+<section id="digital">
+    <div class="wrapper">
+        <!------------------------------- Digital text block ------------------------------->
+        <div class="digital-text">
+            <h3 class="digital-headline">
+                Digital networking
+            </h3>
+            <p class="digital-description">
+                Folio.pro give an opportunity for companies and
+                brands to find suitable creators for their projects
+            </p>
+        </div>
+    </div>
+
+    <!------------------------------- Digital sliders ----------------------------------->
+    <div class="sliders">
+
+        <!------------------------------- Top slider ----------------------------------->
+        <ul class="owl-carousel top-slider">
+            <li class="slider-item">
+                <picture>
+                    <source srcset="img/slide-img1.webp" type="image/webp">
+                    <img src="img/slide-img1.jpg" alt="Slider item">
+                </picture>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Eva Stark</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">cameraman</a></li>
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="slider-item">
+                <picture>
+                    <source srcset="img/slide-img2.webp" type="image/webp">
+                    <img src="img/slide-img2.jpg" alt="Slider item">
+                </picture>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Julia Bush</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                        <li class="slide-tag-item"><a href="#">cameraman</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="slider-item">
+                <picture>
+                    <source srcset="img/slide-img3.webp" type="image/webp">
+                    <img src="img/slide-img3.jpg" alt="Slider item">
+                </picture>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Carlos Lott</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">videographer</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="slider-item">
+                <picture>
+                    <source srcset="img/slide-img4.webp" type="image/webp">
+                    <img src="img/slide-img4.jpg" alt="Slider item">
+                </picture>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Lucy Good</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        <!------------------------------- Bottom slider -------------------------------->
+        <ul class="owl-carousel bottom-slider">
+            <li class="slider-item">
+                <picture>
+                    <source srcset="img/slide-img1.webp" type="image/webp">
+                    <img src="img/slide-img1.jpg" alt="Slider item">
+                </picture>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Eva Stark</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">cameraman</a></li>
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="slider-item">
+                <picture>
+                    <source srcset="img/slide-img2.webp" type="image/webp">
+                    <img src="img/slide-img2.jpg" alt="Slider item">
+                </picture>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Julia Bush</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                        <li class="slide-tag-item"><a href="#">cameraman</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="slider-item">
+                <picture>
+                    <source srcset="img/slide-img3.webp" type="image/webp">
+                    <img src="img/slide-img3.jpg" alt="Slider item">
+                </picture>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Carlos Lott</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">videographer</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="slider-item">
+                <picture>
+                    <source srcset="img/slide-img4.webp" type="image/webp">
+                    <img src="img/slide-img4.jpg" alt="Slider item">
+                </picture>
+                <div class="slide-title">
+                    <a href="#" class="slide-title-name">Lucy Good</a>
+                    <ul class="slide-tag-list">
+                        <li class="slide-tag-item"><a href="#">2d animator</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!------------------------------- Discover link -------------------------------->
+    <div class="discover-block">
+        <a href="#" class="discover-link">Discover more creators</a>
+    </div>
+
+    <!------------------------------- Projects ------------------------------------->
+    <div class="wrapper">
+        <div class="projects" id="projects">
+            <!------------------------ Project text block -------------------------->
+            <div class="project-text-block">
+                <img src="img/icons/fire-icon.svg" alt="Fire icon">
+                <p>
+                    Платформа построена таким образом,
+                    чтобы обеспечить максимально качественную коммуникацию между заказчиками и исполнителями,
+                    что позволяет концентрироваться на создании потрясающих проектов.
+                </p>
+            </div>
+            <!------------------------ Project list block --------------------------->
+            <div class="project-list-block">
+                <ul class="project-list">
+                    <!------------------------ Project list item --------------------------->
+                    <li class="project-item">
+                        <div class="project-card-img">
+                            <picture>
+                                <source srcset="img/project-img.webp" type="image/webp">
+                                <img src="img/project-img.jpg" alt="Project img">
+                            </picture>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                <a href="#" class="project-name">Uber</a>
+                                <span class="project-price">$35000</span>
+                            </div>
+                            <div class="project-card-description">
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing
+                                </p>
+                            </div>
+                            <ul class="project-card-tags">
+                                <li class="card-tag-item"><a href="#">videographer</a></li>
+                                <li class="card-tag-item"><a href="#">cameraman</a></li>
+                                <li class="card-tag-item"><a href="#">director</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!------------------------ Project list item --------------------------->
+                    <li class="project-item">
+                        <div class="project-card-img">
+                            <picture>
+                                <source srcset="img/project-img.webp" type="image/webp">
+                                <img src="img/project-img.jpg" alt="Project img">
+                            </picture>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                <a href="#" class="project-name">Uber</a>
+                                <span class="project-price">$35000</span>
+                            </div>
+                            <div class="project-card-description">
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing
+                                </p>
+                            </div>
+                            <ul class="project-card-tags">
+                                <li class="card-tag-item"><a href="#">videographer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!------------------------ Project list item --------------------------->
+                    <li class="project-item">
+                        <div class="project-card-img">
+                            <picture>
+                                <source srcset="img/project-img.webp" type="image/webp">
+                                <img src="img/project-img.jpg" alt="Project img">
+                            </picture>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                <a href="#" class="project-name">Uber</a>
+                                <span class="project-price">$35000</span>
+                            </div>
+                            <div class="project-card-description">
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing
+                                </p>
+                            </div>
+                            <ul class="project-card-tags">
+                                <li class="card-tag-item"><a href="#">videographer</a></li>
+                                <li class="card-tag-item"><a href="#">cameraman</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!------------------------ Project list item --------------------------->
+                    <li class="project-item">
+                        <div class="project-card-img">
+                            <picture>
+                                <source srcset="img/project-img.webp" type="image/webp">
+                                <img src="img/project-img.jpg" alt="Project img">
+                            </picture>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                <a href="#" class="project-name">Uber</a>
+                                <span class="project-price">$35000</span>
+                            </div>
+                            <div class="project-card-description">
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing
+                                </p>
+                            </div>
+                            <ul class="project-card-tags">
+                                <li class="card-tag-item"><a href="#">videographer</a></li>
+                                <li class="card-tag-item"><a href="#">cameraman</a></li>
+                                <li class="card-tag-item"><a href="#">director</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!------------------------ Discover block --------------------------->
+                <div class="discover-block">
+                    <a href="#" class="discover-link">Discover more creators</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!------------------------------- Newsletter Section ----------------------------------->
+<!-------------------------------------------------------------------------------------->
+<section id="newsletter">
+    <div class="wrapper">
+        <h3 class="newsletter-headline">
+            Sign up for our newsletter
+        </h3>
+        <form action="#" method="post" class="newsletter-form">
+            <input type="text" placeholder="Your email" class="newsletter-input">
+            <input type="submit" value="Subscribe" class="newsletter-submit">
+        </form>
+    </div>
+</section>
+
+<!------------------------------- Benefits Section ----------------------------------->
+<!------------------------------------------------------------------------------------>
+<section id="benefits">
+    <div class="wrapper">
+        <h3 class="benefits-headline">
+            Benefits
+        </h3>
+        <ul class="benefits-list">
+            <!------------------------------- Benefits item -------------------------->
+            <li class="benefits-list-item">
+                <img src="img/icons/benefits-icon1.svg" alt="Benefits icon" class="benefits-icons">
+                <h4 class="benefits-list-title">
+                    High quality
+                </h4>
+                <p class="benefits-list-description">
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor.
+                </p>
+            </li>
+            <!------------------------------- Benefits item -------------------------->
+            <li class="benefits-list-item">
+                <img src="img/icons/benefits-icon2.svg" alt="Benefits icon" class="benefits-icons">
+                <h4 class="benefits-list-title">
+                    Support
+                </h4>
+                <p class="benefits-list-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </li>
+            <!------------------------------- Benefits item -------------------------->
+            <li class="benefits-list-item">
+                <img src="img/icons/benefits-icon3.svg" alt="Benefits icon" class="benefits-icons">
+                <h4 class="benefits-list-title">
+                    Experience
+                </h4>
+                <p class="benefits-list-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                </p>
+            </li>
+            <!------------------------------- Benefits item -------------------------->
+            <li class="benefits-list-item">
+                <img src="img/icons/benefits-icon4.svg" alt="Benefits icon" class="benefits-icons">
+                <h4 class="benefits-list-title">
+                    High quality
+                </h4>
+                <p class="benefits-list-description">
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!------------------------------- Footer --------------------------------------------->
+<!------------------------------------------------------------------------------------>
+<footer id="footer">
+    <div class="wrapper footer-wrapper">
+        <div class="logo">
+            <a href="index.html">
+                <picture>
+                    <source srcset="img/meshwork.webp" type="image/webp">
+                    <img src="img/meshwork_logo_white.svg" alt="Logo" class="logo-img">
+                </picture>
+            </a>
+        </div>
+        <p class="copyright">@All rights reserved. Meshwork 2020</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/owl.carousel.min.js" defer></script>
+<script src="js/custom.js" defer></script>
+<script src="js/demonstration.js" defer></script>
+</body>
+</html>

@@ -12,6 +12,7 @@
 @mixin btn {
   font-size: $lang-item;
   font-weight: 700;
+  text-transform: uppercase;
   color: $black;
   background-color: $aquamarine;
   border: 1px solid $aquamarine;
@@ -20,7 +21,7 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   transition: all .3s linear;
   @media (min-width: 768px) {
-    font-size: $btn-size;
+    font-size: $normal;
   }
 }
 @mixin btn-hover {
