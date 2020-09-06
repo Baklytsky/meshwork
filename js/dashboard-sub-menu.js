@@ -2,7 +2,9 @@
 
 //--------------------- Sub menu on click "My account" -------------------------
 jQuery(function ($) {
+    let subMenuHeight = jQuery(".sub-menu-block").height();
     $('.account-link').on('click', function (e) {
+        $(".sub-menu-block").css('top', -subMenuHeight - 30)
         $(".sub-menu-block").slideToggle("fast");
     });
     $(document).on("click", function (event) {
