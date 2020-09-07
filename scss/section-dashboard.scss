@@ -2936,13 +2936,10 @@
     padding: 0 60px 10px 0;
   }
   img {
-    width: 50px;
+    width: 35px;
     display: block;
     box-sizing: border-box;
     margin-right: 16px;
-    @media (min-width: 992px) {
-      width: 62px;
-    }
   }
   a {
     font-weight: 600;
