@@ -2197,7 +2197,6 @@
   margin-right: 15px;
   position: relative;
   @media (min-width: 768px) {
-    padding: 30px 0 20px;
     margin-right: 45px;
   }
 }
@@ -2212,8 +2211,8 @@
   align-items: center;
   cursor: pointer;
   .append-image {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: auto;
     padding-right: 16px;
   }
 }
@@ -2222,25 +2221,19 @@
 }
 .input-close {
   position: absolute;
-  top: 15px;
-  right: -10px;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
   &:before {
     content: "\38";
     font-family: untitled-font-1, sans-serif;
-    color: $black;
+    color: $wrong-pass;
     font-size: $normal;
-    width: 20px;
-    height: 20px;
     background-color: $white;
     border: 1px solid $mystic;
     border-radius: 50%;
     cursor: pointer;
-    transition: all .3s linear;
-  }
-  &:hover {
-    &:before {
-      background-color: $aquamarine;
-    }
+    padding: 4px;
   }
 }
 
@@ -3144,7 +3137,7 @@
 .edit-cancel-btn {
   @include btn;
   @include white-btn;
-  margin-right: 16px;
+  margin: 0 8px;
 }
 .edit-save-btn {
   @include btn;
@@ -3155,9 +3148,12 @@
 .edit-save-btn, .edit-cancel-btn {
   font-size: $normal;
   min-width: 132px;
-  height: 40px;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+  padding: 12px 16px;
   @media (min-width: 728px) {
-    height: 48px;
+    padding: 12px 16px;
   }
 }
 .submission-wrapper {
@@ -3201,12 +3197,38 @@
 .submission-link {
   margin: 0;
 }
+.submission-details {
+  justify-content: space-between;
+}
 .submission-btns {
+  width: 100%;
+  flex-grow: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   @media (min-width: 992px) {
+    width: auto;
+    flex-direction: row;
     justify-content: flex-end;
+  }
+}
+
+.chose-creator,
+.look-portfolio,
+.write-creator {
+  width: 100%;
+  max-width: 395px;
+  box-sizing: border-box;
+  margin: 8px 0;
+  @media (min-width: 992px) {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.look-portfolio {
+  @media (min-width: 992px) {
+    margin-right: 16px;
   }
 }

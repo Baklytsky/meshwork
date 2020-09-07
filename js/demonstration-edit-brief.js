@@ -242,6 +242,9 @@ function addAttachment(field) {
                 format = file.split(".")
             $(this).prev('label').text(file);
             $(this).prev('label').append("<img src='img/append-" + format[1] + ".png' alt='Image icon' class='append-image'/>");
+            $(".append-image").on("error", function () {
+                $(this).attr("src", "img/append-file.png");
+            });
             $(".formats").append(format[1] + ', ')
         });
         let temp = str.substr(1);
