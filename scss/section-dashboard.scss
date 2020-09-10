@@ -12,6 +12,7 @@
   z-index: 2;
   position: relative;
   box-sizing: border-box;
+  padding-bottom: 50px;
   @media (min-width: 992px) {
     width: calc(100% - 200px);
     border-top-left-radius: 20px;
@@ -355,10 +356,8 @@
     }
     .search-input-mobile {
       bottom: 0;
-      transform: translateY(0);
       @media (min-width: 576px) {
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
       }
     }
     .search-input:focus {
