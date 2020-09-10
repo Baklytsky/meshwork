@@ -252,8 +252,10 @@
   .account-block {
     width: 100%;
     background-color: $dashboard-bg-dark;
+    padding-bottom: 50px;
     @media (min-width: 992px) {
       width: 110%;
+      padding-bottom: 0;
     }
 
     .account-menu {
