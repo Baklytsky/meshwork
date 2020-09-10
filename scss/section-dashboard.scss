@@ -5,13 +5,12 @@
 //***********************************************************************************************
 .dashboard-section {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background: $dashboard-section-bg;
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
   z-index: 1;
   position: relative;
-  box-sizing: border-box;
   @media (min-width: 992px) {
     width: calc(100% - 200px);
     border-top-left-radius: 20px;
@@ -68,6 +67,14 @@
   margin: 0 auto;
   @media (min-width: 992px) {
     padding: 0 3%;
+  }
+}
+.dashboard-section-header {
+  .dashboard-section-wrapper {
+    padding-bottom: 0;
+    @media (min-width: 992px) {
+      padding: 0 3%;
+    }
   }
 }
 .small-section-wrapper {
