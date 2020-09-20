@@ -465,15 +465,14 @@
         overflow-y: scroll;
         z-index: 5;
         box-sizing: border-box;
-        ::-webkit-scrollbar {
+        &::-webkit-scrollbar {
           width: 0;
         }
         @media (min-width: 576px) {
           width: 300px;
-          max-height: none;
+          max-height: 500px;
           position: absolute;
           top: 100%;
-          overflow: hidden;
         }
 
         form:nth-child(2) {
